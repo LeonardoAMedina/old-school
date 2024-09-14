@@ -4,23 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personalización de Giftcard</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/footer.css">
     <style>
-        header footer body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-            width: 100%;
-            margin: 0;
-        }
-        .container {
-            display: flex;
-            border: 1px solid #ccc;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            justify-content: center;
-        }
         .giftcard-preview {
             background-color: #ccc;
             display: flex;
@@ -67,10 +54,12 @@
             justify-content: space-between;
         }
         .confirm-button {
-            background-color: #ccc;
+            background-color: #5ec1e5;
             border: none;
             padding: 10px;
             cursor: pointer;
+            font-weight: bold;
+            border-radius: 12px;
         }
 
         span[name="r-span"] {
@@ -115,18 +104,8 @@
     </style>
 </head>
 <body>
-    <header>
-        <header>
-            <img src="images/old-school.jpg" alt="Logo del Sitio" width="50px" height="50px">
-            <nav>
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="about.html">Acerca de</a></li>
-                    <li><a href="contact.html">Contacto</a></li>
-                </ul>
-            </nav>
-    </header>
-    <div class="container">
+    <div id="header"></div>
+    <main>
         <section class="giftcard-preview">
             <div class="price-tag">$0000.-</div>
             <div>GIFT CARD para</div>
@@ -183,9 +162,8 @@
             </div>
             <button class="confirm-button">CONFIRMAR</button>
         </aside>
-    </div>
-    <footer>
-        <p>&copy; 2024 Mi Sitio Web. Todos los derechos reservados.</p>
-    </footer>
+    </main>
+    <div id="footer"></div>
+    <script src="scripts/includeHeaderFooter.js"></script>
 </body>
 </html>
