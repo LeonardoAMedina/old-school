@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/footer.css">
     <style>
         .giftcard-preview {
-            background-color: #ccc;
+            background-color: #cdfa97;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -101,31 +101,35 @@
         span.color-f5{
             background-color: #d67878;            
         }
+        .recipient-name{
+            background-color: #0e0000;
+            font-size: 20px;
+        }
     </style>
 </head>
 <body>
     <div id="header"></div>
     <main>
-        <section class="giftcard-preview">
-            <div class="price-tag">$0000.-</div>
-            <div>GIFT CARD para</div>
-            <div style="font-size: 32px;">Destinatario</div>
-            <div>VISTA PREVIA DE RESULTADO DE PERSONALIZACIÓN</div>
+        <section id="preview" class="giftcard-preview">
+            <div id="show-input-price" class="price-tag">$0000.-</div>
+            <div>GIFT CARD para:</div>
+            <div id='showRecipientInput' class="recibient-name" style="font-size: 32px;">Destinatario</div>
+            <div id='showMsgRecipient'> VISTA PREVIA DE RESULTADO DE PERSONALIZACIÓN</div>
         </section>
         <aside class="form-container">
             <h2>Personalización de Giftcard</h2>
             <div class="form-group">
                 <label for="nombre">Nombre Destinatario</label>
-                <input type="text" id="nombre" name="nombre">
+                <input  id="recipientInput" type="text" onkeydown="return /[a-zA-Z ]/i.test(event.key)" name="nombre">
             </div>
             <div class="form-group">
                 <label>Color</label>
                 <div class="options">
-                    <label><input type="radio" name="color" value="1"> <span name="r-span" class="color-1"></span></label>
-                    <label><input type="radio" name="color" value="2"> <span name="r-span" class="color-2"></span></label>
-                    <label><input type="radio" name="color" value="3"> <span name="r-span" class="color-3"></span></label>
-                    <label><input type="radio" name="color" value="4"> <span name="r-span" class="color-4"></span></label>
-                    <label><input type="radio" name="color" value="5"> <span name="r-span" class="color-5"></span></label>
+                    <label><input checked type="radio" name="font-color" value="1"> <span name="r-span" class="color-1"></span></label>
+                    <label><input type="radio" name="font-color" value="2"> <span name="r-span" class="color-2"></span></label>
+                    <label><input type="radio" name="font-color" value="3"> <span name="r-span" class="color-3"></span></label>
+                    <label><input type="radio" name="font-color" value="4"> <span name="r-span" class="color-4"></span></label>
+                    <label><input type="radio" name="font-color" value="5"> <span name="r-span" class="color-5"></span></label>
                 </div>
             </div>
             <div class="form-group">
@@ -133,19 +137,19 @@
                 <div class="options">
                     <label><input id="f-size-1" type="radio" name="font-size" value="20"> 20px</label>
                     <label><input id="f-size-2" type="radio" name="font-size" value="28"> 28px</label>
-                    <label><input id="f-size-3" type="radio" name="font-size" value="32"> 32px</label>
+                    <label><input checked id="f-size-3" type="radio" name="font-size" value="32"> 32px</label>
                     <label><input id="f-size-4" type="radio" name="font-size" value="48"> 48px</label>
                     <label><input id="f-size-5" type="radio" name="font-size" value="60"> 60px</label>
                 </div>
             </div>
             <div class="form-group">
                 <label for="monto">Monto $</label>
-                <input type="number" min="0" id="monto" name="monto">
+                <input type="number" min="0" id="amount" name="monto">
             </div>
             <div class="form-group">
                 <label>Ubicación</label>
                 <div class="options">
-                    <label><input type="radio" name="ubicacion" value="1"> <span style="background-color: #ccc; padding: 10px; display: inline-block;"></span></label>
+                    <label><input checked type="radio" name="ubicacion" value="1"> <span style="background-color: #ccc; padding: 10px; display: inline-block;"></span></label>
                     <label><input type="radio" name="ubicacion" value="2"> <span style="background-color: #999; padding: 10px; display: inline-block;"></span></label>
                     <label><input type="radio" name="ubicacion" value="3"> <span style="background-color: #666; padding: 10px; display: inline-block;"></span></label>
                 </div>
@@ -153,11 +157,11 @@
             <div class="form-group">
                 <label>Fondo</label>
                 <div class="options">
-                    <label><input type="radio" name="fondo" value="1"> <span name="r-span" class="color-f1"></span></label>
-                    <label><input type="radio" name="fondo" value="2"> <span name="r-span" class="color-f2"></span></label>
-                    <label><input type="radio" name="fondo" value="3"> <span name="r-span" class="color-f3"></span></label>
-                    <label><input type="radio" name="fondo" value="4"> <span name="r-span" class="color-f4"></span></label>
-                    <label><input type="radio" name="fondo" value="5"> <span name="r-span" class="color-f5"></span></label>
+                    <label><input checked type="radio" name="back-color" value="1"> <span name="r-span" class="color-f1"></span></label>
+                    <label><input type="radio" name="back-color" value="2"> <span name="r-span" class="color-f2"></span></label>
+                    <label><input type="radio" name="back-color" value="3"> <span name="r-span" class="color-f3"></span></label>
+                    <label><input type="radio" name="back-color" value="4"> <span name="r-span" class="color-f4"></span></label>
+                    <label><input type="radio" name="back-color" value="5"> <span name="r-span" class="color-f5"></span></label>
                 </div>
             </div>
             <button class="confirm-button">CONFIRMAR</button>
@@ -165,5 +169,70 @@
     </main>
     <div id="footer"></div>
     <script src="scripts/includeHeaderFooter.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const amountInput = document.getElementById('amount');
+            const showInputPrice = document.getElementById('show-input-price');
+    
+            // Add event listener for radio buttons to shows the amount
+            amountInput.addEventListener('input', function() {
+                const inputValue = amountInput.value.trim();
+                // if there is no value it will show $0000 else will shoe the input
+                // value
+                if (inputValue === '' || inputValue === '0' || inputValue === null) {
+                    showInputPrice.textContent = '$0000';
+                } else {
+                    showInputPrice.textContent = '$' + inputValue;
+                }
+            });
+
+            // Add event listener for radio buttons to shows the recipient name
+            const recipientInput = document.getElementById('recipientInput');
+            const showRecipientInput = document.getElementById('showRecipientInput');
+            recipientInput.addEventListener('input', function() {
+                const recipInputValue = recipientInput.value.trim();
+                // check if there is a value then put the value into the showRecipientInput Section
+                // if not, it put 'Nombre Destinatario'
+                if (recipInputValue === '' || recipInputValue === null) {
+                    showRecipientInput.textContent = 'Nombre Destinatario';
+                    showMsgRecipient.textContent = 'VISTA PREVIA DE RESULTADO DE PERSONALIZACIÓN';
+                } else {
+                    showRecipientInput.textContent = recipInputValue;
+                    showMsgRecipient.textContent = '';
+                }
+            });
+
+            // Add event listener for radio buttons to change background color
+            const backColorRadio = document.querySelectorAll('input[name="back-color"]');
+            const previewSection = document.querySelector('.giftcard-preview');
+            
+            backColorRadio.forEach(radio => {
+                radio.addEventListener('change', function() {
+                    // Get the background color from the span element
+                    const selectedColor = window.getComputedStyle(this.nextElementSibling).backgroundColor;
+                    // Set the background color of the preview section
+                    previewSection.style.backgroundColor = selectedColor;
+                });
+            });
+            const fontColorRadios = document.querySelectorAll('input[name="font-color"]');
+            fontColorRadios.forEach(radio => {
+                radio.addEventListener('change', function() {
+                    // Get the background color from the span element inside the selected radio input
+                    const selectedColor = window.getComputedStyle(this.nextElementSibling).backgroundColor;
+                    // Set the text color of the showRecipientInput div
+                    showRecipientInput.style.color = selectedColor;
+                });
+            });
+            const fontSizeRadios = document.querySelectorAll('input[name="font-size"]');
+            fontSizeRadios.forEach(radio => {
+                radio.addEventListener('change', function() {
+                    // Get the selected font size value
+                    const selectedFontSize = this.value;                    
+                    // Update the font size of the showRecipientInput div
+                    showRecipientInput.style.fontSize = selectedFontSize + 'px';
+                });
+            });
+        });
+    </script>
 </body>
 </html>
