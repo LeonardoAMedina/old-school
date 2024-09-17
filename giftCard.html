@@ -101,6 +101,10 @@
         span.color-f5{
             background-color: #d67878;            
         }
+        .recipient-name{
+            background-color: #0e0000;
+            font-size: 20px;
+        }
     </style>
 </head>
 <body>
@@ -108,9 +112,9 @@
     <main>
         <section id="preview" class="giftcard-preview">
             <div id="show-input-price" class="price-tag">$0000.-</div>
-            <div>GIFT CARD para</div>
-            <div id='showRecipientInput' style="font-size: 32px;">Destinatario</div>
-            <div>VISTA PREVIA DE RESULTADO DE PERSONALIZACIÓN</div>
+            <div>GIFT CARD para:</div>
+            <div id='showRecipientInput' class="recibient-name" style="font-size: 32px;">Destinatario</div>
+            <div id='showMsgRecipient'> VISTA PREVIA DE RESULTADO DE PERSONALIZACIÓN</div>
         </section>
         <aside class="form-container">
             <h2>Personalización de Giftcard</h2>
@@ -121,19 +125,19 @@
             <div class="form-group">
                 <label>Color</label>
                 <div class="options">
-                    <label><input checked type="radio" name="color" value="1"> <span name="r-span" class="color-1"></span></label>
-                    <label><input type="radio" name="color" value="2"> <span name="r-span" class="color-2"></span></label>
-                    <label><input type="radio" name="color" value="3"> <span name="r-span" class="color-3"></span></label>
-                    <label><input type="radio" name="color" value="4"> <span name="r-span" class="color-4"></span></label>
-                    <label><input type="radio" name="color" value="5"> <span name="r-span" class="color-5"></span></label>
+                    <label><input checked type="radio" name="font-color" value="1"> <span name="r-span" class="color-1"></span></label>
+                    <label><input type="radio" name="font-color" value="2"> <span name="r-span" class="color-2"></span></label>
+                    <label><input type="radio" name="font-color" value="3"> <span name="r-span" class="color-3"></span></label>
+                    <label><input type="radio" name="font-color" value="4"> <span name="r-span" class="color-4"></span></label>
+                    <label><input type="radio" name="font-color" value="5"> <span name="r-span" class="color-5"></span></label>
                 </div>
             </div>
             <div class="form-group">
                 <label>Tamaño de fuente</label>
                 <div class="options">
-                    <label><input checked id="f-size-1" type="radio" name="font-size" value="20"> 20px</label>
+                    <label><input id="f-size-1" type="radio" name="font-size" value="20"> 20px</label>
                     <label><input id="f-size-2" type="radio" name="font-size" value="28"> 28px</label>
-                    <label><input id="f-size-3" type="radio" name="font-size" value="32"> 32px</label>
+                    <label><input checked id="f-size-3" type="radio" name="font-size" value="32"> 32px</label>
                     <label><input id="f-size-4" type="radio" name="font-size" value="48"> 48px</label>
                     <label><input id="f-size-5" type="radio" name="font-size" value="60"> 60px</label>
                 </div>
@@ -170,9 +174,11 @@
             const amountInput = document.getElementById('amount');
             const showInputPrice = document.getElementById('show-input-price');
     
+            // Add event listener for radio buttons to shows the amount
             amountInput.addEventListener('input', function() {
                 const inputValue = amountInput.value.trim();
-    
+                // if there is no value it will show $0000 else will shoe the input
+                // value
                 if (inputValue === '' || inputValue === '0' || inputValue === null) {
                     showInputPrice.textContent = '$0000';
                 } else {
@@ -180,28 +186,50 @@
                 }
             });
 
+            // Add event listener for radio buttons to shows the recipient name
             const recipientInput = document.getElementById('recipientInput');
             const showRecipientInput = document.getElementById('showRecipientInput');
             recipientInput.addEventListener('input', function() {
                 const recipInputValue = recipientInput.value.trim();
-    
+                // check if there is a value then put the value into the showRecipientInput Section
+                // if not, it put 'Nombre Destinatario'
                 if (recipInputValue === '' || recipInputValue === null) {
                     showRecipientInput.textContent = 'Nombre Destinatario';
+                    showMsgRecipient.textContent = 'VISTA PREVIA DE RESULTADO DE PERSONALIZACIÓN';
                 } else {
                     showRecipientInput.textContent = recipInputValue;
+                    showMsgRecipient.textContent = '';
                 }
             });
 
             // Add event listener for radio buttons to change background color
-            const radioButtons = document.querySelectorAll('input[name="back-color"]');
+            const backColorRadio = document.querySelectorAll('input[name="back-color"]');
             const previewSection = document.querySelector('.giftcard-preview');
             
-            radioButtons.forEach(radio => {
+            backColorRadio.forEach(radio => {
                 radio.addEventListener('change', function() {
                     // Get the background color from the span element
                     const selectedColor = window.getComputedStyle(this.nextElementSibling).backgroundColor;
                     // Set the background color of the preview section
                     previewSection.style.backgroundColor = selectedColor;
+                });
+            });
+            const fontColorRadios = document.querySelectorAll('input[name="font-color"]');
+            fontColorRadios.forEach(radio => {
+                radio.addEventListener('change', function() {
+                    // Get the background color from the span element inside the selected radio input
+                    const selectedColor = window.getComputedStyle(this.nextElementSibling).backgroundColor;
+                    // Set the text color of the showRecipientInput div
+                    showRecipientInput.style.color = selectedColor;
+                });
+            });
+            const fontSizeRadios = document.querySelectorAll('input[name="font-size"]');
+            fontSizeRadios.forEach(radio => {
+                radio.addEventListener('change', function() {
+                    // Get the selected font size value
+                    const selectedFontSize = this.value;                    
+                    // Update the font size of the showRecipientInput div
+                    showRecipientInput.style.fontSize = selectedFontSize + 'px';
                 });
             });
         });
