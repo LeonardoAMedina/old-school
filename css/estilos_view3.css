@@ -1,0 +1,181 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/*Header provisorio */
+
+.header {
+	min-height: 56px;
+	background-color: #000000;
+}
+
+/*Fin header provisorio */
+
+/* Footer provisorio*/
+
+.footer {
+	min-height: 112px;
+	background-color: #000000;
+}
+
+/* Fin footer provisorio*/
+
+/* Seccion curso */
+.curso {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-top: 2%;
+	margin-bottom: 2%;
+}
+
+.curso-contenedor-img{
+	width: 40%;
+}
+
+.curso__imagen {
+	max-width: 100%;
+	
+}
+
+.curso__detalles {
+	
+}
+
+.curso__detalles-lista {
+	list-style: none;
+}
+
+@media only screen and (max-width: 600px) {
+	.curso-contenedor-img{
+		width: 90%;
+	}
+
+	.curso__detalles {
+		width: 90%;
+	}
+}
+
+@media only screen and (min-width: 600px){
+	.curso-contenedor-img{
+		width: 40%;
+	}
+	.curso__detalles {
+		width: 50%;
+	}
+}
+
+@media only screen and (min-width: 992px){
+	.curso-contenedor-img{
+		width: 35%;
+	}
+
+	.curso__detalles {
+		width: 55%;
+	}	
+}
+/* Fin seccion curso */
+
+/* Seccion docente */
+
+.docente {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	margin-top: 2%;
+	margin-bottom: 2%;
+}
+
+.docente-contenedor-imagen{
+
+}
+
+.docente__detalles{
+	width: 60%;
+}
+
+.docente__detalles-lista {
+	list-style: none;
+}
+
+.docente-imagen {
+	border-radius: 50%;
+}
+
+@media only screen and (max-width: 600px){
+	.docente__detalles{
+		width: 90%;
+	}
+}
+
+/* Fin seccion docente */
+
+/*Seccion cursos relacionados*/
+
+.cursos-relacionados {
+	display: flex;
+	/*flex-wrap: wrap;*/
+	justify-content: space-around;
+	margin-top: 2%;
+	margin-bottom: 2%;
+}
+
+.cursos-relacionados-item{
+	max-width: 20%;
+}
+
+.cursos-relacionados-item-lista {
+	list-style: none;
+}
+
+.cursos-relacionados-item__imagen{
+	max-width: 100%;
+	border-radius: 5%;
+}
+
+@media only screen and (max-width: 600px) {
+
+	.cursos-relacionados {
+		flex-wrap: wrap;
+	}
+
+	.cursos-relacionados-item{
+		max-width: 80%;
+	}
+}
+
+@media only screen and (min-width: 600px) {
+
+	.cursos-relacionados {
+		flex-wrap: wrap;
+	}
+
+	.cursos-relacionados-item{
+		max-width: 40%;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+
+	.cursos-relacionados {
+		flex-wrap: wrap;
+	}
+
+  	.cursos-relacionados-item{
+		max-width: 40%;
+	}
+}
+
+@media only screen and (min-width: 992px) {
+
+	.cursos-relacionados {
+		flex-wrap: nowrap;
+	}
+
+  	.cursos-relacionados-item{
+		max-width: 20%;
+	}
+} 
+
+/*Fin seccion cursos relacionados*/
