@@ -1,0 +1,247 @@
+*{ /*Esto es para sacar todo tipo de margin y padding que pueda haber*/
+    margin: 0;
+    padding: 0;;
+}
+
+/* .header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height:56px;
+    background-color: black;
+    padding: 4px 2px;
+    color: white;
+}
+
+.header .navbar{
+    width:80%;
+}
+
+.header .navbar .navbar__menu{
+    list-style: none;
+    height:80px; 
+    display: flex; 
+    justify-content: space-between;
+    align-items: center; 
+    background-color: red;
+    gap:24px;
+    text-transform: uppercase; 
+    font-weight: 300;
+    font-size:14px; 
+    letter-spacing: 5;
+}
+
+.header .navbar .navbar__menu .navbar__menu-item{
+    background-color: blue;
+}
+
+.header .navbar .navbar__menu .navbar__menu-item:hover{
+    background-color: orange;
+}
+
+.header .navbar .navbar__menu .navbar__menu-item .navbar__menu-item-link{
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+    display: block;
+} */
+
+.ajustar_ancho{
+    width:100%;
+}
+
+.Art1{
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main .Art1 .Art1__section{
+    height: 200px;
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main .Art1 .Art1__section .img_1{
+    display: flex;
+    width:85%;
+    height: 65%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.main .Art1 .Art1__section .img_1 .img__contenido{
+    display: flex;
+    width:65%;
+    height:85%;
+    justify-content: center;
+    align-items: center;
+}
+
+.Art2{
+    min-height: 180px;
+    display: flex;
+    padding: 8px 16px;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+.main .Art2 .Art2__menu{
+    list-style: none;
+    height:140px;
+    width:75%;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap:22px;
+    text-transform: uppercase;
+}
+
+.main .Art2 .Art2__menu .Art2__menu-item{
+    background-color: rgb(65, 65, 209);
+    width: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:2px solid black;
+}
+
+.main .Art2 .Art2__menu .Art2__menu-item .Art2__menu-item-link{
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+    display: block;
+}
+
+.Art3{
+    height: auto;
+    padding: 1px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main .Art3 .Art3__section{
+    height: 500px;
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main .Art3 .Art3__section .Art3__menu{
+    list-style: none;
+    height:500px;
+    width:53%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:1px;
+    flex-wrap: wrap;
+    text-transform: uppercase;
+}
+
+.main .Art3 .Art3__section .Art3__menu .Art3__menu-item{
+    height:25%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding:5px 5px;
+    width: 100px;
+}
+
+.main .Art3 .Art3__section .Art3__menu .Art3__menu-item .Art3__menu-item-link{
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+    display: block;
+}
+
+.Art4{
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main .Art4 .Art4__section{
+    width:65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main .Art4 .Art4__section .Art4__menu{
+    list-style: none;
+    height:50px;
+    width:60%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.main .Art4 .Art4__section .Art4__menu .Art4__menu-item{
+    height:80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 25px;
+}
+
+.main .Art4 .Art4__section .Art4__menu .Art4__menu-item .Art4__menu-item-link{
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+    display: block;
+}
+
+@media all and (min-width: 650px) and (max-width: 1200px){
+    /* body{
+        height:100%;
+    } */
+}
+
+@media all and (min-width: 350px) and (max-width:649px){
+
+    .Art3{
+        height: auto;
+    }
+
+    .main .Art3 .Art3__section{
+        height: 1300px;
+    }
+
+    .main .Art3 .Art3__section .Art3__menu{
+        height: 1300px;
+    }
+
+    .main .Art3 .Art3__section .Art3__menu .Art3__menu-item {
+        max-height: 15%;
+    } 
+}
+
+@media all and (min-width: 340px) and (max-width:349px){
+    .main .Art3 .Art3__section .Art3__menu .Art3__menu-item {
+        max-height: 15%;
+    }
+
+    .Art3{
+        height: auto;
+    }
+
+    .main .Art3 .Art3__section{
+        height: 1200px;
+    }
+
+    .main .Art3 .Art3__section .Art3__menu{
+        height: 1200px;
+    }
+}
