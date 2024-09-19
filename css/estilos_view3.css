@@ -21,6 +21,17 @@
 
 /* Fin footer provisorio*/
 
+.link-button{
+    display: inline-block;
+    background: #259c42;
+    padding: 10px;
+    border-radius: 25px;
+    color: white;
+    font-size: large;
+    text-decoration: none;
+
+}
+
 /* Seccion curso */
 .curso {
 	display: flex;
