@@ -1,14 +1,66 @@
 .footer {
+    font-family: Arial, sans-serif;
     display: flex;
     justify-content: space-around;
-    background-color: #747a95;
-    padding: 20px;
+    background-color: #555a74;
     color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
 }
+
 .footer div {
-    border: 1px solid white;
-    padding: 20px;
     flex: 1;
     margin: 0 10px;
     text-align: center;
 }
+
+.group-title span {
+    font-weight: bold;
+}
+
+.group-title ul {
+    list-style-type: none;
+}
+
+.social-media-links {
+    display: flex;
+    gap: 2%;
+    justify-content: center;
+    padding: 5%;
+}
+
+.social-media-links img {
+    width: 35px;
+}
+
+.social-media-links a {
+    border: none;
+}
+
+.footer-menu {
+    display: flex;
+    gap: 2%;
+    justify-content: center;
+    padding: 2%;
+    flex-direction: column;
+}
+
+.footer-menu a {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: space-around;
+    background-color: #555a74;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 2px 6px;
+    text-decoration: none;
+}
+
+.footer-menu a:hover {
+    background-color: #555; /* Background color on hover */
+}
+
