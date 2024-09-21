@@ -1,6 +1,6 @@
 main {
     display: flex;            
-    padding: 3em;            
+    padding: 1em;            
     justify-content: center;
     background-color: aliceblue;
 }

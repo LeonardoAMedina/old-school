@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #747a95;
+    background-color: #8d96bb;
     padding: 10px 20px;
 }
 .navbar .logo {
@@ -57,7 +57,7 @@
 .menu {
     display: flex;
     justify-content: space-around;
-    background-color: #555a74; /* Background color */
+    background-color: #56619b; /* Background color */
     color: white; /* Text color */
     padding: 10px; /* Padding around the links */
     border-bottom-left-radius: 15px;
@@ -68,7 +68,7 @@
     text-decoration: none;
     color: white;
     font-weight: bold;
-    padding: 2px 6px;
+    padding: 4px 14px;
 }
 
 .menu a:hover {
