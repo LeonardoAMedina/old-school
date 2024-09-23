@@ -1,15 +1,14 @@
 .navbar {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    background-color: #747a95;
-    padding: 10px 20px;
+    background-color: #8d96bb;
+    padding: 10px 25px 10px 20px;
 }
-.navbar .logo {
+.logo {
     background-color: #145c73;
-    padding: 0.5%;
-    border-radius: 5px;
-    width: 6%;
+    padding: 9px 9px 9px 9px;
+    border-radius: 8px;
+    width: 4%;
     display: flex;
     justify-content: center;
 }
@@ -17,17 +16,17 @@
     width: 4em;
 }
 .search-bar {
-    margin-left: 50%; /* Adjust the percentage as needed */
+    margin-left: 50%;
 }
 
 .navbar .search-bar {
     display: flex;
     align-items: center;
-    background-color: #e0e0e0;
+    background-color: white;
     padding: 10px;
-    border-radius: 5px;
-    flex-grow: 1;
-    margin: 0 20px;
+    margin: 3px 62px;
+    width: 30%;
+    border-radius: 15px;
 }
 .navbar .search-bar input {
     border: none;
@@ -57,9 +56,9 @@
 .menu {
     display: flex;
     justify-content: space-around;
-    background-color: #555a74; /* Background color */
-    color: white; /* Text color */
-    padding: 10px; /* Padding around the links */
+    background-color: #56619b; 
+    color: white;
+    padding: 10px;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
 }
@@ -68,11 +67,11 @@
     text-decoration: none;
     color: white;
     font-weight: bold;
-    padding: 2px 6px;
+    padding: 4px 14px;
 }
 
 .menu a:hover {
-    background-color: #555; /* Background color on hover */
+    background-color: #555;
 }
 
 header body {
@@ -83,4 +82,39 @@ header body {
     height: 100%;
     width: 100%;
     margin: 0;
+}
+
+a.btn-weak, a.btn-strong {
+    display: inline-block;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+
+a.btn-weak {
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ccc;
+}
+
+a.btn-weak:hover {
+    background-color: #e0e0e0b0;
+    color: #000; 
+}
+
+a.btn-strong {
+    background-color: #212326;
+    color: #fff;    
+}
+
+a.btn-strong:hover {
+    background-color: #0056b3;
+    color: #fff; 
+}
+
+div.header-btn {
+    margin: 0px 1rem 0rem 37rem;
 }
