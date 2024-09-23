@@ -1,6 +1,8 @@
 main {
-    display: flex;            
-    padding: 1em;            
-    justify-content: center;
-    background-color: aliceblue;
+    display: flex;
+    justify-content: center;  
+    min-height: 80vh;
+    background: linear-gradient(180deg, #004080, #333333); /* Gradiente de azul a gris */
+    padding: 20px;
+    color: white;
 }
