@@ -26,7 +26,7 @@ body {
     margin-bottom: 20px;
 }
 
-.contacto input, .contacto button, .datos-contacto textarea {
+.contacto input, .datos-contacto textarea {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
@@ -35,6 +35,7 @@ body {
     border-radius: 4px;
 }
 
+/*
 .contacto button {
     background-color: #007BFF;
     color: white;
@@ -45,21 +46,27 @@ body {
 .contacto button:hover {
     background-color: #0056b3;
 }
-
+*/
 .datos-contacto textarea {
     height: 100px;
 }
 
+.ubicacion {
+    display: inline-table;
+}
+
 .ubicacion .mapa {
-    width: 100%;
-    height: 200px;
+    width: 82rem;
+    height: 30rem;
     background-color: #e9e9e9;
+    background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 18px;
     color: #666;
     border: 1px dashed #ccc;
+    background-image: url(/images/contact-map-view.png);
 }
 
 @media (min-width: 768px) {

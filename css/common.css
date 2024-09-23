@@ -1,0 +1,11 @@
+
+
+
+main {
+    display: flex;
+    justify-content: center;  
+    min-height: 60vh;
+    background: linear-gradient(180deg, #004080, #333333); /* Gradiente de azul a gris */
+    padding: 20px;
+    color: white;
+}
