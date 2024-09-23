@@ -1,8 +1,22 @@
 main {
     display: flex;
     justify-content: center;  
-    min-height: 80vh;
+    min-height: 60vh;
     background: linear-gradient(180deg, #004080, #333333); /* Gradiente de azul a gris */
     padding: 20px;
     color: white;
+}
+
+.confirm-button {
+    background-color: #5ec1e5;
+    border: none;
+    padding: 1em 2em 1em 2em;
+    margin-top: 2em;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 1rem;
+}
+
+button.confirm-button:hover {
+    background-color: #c4cdd7;
 }
