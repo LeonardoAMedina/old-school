@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Detalle de curso</title>
 	<link rel="stylesheet" type="text/css" href="./css/estilos_view3.css">
-	<link rel="stylesheet" href="css/header.css">   
+	<link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
 </head>
 <body>
@@ -16,12 +16,26 @@
 				<img src="./images/react_.png" alt="Imagen del curso" class="curso__imagen">
 			</div>
 			<div class="curso__detalles">
-				<h1>Titulo Curso</h1>
+				<h1>Titulo curso: de cero a experto</h1>
 				<ul class="curso__detalles-lista">
-					<li>Valor: </li>
-					<li>Tiempo de dedicacion necesario: </li>
-					<li>Descripcion del curso: </li>
-					<li>Requisitos Previos: </li>
+					<li><span class="titulos">Valor: </span>$ 5000</li>
+					<li><span class="titulos">Tiempo de dedicacion necesario:</span> 120hs</li>
+					<li><span class="titulos">Descripcion del curso: </span>
+						<article>
+							Lorem ipsum odor amet, consectetuer adipiscing elit. Viverra viverra praesent dictumst turpis efficitur bibendum. Odio interdum et justo conubia dictum nam eleifend. Porttitor porta montes sodales sodales pellentesque dolor. Vitae justo luctus laoreet faucibus sem lectus tristique semper. Scelerisque cursus platea purus porta diam. Felis scelerisque massa ultrices etiam vestibulum rutrum. Massa faucibus magnis facilisis proin suscipit mattis. Non ex sollicitudin habitasse consequat, leo nullam.
+							<br>
+							Lorem ipsum odor amet, consectetuer adipiscing elit. Viverra viverra praesent dictumst turpis efficitur bibendum. Odio interdum et justo conubia dictum nam eleifend. Porttitor porta montes sodales sodales pellentesque dolor. Vitae justo luctus laoreet faucibus sem lectus tristique semper. Scelerisque cursus platea purus porta diam. Felis scelerisque massa ultrices etiam vestibulum rutrum. Massa faucibus magnis facilisis proin suscipit mattis. Non ex sollicitudin habitasse consequat, leo nullam.
+							<br>
+							Lorem ipsum odor amet, consectetuer adipiscing elit. Viverra viverra praesent dictumst turpis efficitur bibendum. Odio interdum et justo conubia dictum nam eleifend. Porttitor porta montes sodales sodales pellentesque dolor.
+						</article>
+					</li>
+					<li><span class="titulos">Requisitos Previos: </span></li>
+						<ul class="curso__detalles-requisitos">
+							<li>Lorem ipsum odor amet, consectetuer adipiscing elit. </li>
+							<li>Lorem ipsum odor amet, consectetuer adipiscing elit. </li>
+							<li>Lorem ipsum odor amet, consectetuer adipiscing elit. </li>
+							<li>Lorem ipsum odor amet, consectetuer adipiscing elit. </li>
+						</ul>
 				</ul>
 				<a class="link-button" href="./registationform.html">Inscribirse</a>
 			</div>
@@ -30,83 +44,224 @@
 				<h2>Contenidos por clase</h2>
 
 				<details>
-					<summary class="curso_cronograma-clase">Introduccion</summary>
-					<p class="curso-cronograma-clase-extendido">More info about the details.</p>
+					<summary class="curso_cronograma-unidad">Introduccion</summary>
+
+					<div class="curso-cronograma-unidad-extendido">
+						<div class="curso-cronograma-unidad-extendido-tipo">
+							<img src="./images/video-icon.svg">
+						</div>
+
+						<div class="curso-cronograma-unidad-extendido-nombre">
+							<span>Video explicativo introductorio</span>
+						</div>
+
+						<div class="curso-cronograma-unidad-extendido-duracion">
+							<img src="./images/clock-icon.svg">
+							<span>10min</span>
+						</div>
+					</div>
+
+					<div class="curso-cronograma-unidad-extendido">
+						<div class="curso-cronograma-unidad-extendido-tipo">
+							<img src="./images/audio-icon.svg">
+						</div>
+
+						<div class="curso-cronograma-unidad-extendido-nombre">
+							<span>Audio explicativo introductorio</span>
+						</div>
+
+						<div class="curso-cronograma-unidad-extendido-duracion">
+							<img src="./images/clock-icon.svg">
+							<span>10min</span>
+						</div>
+					</div>
+
+					<div class="curso-cronograma-unidad-extendido">
+						<div class="curso-cronograma-unidad-extendido-tipo">
+							<img src="./images/pdf-icon.svg">
+						</div>
+
+						<div class="curso-cronograma-unidad-extendido-nombre">
+							<span>Texto explicativo introductorio</span>
+						</div>
+
+						<div class="curso-cronograma-unidad-extendido-duracion">
+							<img src="./images/clock-icon.svg">
+							<span>10min</span>
+						</div>
+					</div>
+
+					<div class="curso-cronograma-unidad-extendido">
+						<div class="curso-cronograma-unidad-extendido-tipo">
+							<img src="./images/exam-icon.svg">
+						</div>
+
+						<div class="curso-cronograma-unidad-extendido-nombre">
+							<span>Examen</span>
+						</div>
+
+						<div class="curso-cronograma-unidad-extendido-duracion">
+							<img src="./images/clock-icon.svg">
+							<span>10min</span>
+						</div>
+					</div>									
 				</details>
 
 				<details>
-					<summary class="curso_cronograma-clase">Clase 1</summary>
-					<p class="curso-cronograma-clase-extendido">More info about the details.</p>
-				</details>
+					<summary class="curso_cronograma-unidad">Unidad 1</summary>
 
-				<details>
-					<summary class="curso_cronograma-clase">Clase 2</summary>
-					<p class="curso-cronograma-clase-extendido">More info about the details.</p>
-				</details>								
+					<div class="curso-cronograma-unidad-extendido">
+						<div class="curso-cronograma-unidad-extendido-tipo">
+							<img src="./images/video-icon.svg">
+						</div>
+
+						<div class="curso-cronograma-unidad-extendido-nombre">
+							<span>Video explicativo Unidad 1</span>
+						</div>
+
+						<div class="curso-cronograma-unidad-extendido-duracion">
+							<img src="./images/clock-icon.svg">
+							<span>10min</span>
+						</div>
+					</div>
+
+					<div class="curso-cronograma-unidad-extendido">
+						<div class="curso-cronograma-unidad-extendido-tipo">
+							<img src="./images/audio-icon.svg">
+						</div>
+
+						<div class="curso-cronograma-unidad-extendido-nombre">
+							<span>Audio explicativo Unidad 1</span>
+						</div>
+
+						<div class="curso-cronograma-unidad-extendido-duracion">
+							<img src="./images/clock-icon.svg">
+							<span>10min</span>
+						</div>
+					</div>
+
+					<div class="curso-cronograma-unidad-extendido">
+						<div class="curso-cronograma-unidad-extendido-tipo">
+							<img src="./images/pdf-icon.svg">
+						</div>
+
+						<div class="curso-cronograma-unidad-extendido-nombre">
+							<span>Texto explicativo Unidad 1</span>
+						</div>
+
+						<div class="curso-cronograma-unidad-extendido-duracion">
+							<img src="./images/clock-icon.svg">
+							<span>10min</span>
+						</div>
+					</div>
+
+					<div class="curso-cronograma-unidad-extendido">
+						<div class="curso-cronograma-unidad-extendido-tipo">
+							<img src="./images/exam-icon.svg">
+						</div>
+
+						<div class="curso-cronograma-unidad-extendido-nombre">
+							<span>Examen Unidad 1</span>
+						</div>
+
+						<div class="curso-cronograma-unidad-extendido-duracion">
+							<img src="./images/clock-icon.svg">
+							<span>10min</span>
+						</div>
+					</div>									
+				</details>
+								
 			</div>
 		</section>
 
 		<section class="docente">
+				<div class="docente-titulo">
+					<h2>Docente</h2>
+				</div>
 				<div class="docente-contenedor-imagen">
 					<img src="./images/Brendan_Eich_js.jpg" alt="Foto docente" class="docente-imagen">
 				</div>
 				<div class="docente__detalles">
-					<h2>Docente</h2>
 					<ul class="docente__detalles-lista">
-						<li>Brendan Eich</li>
-						<li>Calificacion</li>
+						<li class="docente__detalles-lista-nombre">Brendan Eich</li>
+						<li>Calificacion
+							<div class="docente-calification">
+								<a>&#9733;</a>
+								<a>&#9733;</a>
+								<a>&#9733;</a>
+								<a>&#9733;</a>
+								<a class="docente-calification_inactive">&#9733;</a>
+							</div>
+						</li>
 					</ul>
-
-					<article>					
-						 Es un programador estadounidense conocido por inventar el lenguaje de programación JavaScript, así como el navegador Brave.Tras trabajar en Silicon Graphics, pasó por varias empresas hasta llegar a Netscape Communications Corporation en abril de 1995, trabajando en el desarrollo del lenguaje JavaScript (originalmente llamado Mocha, luego denominado LiveScript) para el navegador web Netscape Navigator. A principios de 1998 ayudó a fundar la Fundación Mozilla, sirviendo como principal arquitecto. Cuando AOL cerró la unidad del navegador Netscape en julio de 2003, Eich ayudó a hacer girar a la Fundación Mozilla.
+					<br>
+					<article class="docente__detalles-extracto">					
+						 Es un programador estadounidense conocido por inventar el lenguaje de programación JavaScript, así como el navegador Brave.<br>
+						 Tras trabajar en Silicon Graphics, pasó por varias empresas hasta llegar a Netscape Communications Corporation en abril de 1995, trabajando en el desarrollo del lenguaje JavaScript (originalmente llamado Mocha, luego denominado LiveScript) para el navegador web Netscape Navigator.<br>
+						 A principios de 1998 ayudó a fundar la Fundación Mozilla, sirviendo como principal arquitecto. Cuando AOL cerró la unidad del navegador Netscape en julio de 2003, Eich ayudó a hacer girar a la Fundación Mozilla.
 					</article>
 				</div>
 		</section>
 
 		<section class="cursos-relacionados">
 			<div class="cursos-relacionados-title">
-				Cursos relacionados:
+				<h4 class="titulos">Cursos relacionados</h4>
 			</div>
+
 			<div class="cursos-relacionados-item">
 				<div class="cursos-relacionados-item-contenedor-imagen">
 					<img src="./images/php2.png" alt="Foto Curso 1" class="cursos-relacionados-item__imagen">
 				</div>
+				<div class="cursos-relacionados-item-contenedor-lista">
 				<ul class="cursos-relacionados-item-lista">
-					<li>Nombre curso</li>
-					<li>Duracion</li>
-					<li>Precio</li>
+					<li>Introducción a PHP</li>
+					<li>25 horas</li>
+					<li>$ 125000</li>
 				</ul>
 				<a class="link-button" href="./coursedetaile.html">Ver detalle</a>
+				</div>
 			</div>
 
 			<div class="cursos-relacionados-item">
-				<img src="./images/php2.png" alt="Foto Curso 1" class="cursos-relacionados-item__imagen">
+				<div class="cursos-relacionados-item-contenedor-imagen">
+					<img src="./images/php2.png" alt="Foto Curso 1" class="cursos-relacionados-item__imagen">
+				</div>
+				<div class="cursos-relacionados-item-contenedor-lista">
 				<ul class="cursos-relacionados-item-lista">
 					<li>Nombre curso</li>
 					<li>Duracion</li>
 					<li>Precio</li>
 				</ul>
 				<a class="link-button" href="./coursedetaile.html">Ver detalle</a>
+				</div>
 			</div>
 
 			<div class="cursos-relacionados-item">
-				<img src="./images/laravel.webp" alt="Foto Curso 1" class="cursos-relacionados-item__imagen">
+				<div class="cursos-relacionados-item-contenedor-imagen">
+					<img src="./images/php2.png" alt="Foto Curso 1" class="cursos-relacionados-item__imagen">
+				</div>
+				<div class="cursos-relacionados-item-contenedor-lista">
 				<ul class="cursos-relacionados-item-lista">
 					<li>Nombre curso</li>
 					<li>Duracion</li>
 					<li>Precio</li>
 				</ul>
 				<a class="link-button" href="./coursedetaile.html">Ver detalle</a>
+				</div>
 			</div>
 
 			<div class="cursos-relacionados-item">
-				<img src="./images/react_.png" alt="Foto Curso 1" class="cursos-relacionados-item__imagen">
+				<div class="cursos-relacionados-item-contenedor-imagen">
+					<img src="./images/php2.png" alt="Foto Curso 1" class="cursos-relacionados-item__imagen">
+				</div>
+				<div class="cursos-relacionados-item-contenedor-lista">
 				<ul class="cursos-relacionados-item-lista">
 					<li>Nombre curso</li>
 					<li>Duracion</li>
 					<li>Precio</li>
 				</ul>
 				<a class="link-button" href="./coursedetaile.html">Ver detalle</a>
+				</div>
 			</div>
 
 		</section>
