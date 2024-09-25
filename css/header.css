@@ -82,37 +82,7 @@ header body {
     margin: 0;
 }
 
-a.btn-weak, a.btn-strong {
-    display: inline-block;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 5px;
-    margin: 5px;
-}
-
-
-a.btn-weak {
-    background-color: #f0f0f0;
-    color: #333;
-    border: 1px solid #ccc;
-}
-
-a.btn-weak:hover {
-    background-color: #e0e0e0b0;
-    color: #000; 
-}
-
-a.btn-strong {
-    background-color: #212326;
-    color: #fff;    
-}
-
-a.btn-strong:hover {
-    background-color: #0056b3;
-    color: #fff; 
-}
-
 div.header-btn {
+    display: flex;
     margin: 0px 1rem 0rem 37rem;
 }

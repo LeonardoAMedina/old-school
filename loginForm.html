@@ -5,27 +5,26 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Iniciar sesion</title>
 	<link rel="stylesheet" type="text/css" href="./css/loginForm.css">
-	<link rel="stylesheet" href="css/header.css">   
-    <link rel="stylesheet" href="css/footer.css">
+	<link rel="stylesheet" href="css/button.css">
 </head>
 <body>
-	<div id="header"></div>
 	<main>
 		<section class="login">
 			<div class="login-header">Iniciar Sesion</div>
-
-			<form class="login-form"  action="/old-school.html" method="get">
+			<form class="login-form" action="/old-school.html" method="get">
 					<label class="login-form-label" for="username"><b>Usuario:</b></label><br/>
 					<input class="login-form-input" type="text" placeholder="Ingrese nombre de usuario" name="username" required>
-					<br/>
 					<label for="password"><b>Contraseña:</b></label><br/>
 					<input class="login-form-input" type="password" placeholder="Ingrese contraseña" name="password" required>
-					<br/>
-					<input type="submit" value="Iniciar Sesion" class="submit-button"/>
-					<br/>
+					<div class="form-btns">
+						<button type="submit" class="btn-weak">Aceptar</button>
+						<a type="button" class="btn-strong" href="/old-school.html">Cancelar</a>					
+					</div>
+					<!--
 					<label>
 						<a type="checkbox" name="remember"> Mantener mi sesión activa</a>
 					</label>
+					-->
 			</form>
 
 			<div class="login-footer">
@@ -33,7 +32,5 @@
 			</div>
 		</section>
 	</main>
-	<div id="footer"></div>
-	<script src="scripts/includeHeaderFooter.js"></script>
 </body>
 </html>
