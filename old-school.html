@@ -1,133 +1,180 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8" />
-    <title>title</title>
-    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Inicio</title>
+    <link rel="stylesheet" type="text/css" href="./css/old-school-inicio.css">
     <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/vw0_styles.css">
-    <link rel="stylesheet" href="css/button.css">
-    <!-- <link rel="stylesheet" href="css/main.css"> -->
     <link rel="stylesheet" href="css/footer.css">
-    <meta name="viewport" content="width=device-width", initial-scale="1.0"></meta>
+    <link rel="stylesheet" href="css/button.css">
 </head>
 <body>
     <div id="header"></div>
-    <!-- <header class="header">
-            <nav class="navbar">
-                <p>Resolucion: <span id="resolucion"></span></p>
-                <ul class="navbar__menu">
-                    <li class="navbar__menu-item item1"><a class="navbar__menu-item-link" href="#">logo</a></li>
-                    <li class="navbar__menu-item item2"><a class="navbar__menu-item-link" href="#">buscador</a></li>
-                    <li class="navbar__menu-item item3"><a class="navbar__menu-item-link" href="#">carrito</a></li>
-                </ul>
-            </nav>
-    </header> -->
-    <main class="main">
-        <article class="Art1">
-            <section class="Art1__section">
-                <div class="img_1">
-                    <img src="images/img_1.jpg" class="img__contenido" >
+    <main>
+        <section class="slider">
+            <div class="slider-carousel">
+                <img class="slide-img" src="./images/slider-1a.jpg" alt="Imagen carousel 1">
+                <button class="btn-display-left"><</button>
+                <button class="btn-display-right">></button>
+            </div>
+        </section>
+
+        <section class="pasos">
+            <div class="pasos-cabecera">
+                <h1>¿Queres adquirir nuevas habilidades y potenciar tu futuro? </h1>
+                <h2>Es sencillo, solo tenes que seguir estos pasos:</h2>
+            </div>
+            <div class="pasos-item">
+                <img src="./images/paso-1.svg">
+                <article>
+                    Usá el buscador o mirá nuestros cursos destacados para encontrar el curso que más te interese.
+                </article>
+            </div>
+            <div class="pasos-item">
+                <img src="./images/paso-2.svg">
+                <article>
+                    Ingresá al detalle del curso para conocer mejor los contenidos que te esperan.
+                </article>
+            </div>
+            <div class="pasos-item">
+                <img src="./images/paso-3.svg">
+                <article>
+                    Una vez que estes convencido, hace click en Inscribirme, la pagina te va a guiar a un sencillo formulario.<br> Una vez completados tus datos ya podes empezar el curso!!!
+                </article>
+            </div>
+        </section>
+
+        <section class="cursos-relacionados">
+            <div class="cursos-relacionados-title">
+                <h4 class="titulos">Cursos destacados</h4>
+            </div>
+
+            <div class="cursos-relacionados-item">
+                <div class="cursos-relacionados-item-contenedor-imagen">
+                    <img src="./images/cursos/python.jpg" alt="Foto Curso 1" class="cursos-relacionados-item__imagen">
                 </div>
-            </section>
-        </article>
-        <article class="Art2">
-            <ul class="Art2__menu">
-                <li class="Art2__menu-item item1"><a class="Art2__menu-item-link" href="#">paso1</a></li>
-                <li class="Art2__menu-item item2"><a class="Art2__menu-item-link" href="#">paso2</a></li>
-                <li class="Art2__menu-item item3"><a class="Art2__menu-item-link" href="#">paso3</a></li>
-            </ul>
-        </article>
-        <article class="Art3">
-            <section style="text-transform: uppercase;">
-                <p style="padding-bottom: 20px;color: black;">
-                    cursos destacados
-                </p>
-            </section>
-            <section class="Art3__section">
-                <ul class="Art3__menu">
-                    <li class="Art3__menu-item item1">
-                        <a class="Art3__menu-item-link" href="#">
-                            <div style="background-color: aqua; height: 160px">
-                                <img src="images/gift.jpg" alt="pic1" style="width: 100%;height: 100%;">
-                            </div>
-                        </a></li>
-                    <li class="Art3__menu-item item2">
-                        <a class="Art3__menu-item-link" href="#">
-                            <div style="background-color: aqua; height: 160px">
-                                <img src="images/gift.jpg" alt="pic2" style="width: 100%;height: 100%;">
-                            </div>
-                            <!-- <img src="images/gift.jpg" alt="pic2"> -->
-                        </a>
-                    </li>
-                    <li class="Art3__menu-item item3">
-                        <a class="Art3__menu-item-link" href="#">
-                            <div style="background-color: aqua; height: 160px">
-                                <img src="images/gift.jpg" alt="pic3" style="width: 100%;height: 100%;">
-                            </div>
-                        </a>
-                    </li>
-                    <li class="Art3__menu-item item4">
-                        <a class="Art3__menu-item-link" href="#">
-                            <div style="background-color: aqua; height: 160px">
-                                <img src="images/gift.jpg" alt="pic4" style="width: 100%;height: 100%;">
-                            </div>
-                        </a>
-                    </li>
-                    <li class="Art3__menu-item item5">
-                        <a class="Art3__menu-item-link" href="#">
-                            <div style="background-color: aqua; height: 160px">
-                                <img src="images/gift.jpg" alt="pic5" style="width: 100%;height: 100%;">
-                            </div>
-                        </a>
-                    </li>
-                    <li class="Art3__menu-item item6">
-                        <a class="Art3__menu-item-link" href="#">
-                            <div style="background-color: aqua; height: 160px">
-                                <img src="images/gift.jpg" alt="pic6" style="width: 100%;height: 100%;">
-                            </div>
-                        </a>
-                    </li>
+                <div class="cursos-relacionados-item-contenedor-lista">
+                <ul class="cursos-relacionados-item-lista">
+                    <li>Nombre curso</li>
+                    <li>Duracion</li>
+                    <li>Precio</li>
                 </ul>
-            </section>
-        </article>
-        </article>
-        <article class="Art4">
-            <section class="Art4__section">
-                <p style="color: black;"></p>
-                    METODOS DE PAGO
-                </p>
-                <ul class="Art4__menu" style="padding-bottom: 90px;padding-bottom: 20px;">
-                    <li class="Art4__menu-item item1">
-                        <a class="Art4__menu-item-link" href="#">
-                            <img src="images/tarj_1.jpg" alt="pic1">
-                        </a>
-                    </li>
-                    <li class="Art4__menu-item item2">
-                        <a class="Art4__menu-item-link" href="#">
-                            <img src="images/tarj_2.jpg" alt="pic2">
-                        </a>
-                    </li>
-                    <li class="Art4__menu-item item3">
-                        <a class="Art4__menu-item-link" href="#">
-                            <img src="images/tarj_3.jpg" alt="pic3">
-                        </a>
-                    </li>
-                    <li class="Art4__menu-item item4">
-                        <a class="Art4__menu-item-link" href="#">
-                            <img src="images/tarj_4.jpg" alt="pic3">
-                        </a>
-                    </li>
+                <a class="link-button" href="./courseDetaile.html">Ver detalle</a>
+                </div>
+            </div>
+
+            <div class="cursos-relacionados-item">
+                <div class="cursos-relacionados-item-contenedor-imagen">
+                    <img src="./images/cursos/vue.jpg" alt="Foto Curso 1" class="cursos-relacionados-item__imagen">
+                </div>
+                <div class="cursos-relacionados-item-contenedor-lista">
+                <ul class="cursos-relacionados-item-lista">
+                    <li>Nombre curso</li>
+                    <li>Duracion</li>
+                    <li>Precio</li>
                 </ul>
-            </section>
-        </article>
+                <a class="link-button" href="./courseDetaile.html">Ver detalle</a>
+                </div>
+            </div>
+
+            <div class="cursos-relacionados-item">
+                <div class="cursos-relacionados-item-contenedor-imagen">
+                    <img src="./images/cursos/react.jpg" alt="Foto Curso 1" class="cursos-relacionados-item__imagen">
+                </div>
+                <div class="cursos-relacionados-item-contenedor-lista">
+                <ul class="cursos-relacionados-item-lista">
+                    <li>Nombre curso</li>
+                    <li>Duracion</li>
+                    <li>Precio</li>
+                </ul>
+                <a class="link-button" href="./courseDetaile.html">Ver detalle</a>
+                </div>
+            </div>
+
+            <div class="cursos-relacionados-item">
+                <div class="cursos-relacionados-item-contenedor-imagen">
+                    <img src="./images/cursos/js.jpg" alt="Foto Curso 1" class="cursos-relacionados-item__imagen">
+                </div>
+                <div class="cursos-relacionados-item-contenedor-lista">
+                <ul class="cursos-relacionados-item-lista">
+                    <li>Nombre curso</li>
+                    <li>Duracion</li>
+                    <li>Precio</li>
+                </ul>
+                <a class="link-button" href="./courseDetaile.html">Ver detalle</a>
+                </div>
+            </div>
+
+            <div class="cursos-relacionados-item">
+                <div class="cursos-relacionados-item-contenedor-imagen">
+                    <img src="./images/cursos/excel.jpg" alt="Foto Curso 1" class="cursos-relacionados-item__imagen">
+                </div>
+                <div class="cursos-relacionados-item-contenedor-lista">
+                <ul class="cursos-relacionados-item-lista">
+                    <li>Nombre curs</li>
+                    <li>Duracion</li>
+                    <li>Precio</li>
+                </ul>
+                <a class="link-button" href="./courseDetaile.html">Ver detalle</a>
+                </div>
+            </div>
+
+            <div class="cursos-relacionados-item">
+                <div class="cursos-relacionados-item-contenedor-imagen">
+                    <img src="./images/cursos/front.jpg" alt="Foto Curso 1" class="cursos-relacionados-item__imagen">
+                </div>
+                <div class="cursos-relacionados-item-contenedor-lista">
+                <ul class="cursos-relacionados-item-lista">
+                    <li>Nombre curso</li>
+                    <li>Duracion</li>
+                    <li>Precio</li>
+                </ul>
+                <a class="link-button" href="./courseDetaile.html">Ver detalle</a>
+                </div>
+            </div>
+
+            <div class="cursos-relacionados-item">
+                <div class="cursos-relacionados-item-contenedor-imagen">
+                    <img src="./images/cursos/full-js.jpg" alt="Foto Curso 1" class="cursos-relacionados-item__imagen">
+                </div>
+                <div class="cursos-relacionados-item-contenedor-lista">
+                <ul class="cursos-relacionados-item-lista">
+                    <li>Nombre curso</li>
+                    <li>Duracion</li>
+                    <li>Precio</li>
+                </ul>
+                <a class="link-button" href="./courseDetaile.html">Ver detalle</a>
+                </div>
+            </div>
+
+            <div class="cursos-relacionados-item">
+                <div class="cursos-relacionados-item-contenedor-imagen">
+                    <img src="./images/cursos/powerbi.jpg" alt="Foto Curso 1" class="cursos-relacionados-item__imagen">
+                </div>
+                <div class="cursos-relacionados-item-contenedor-lista">
+                <ul class="cursos-relacionados-item-lista">
+                    <li>Nombre curso</li>
+                    <li>Duracion</li>
+                    <li>Precio</li>
+                </ul>
+                <a class="link-button" href="./courseDetaile.html">Ver detalle</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="medios-de-pago">
+            <h2>Medios de pago</h2>
+            <img src="./images/medios-de-pago/medio-american.svg" alt="American Express">
+            <img src="./images/medios-de-pago/medio-argencard.svg" alt="American Express">
+            <img src="./images/medios-de-pago/medio-cabal.svg" alt="American Express">
+            <img src="./images/medios-de-pago/medio-mastercard.svg" alt="American Express">
+            <img src="./images/medios-de-pago/medio-naranja.svg" alt="American Express">
+            <img src="./images/medios-de-pago/medio-visa.svg" alt="American Express">
+        </section>
+        
     </main>
     <div id="footer"></div>
-    <script src="../scripts/includeHeaderFooter.js"></script>
-    <script>
-            window.addEventListener("resize", (event) => {
-                document.getElementById("resolucion").innerHTML=window.innerWidth + ' x ' + window.innerHeight;
-            });
-    </script>
+    <script src="scripts/includeHeaderFooter.js"></script>    
 </body>
 </html>
