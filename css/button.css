@@ -1,0 +1,39 @@
+
+a.btn-weak, a.btn-strong,
+button.btn-weak {
+    display: inline-block;
+    font-family: Arial, sans-serif;
+    font-size: large;
+    padding: 3% 6%;
+    text-align: center;
+    text-decoration: none;    
+    margin: 1%;
+}
+
+
+a.btn-weak, button.btn-weak {
+    background-color: #FF0033;
+    color: white;
+    border: 2px solid #ccc;
+}
+
+a.btn-weak:hover, button.btn-weak:hover {
+    background-color: #e0e0e0b0;
+    color: #000; 
+}
+
+a.btn-strong {
+    background-color: #212326;
+    color: #fff;    
+}
+
+a.btn-strong:hover {
+    background-color: #0056b3;
+    color: #fff; 
+}
+
+.form-btns {
+    display: flex;
+    justify-content: center;
+    padding: 1em 0 1em 0;
+}

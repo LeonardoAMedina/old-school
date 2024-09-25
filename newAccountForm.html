@@ -3,42 +3,36 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Crear cuenta nueva</title>
-	<link rel="stylesheet" type="text/css" href="./css/newaccount.css">
-	<link rel="stylesheet" href="css/header.css">   
-    <link rel="stylesheet" href="css/footer.css">
+	<title>Iniciar sesion</title>
+	<link rel="stylesheet" type="text/css" href="./css/loginForm.css">
+	<link rel="stylesheet" href="css/button.css">
 </head>
 <body>
-	<div id="header"></div>
 	<main>
-		<section class="register">
-			<div class="register-header">Crear cuenta nueva</div>
+		<section class="registration">
+			<div class="login-header">Crear cuenta nueva</div>
 
-			<form class="register-form" action="">
-					<label class="register-form-label" for="username"><b>Email</b></label><br/>
-					<input class="register-form-input" type="email" placeholder="Ingrese Email" name="email" required>
-					<br/>
+			<form class="login-form" action="/old-school.html" method="get">
+					<label class="login-form-label" for="username"><b>Email</b></label><br/>
+					<input class="login-form-input" type="email" placeholder="Ingrese Email" name="email" required>
 
-					<label class="register-form-label" for="username"><b>Nombre de usuario:</b></label><br/>
-					<input class="register-form-input" type="text" placeholder="Ingrese nombre de usuario" name="username" required>
-					<br/>
+					<label class="login-form-label" for="username"><b>Nombre de usuario:</b></label><br/>
+					<input class="login-form-input" type="text" placeholder="Ingrese nombre de usuario" name="username" required>
 
-					<label for="password"><b>Contraseña:</b></label><br/>
-					<input class="register-form-input" type="password" placeholder="Ingrese contraseña" name="password" required>
-					<br/>
+					<label class="login-form-label" for="password"><b>Contraseña:</b></label><br/>
+					<input class="login-form-input" type="password" placeholder="Ingrese contraseña" name="password" required>
 
-					<label for="passwordCheck"><b>Repita contraseña:</b></label><br/>
-					<input class="register-form-input" type="password" placeholder="Repita contraseña" name="passwordCheck" required>
-					<br/>
-
-					<input type="submit" value="Crear cuenta" class="submit-button">
+					<label class="login-form-label" for="passwordCheck"><b>Repita contraseña:</b></label><br/>
+					<input class="login-form-input" type="password" placeholder="Repita contraseña" name="passwordCheck" required>
+					<div class="form-btns">
+						<button type="submit" class="btn-weak">Crear cuenta</button>					
+					</div>					
 			</form>
-			<div class="register-footer">
+
+			<div class="login-footer">
 				<span>¿Ya tenes cuenta? <a href="./loginForm.html">Inicia sesion</a> </span>
 			</div>
 		</section>
 	</main>
-	<div id="footer"></div>
-	<script src="scripts/includeHeaderFooter.js"></script>	
 </body>
 </html>
