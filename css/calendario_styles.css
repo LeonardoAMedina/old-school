@@ -1,0 +1,40 @@
+h2{
+    font-size: 40px;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+/* .grid{
+    display: grid;
+    grid-template-areas:"head head"
+                        "menu main"
+                        "foot foot";
+}
+
+.a {grid-area: head; background: blue}
+.b {grid-area: menu; background: red}
+.c {grid-area: main; background: green}
+.d {grid-area: foot; background: orange} */
+
+section{
+    display: grid;
+    /*cada porcentaje equivale a una columna y el ancho dependerá de quien lo contiene*/
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr; /*Fr es una porción del espacio disponible*/
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    /* grid-template-columns: 10% 78% 10%; */
+    grid-template-rows:20px 10px;
+    justify-items: center;
+    align-items: center;
+    gap:5%;/*Separación entre columnas y filas*/
+}
+
+article{ 
+    background-color: aqua;
+    width: 100%; /*no puede centrar algo que ocupa todo el ancho */
+}
