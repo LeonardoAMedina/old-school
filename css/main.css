@@ -10,7 +10,8 @@ main {
 .confirm-button {
     background-color: #5ec1e5;
     border: none;
-    padding: 1em 2em;
+    display: flex;
+    padding: 1em 4em;
     margin-top: 2em;
     cursor: pointer;
     font-weight: bold;

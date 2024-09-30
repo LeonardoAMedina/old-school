@@ -6,4 +6,3 @@ async function loadHTML(file, tagName) {
 
 loadHTML('commons/header.html', 'header');
 loadHTML('commons/footer.html', 'footer');
-

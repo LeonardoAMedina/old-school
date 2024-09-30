@@ -45,6 +45,7 @@
     border-radius: 0.3125em;
 }
 .navbar .cart .badge {
+    display: none;
     position: absolute;
     top: 0;
     right: 0;
