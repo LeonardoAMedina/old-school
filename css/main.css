@@ -1,7 +1,7 @@
 main {
     display: flex;
     justify-content: center;  
-    min-height: 66vh;
+    min-height: 120vh;
     background: linear-gradient(180deg, #004080, #333333); 
     padding: 20px;
     color: white;
