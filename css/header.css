@@ -2,12 +2,12 @@
     display: flex;
     align-items: center;
     background-color: #8d96bb;
-    padding: 10px 25px 10px 20px;
+    padding: 0.625em 1.5625em 0.625em 1.25em;
 }
 .logo {
     background-color: #145c73;
-    padding: 9px 9px 9px 9px;
-    border-radius: 8px;
+    padding: 0.5625em;
+    border-radius: 0.5em;
     width: 4%;
     display: flex;
     justify-content: center;
@@ -23,8 +23,8 @@
     display: flex;
     align-items: center;
     background-color: white;
-    padding: 10px;
-    margin: 3px 62px;
+    padding: 0.625em;
+    margin: 0em 1.25em 0em 2.5em;
     width: 30%;
     border-radius: 15px;
 }
@@ -35,41 +35,59 @@
     flex-grow: 1;
 }
 .navbar .search-bar .search-icon {
-    margin-left: 10px;
+    margin-left: 0.625em;
 }
 .navbar .cart {
+    display: flex;
     position: relative;
     background-color: #e0e0e0;
-    padding: 10px;
-    border-radius: 5px;
+    padding: 0.625em;
+    border-radius: 0.3125em;
 }
 .navbar .cart .badge {
     position: absolute;
     top: 0;
     right: 0;
-    background-color: #555;
+    background-color: red;
     color: white;
     border-radius: 50%;
-    padding: 5px 10px;
-    font-size: 12px;
+    padding:  0.3125em 0.625em;
+    font-size: 0.75em;
+}
+.cart img {
+    width: 2em;
 }
 .menu {
     display: flex;
     justify-content: space-around;
     background-color: #56619b; 
     color: white;
-    padding: 10px;
+    padding: 0.625em;
 }
 
 .menu a {
     text-decoration: none;
     color: white;
     font-weight: bold;
-    padding: 4px 14px;
+    padding: 0.25em 0.875em;
 }
 
 .menu a:hover {
     background-color: #555;
+}
+
+body {
+    font-size: 16px; /* Base font size */
+}
+
+.container {
+    width: 50em; /* 800px / 16px */
+    padding: 1.25em; /* 20px / 16px */
+}
+
+.header {
+    font-size: 1.5em; /* 24px / 16px */
+    margin-bottom: 0.625em; /* 10px / 16px */
 }
 
 header body {
@@ -84,5 +102,36 @@ header body {
 
 div.header-btn {
     display: flex;
-    margin: 0px 1rem 0rem 37rem;
+        margin: 0 1rem 0 20rem;
 }
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+    .container {
+        width: 40em; /* Adjust width for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 30em; /* Adjust width for tablets */
+        padding: 1em; /* Adjust padding for tablets */
+    }
+
+    .header {
+        font-size: 1.25em; /* Adjust font size for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 20em; /* Adjust width for mobile devices */
+        padding: 0.75em; /* Adjust padding for mobile devices */
+    }
+
+    .header {
+        font-size: 1em; /* Adjust font size for mobile devices */
+    }
+}
+

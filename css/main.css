@@ -3,14 +3,14 @@ main {
     justify-content: center;  
     min-height: 66vh;
     background: linear-gradient(180deg, #004080, #333333); 
-    padding: 20px;
+    padding: 1.25em;
     color: white;
 }
 
 .confirm-button {
     background-color: #5ec1e5;
     border: none;
-    padding: 1em 2em 1em 2em;
+    padding: 1em 2em;
     margin-top: 2em;
     cursor: pointer;
     font-weight: bold;
@@ -19,4 +19,29 @@ main {
 
 button.confirm-button:hover {
     background-color: #c4cdd7;
+}
+
+
+/* Responsive styles */
+@media (max-width: 48em) { /* 768px / 16px = 48em */
+    main {
+        flex-direction: column;
+        padding: 0.625em; /* 10px / 16px = 0.625em */
+    }
+
+    .confirm-button {
+        padding: 0.8em 1.5em;
+        margin-top: 1.5em;
+    }
+}
+
+@media (max-width: 30em) { /* 480px / 16px = 30em */
+    main {
+        padding: 0.3125em; /* 5px / 16px = 0.3125em */
+    }
+
+    .confirm-button {
+        padding: 0.6em 1em;
+        margin-top: 1em;
+    }
 }
