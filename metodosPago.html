@@ -7,9 +7,10 @@
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="./css/metodos_pago.css">
+    <link rel="stylesheet" href="css/button.css">
 </head>
 <body>
-    <div id="header"></div>
+    <header></header>
     <main>
         <section class="pago-curso">
             <article class="pago-curso-cabecera">
@@ -17,7 +18,7 @@
                 <h2>Pago con tarjeta</h2>
             </article>
 
-            <form class="pago-curso-form" action="./old-school.html" method="get">
+            <form class="pago-curso-form" action="#" method="get">
 
                     <label for="cardName">Nombre como aparece en la tarjeta</label>
                     <input class="pago-curso-form-input"type="text" id="cardName" name="cardName" placeholder="Nombre" required>
@@ -44,11 +45,21 @@
 
                 <span class="pago-curso-form-importe">$199,99 </span>
                 
-                <button class="link-button" type="submit" >Pagar</button>              
+                <button class="link-button" type="button">Pagar</button>              
             </form>
         </section>
     </main>
-    <div id="footer"></div>
+    <footer></footer>
     <script src="./scripts/includeHeaderFooter.js"></script>
+    <script>
+        function shoppingCartIncrement() {
+            const shoppingCounter = document.querySelector('.badge');
+            let currentCount = parseInt(shoppingCounter.innerText);
+            shoppingCounter.innerText = currentCount + 1;
+            shoppingCounter.style.display = 'block';
+        }
+        document.querySelector('.link-button').addEventListener('click', shoppingCartIncrement);
+        
+    </script>
 </body>
 </html>
