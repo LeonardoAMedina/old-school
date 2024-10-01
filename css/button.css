@@ -24,7 +24,8 @@ a.btn-weak:hover, button.btn-weak:hover {
 
 a.btn-strong {
     background-color: #212326;
-    color: #fff;    
+    color: #fff;
+    border: 2px solid #ccc; 
 }
 
 a.btn-strong:hover {
