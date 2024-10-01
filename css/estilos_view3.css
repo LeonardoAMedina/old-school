@@ -6,6 +6,13 @@
 	font-family: Arial, sans-serif;
 }
 
+header{
+	position:sticky;
+	top:0;
+	/*Esto sirve para corregir la propiedad que le da el relative y que no esten superpuestos los objetos*/
+	z-index: 1000;
+}
+
 h1{
 	font-size: 2em;
 	margin-bottom: 5%;

@@ -16,12 +16,21 @@
             padding: 0px;
         }
 
+        header{
+            position:sticky;
+            top:0;
+            /*Esto sirve para corregir la propiedad que le da el relative y que no esten superpuestos los objetos*/
+            z-index: 1000;
+        }
+
+
         .calendar {
             display: flex;
             flex-direction: column;
             padding: 2px;
             text-align: center;
             width:80%;
+            height: 50rem;
         }
 
         .menu__fecha{
@@ -496,5 +505,10 @@
     <footer></footer>
     <script src="scripts/includeHeaderFooter.js"></script>
     <script src="scripts/DOM.js"></script>
+    <script>
+        window.addEventListener("resize", (event) => {
+            document.getElementById("resolucion").innerHTML=window.innerWidth + ' x ' + window.innerHeight;
+        });
+</script>
 </body>
 </html>

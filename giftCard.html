@@ -9,6 +9,14 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/footer.css">
     <style>
+
+        header{
+            position:sticky;
+            top:0;
+            /*Esto sirve para corregir la propiedad que le da el relative y que no esten superpuestos los objetos*/
+            z-index: 1000;
+        }
+
         .giftcard-preview {
             display: flex;
             flex-direction: column;
@@ -156,15 +164,15 @@
                     <label>Ubicación</label>
                     <div class="options">
                         <label>
-                            <img class="position-img" src="/images/giftCard/position-1.png" alt="Opcion 1">
+                            <img class="position-img" src="images/giftCard/position-1.png" alt="Opcion 1">
                             <input name="position-check" type="radio" value="1">
                         </label>
                         <label>
-                            <img class="position-img" src="/images/giftCard/position-2.png" alt="Opcion 2">
+                            <img class="position-img" src="images/giftCard/position-2.png" alt="Opcion 2">
                             <input checked name="position-check" type="radio" value="2">
                         </label>
                         <label>
-                            <img class="position-img" src="/images/giftCard/position-3.png" alt="Opcion 3">
+                            <img class="position-img" src="images/giftCard/position-3.png" alt="Opcion 3">
                             <input name="position-check" type="radio" value="3">
                         </label>
                     </div>
@@ -173,23 +181,23 @@
                     <label>Fondo</label>
                     <div class="options">
                         <label>
-                            <img class="preview-bg-img" src="/images/giftCard/gift-card-bg-1-preview.png" alt="Opcion 3">
+                            <img class="preview-bg-img" src="images/giftCard/gift-card-bg-1-preview.png" alt="Opcion 3">
                             <input checked type="radio" name="back-color" value="url('images/giftCard/gift-card-bg-1.png')">
                         </label>
                         <label>
-                            <img class="preview-bg-img" src="/images/giftCard/gift-card-bg-2-preview.png" alt="Opcion 3">
+                            <img class="preview-bg-img" src="images/giftCard/gift-card-bg-2-preview.png" alt="Opcion 3">
                             <input type="radio" name="back-color" value="url('images/giftCard/gift-card-bg-2.png')">
                         </label>
                         <label>
-                            <img class="preview-bg-img" src="/images/giftCard/gift-card-bg-3-preview.png" alt="Opcion 3">
+                            <img class="preview-bg-img" src="images/giftCard/gift-card-bg-3-preview.png" alt="Opcion 3">
                             <input type="radio" name="back-color" value="url('images/giftCard/gift-card-bg-3.png')">
                         </label>
                         <label>
-                            <img class="preview-bg-img" src="/images/giftCard/gift-card-bg-4-preview.png" alt="Opcion 3">
+                            <img class="preview-bg-img" src="images/giftCard/gift-card-bg-4-preview.png" alt="Opcion 3">
                             <input type="radio" name="back-color" value="url('images/giftCard/gift-card-bg-4.png')">
                         </label>
                         <label>
-                            <img class="preview-bg-img" src="/images/giftCard/gift-card-bg-5-preview.png" alt="Opcion 3">
+                            <img class="preview-bg-img" src="images/giftCard/gift-card-bg-5-preview.png" alt="Opcion 3">
                             <input type="radio" name="back-color" value="url('images/giftCard/gift-card-bg-5.png')">
                         </label>
                     </div>
