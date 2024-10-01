@@ -18,7 +18,7 @@
                 <h2>Pago con tarjeta</h2>
             </article>
 
-            <form class="pago-curso-form" action="#">
+            <form class="pago-curso-form" onsubmit="return shoppingCartIncrement(event)">
 
                     <label for="cardName">Nombre como aparece en la tarjeta</label>
                     <input class="pago-curso-form-input"type="text" id="cardName" name="cardName" placeholder="Nombre" required>
@@ -43,8 +43,7 @@
                     title="Ingrese tres numeros."
                     required>
 
-                <span class="pago-curso-form-importe">$199,99 </span>
-                
+                <span class="pago-curso-form-importe">$199,99 </span>                
                 <button class="link-button" type="submit">Pagar</button>              
             </form>
         </section>
@@ -52,14 +51,17 @@
     <footer></footer>
     <script src="./scripts/includeHeaderFooter.js"></script>
     <script>
-        function shoppingCartIncrement() {
+        function shoppingCartIncrement(event) {
+            event.preventDefault();
             const shoppingCounter = document.querySelector('.badge');
             let currentCount = parseInt(shoppingCounter.innerText);
             shoppingCounter.innerText = currentCount + 1;
             shoppingCounter.style.display = 'block';
-        }
-        document.querySelector('.link-button').addEventListener('click', shoppingCartIncrement);
-        
+
+            // Clear the form fields
+            const form = event.target;
+            form.reset();
+        }       
     </script>
 </body>
 </html>
