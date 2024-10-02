@@ -3,6 +3,7 @@
     align-items: center;
     background-color: #8d96bb;
     padding: 0.625em 1.5625em 0.625em 1.25em;
+    flex-wrap: wrap;
 }
 .logo {
     /* background-color: #145c73; */
@@ -78,6 +79,7 @@
 
 .menu {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     background-color: #56619b; 
     color: white;
@@ -122,7 +124,7 @@ header body {
 .header-btn {
     display: flex;
     justify-content: space-around;
-    margin-left:15px;
+    margin-left:2%;
 
 }
 
