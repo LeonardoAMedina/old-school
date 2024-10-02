@@ -14,7 +14,7 @@ main{
 }
 
 body{
-    background: linear-gradient(180deg, #004080, #333333);
+    background: linear-gradient(#004080, #333333,#008080);
 }
 
 .titulos{
@@ -23,6 +23,13 @@ body{
     font-weight: bold;
 }
 
+.modalidad-online{
+    color: #45E6AA;
+}
+
+.modalidad-presencial{
+    color: #A145E6;
+}
 .link-button{
     display: inline-flex;
     align-items: center;

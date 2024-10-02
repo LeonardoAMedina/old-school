@@ -11,27 +11,32 @@
     <link rel="stylesheet" href="css/button.css">
 </head>
 <body>
-    <div id="header"></div>
+    <header></header>
     <main>
-        <div class="container">
-            <div class="contacto">
-                <h2>CONTACTO</h2>
-                <input type="text" placeholder="Nombre">
-                <input type="email" placeholder="Correo Electrónico">
-                <input type="tel" placeholder="Teléfono">
-                <button class="confirm-button">Enviar</button>
-            </div>
-            <div class="datos-contacto">
-                <h2>DATOS DE CONTACTO</h2>
-                <textarea placeholder="Información de contacto"></textarea>
-            </div>
-            <div class="ubicacion">
+        <section class="container">
+            <article class="contacto">
+                <div class="centrado">
+                    <h2>CONTACTO</h2>
+                </div>
+                <form action="contactForm.html">
+                    <input type="text" name="name" placeholder="Nombre" required>
+                    <input type="email" name="email" placeholder="Correo Electrónico" required>
+                    <input type="tel" name="tel" placeholder="Teléfono" required>
+                    <textarea class="datos-contacto" name="datos" placeholder="Información de contacto"></textarea>
+                    <div class="centrado">
+                        <button class="confirm-button" type="submit">Enviar</button>
+                    </div>
+                    
+                </form>
+            </article>
+
+            <article class="ubicacion">
                 <h2>UBICACIÓN</h2>
                 <div class="mapa">MAPA</div>
-            </div>
-        </div>
+            </article>
+        </section>
     </main>
-    <div id="footer"></div>
+    <footer></footer>
     <script src="scripts/includeHeaderFooter.js"></script>
 </body>
 </html>

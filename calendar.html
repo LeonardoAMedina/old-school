@@ -8,175 +8,504 @@
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/footer.css">
+    <script type="text/javascript" src="scripts/script_calendar.js"></script>
     <style>
-.calendar {
-    padding: 20px;
-    text-align: center;
-}
 
-.calendar-title {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
 
-.calendar-grid {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 10px;
-}
+        header{
+            position:sticky;
+            top:0;
+            /*Esto sirve para corregir la propiedad que le da el relative y que no esten superpuestos los objetos*/
+            z-index: 1000;
+        }
 
-.calendar-day {
-    border: 1px solid #ccc;
-    padding: 10px;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-}
 
-.day-title {
-    font-weight: bold;
-    margin-bottom: 5px;
-}
+        .calendar {
+            display: flex;
+            flex-direction: column;
+            padding: 2px;
+            text-align: center;
+            width:80%;
+            height: 50rem;
+        }
 
-.day-comment {
-    font-size: 14px;
-    color: #666;
-}
+        .menu__fecha{
+            display: flex;
+            flex-direction: column;
+            width:100%;
+            background-color:transparent;
+        }
 
-</style>
+        .mes{
+            font-size: 16px;
+            background-color: #253749;
+            color:white;
+            width:fit-content
+        }
+
+
+        .calendar-grid{
+            padding-top: 0.5rem;
+            display: grid;
+            /*cada porcentaje equivale a una columna y el ancho dependerá de quien lo contiene*/
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr; /*Fr es una porción del espacio disponible*/
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            /*grid-template-columns: 10% 78% 10%;*/
+            grid-template-rows:50px 40px;
+            justify-items: center;
+            align-items: center;
+            gap:5% 3%;/*Separación entre columnas y filas*/
+        }
+
+        /*.calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 10px;
+        }*/
+
+        .calendar-title {
+            font-size: 24px;
+            margin-bottom: 10px;
+            border: 1px solid #666;
+            padding: 5px;
+            border-radius: 5px;
+            background-color: #253749;
+            width: 100%;
+        }
+
+        .calendar-day {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            border: 1px solid #ccc;
+            padding: 4px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            width: 100%;
+        }
+
+        .day-title {
+            display: flex;
+            justify-content: center;
+            font-weight: bold;
+            margin-bottom: 5px;
+            border: 1px solid #000000;
+            background-color: white;
+            color: black;
+            width: 20%;
+        }
+
+        .day-comment{
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+        }
+
+        .comment-0 {
+            display: flex;
+            justify-content: right;
+            font-size: 14px;
+            background-color: transparent;
+            width: 80%;
+        }
+
+        .comment-1 {
+            display: flex;
+            justify-content: right;
+            font-size: 14px;
+            background-color: green;
+            width: 80%;
+        }
+
+        .comment-2 {
+            display: flex;
+            justify-content: right;
+            font-size: 14px;
+            background-color:red;
+            width: 80%;
+        }
+
+        .comment-3 {
+            display: flex;
+            justify-content: right;
+            font-size: 14px;
+            background-color: blue;
+            width: 80%;
+        }
+    </style>
 </head>
 <body>
-    <div id="header"></div>
+    <header></header>
     <main>
-        <div class="calendar">
-            <div class="calendar-title">Septiembre</div>
-            <div class="calendar-grid">
-                <!-- Generar los días del mes de septiembre -->
-                <div class="calendar-day">
-                    <div class="day-title">1</div>
-                    <div class="day-comment">Comentario del día 1</div>
+        <section class="calendar">
+            <article class="menu__fecha">
+                <input type="month" class="mes" onchange="cargar_calendario()" value="2024-09" id="date">
+            </article>
+            <article class="calendar-grid">
+                <span class="calendar-title">Lunes</span>
+                <span class="calendar-title">Martes</span>
+                <span class="calendar-title">Miercoles</span>
+                <span class="calendar-title">Jueves</span>
+                <span class="calendar-title">Viernes</span>
+                <span class="calendar-title">Sabado</span>
+                <span class="calendar-title">Domingo</span>
+                    
+                <div class="calendar-day" id="calendar_id_0">
+                    <span class="day-title" id="id_0"></span>
+                    <div class="day-comment">
+                        <span class="comment-0"><br></span>
+                        <span class="comment-0"><br></span>
+                        <span class="comment-0"><br></span>
+                    </div>
                 </div>
-                <div class="calendar-day">
-                    <div class="day-title">2</div>
-                    <div class="day-comment">Comentario del día 2</div>
+                <div class="calendar-day" id="calendar_id_1">
+                    <span class="day-title" id="id_1"></span>
+                    <div class="day-comment">
+                        <span class="comment-0"><br></span>
+                        <span class="comment-0"><br></span>
+                        <span class="comment-0"><br></span>
+                    </div>
                 </div>
-                <!-- Repetir para todos los días del mes -->
-                <!-- ... -->
-                <div class="calendar-day">
-                    <div class="day-title">3</div>
-                    <div class="day-comment">Comentario del día 3</div>
+                <div class="calendar-day" id="calendar_id_2">
+                    <span class="day-title" id="id_2"></span>
+                    <div class="day-comment">
+                        <span class="comment-0"><br></span>
+                        <span class="comment-1">Curso html5</span>
+                        <span class="comment-3">Diseño gráfico</span>
+                    </div>
                 </div>
-                <div class="calendar-day">
-                    <div class="day-title">4</div>
-                    <div class="day-comment">Comentario del día 4</div>
+                <div class="calendar-day" id="calendar_id_3">
+                    <span class="day-title" id="id_3"></span>
+                    <div class="day-comment">
+                        <span class="comment-0"><br></span>
+                        <span class="comment-0"><br></span>
+                        <span class="comment-0"><br></span>
+                    </div>
                 </div>
-                <div class="calendar-day">
-                    <div class="day-title">5</div>
-                    <div class="day-comment">Comentario del día 5</div>
+                <div class="calendar-day" id="calendar_id_4">
+                    <span class="day-title" id="id_4"></span>
+                    <div class="day-comment">
+                        <span class="comment-0"><br></span>
+                        <span class="comment-0"><br></span>
+                        <span class="comment-1">Curso Boostrap</span>
+                    </div>
                 </div>
-                <div class="calendar-day">
-                    <div class="day-title">6</div>
-                    <div class="day-comment">Comentario del día 6</div>
+                <div class="calendar-day" id="calendar_id_5">
+                    <span class="day-title" id="id_5"></span>
+                    <div class="day-comment">
+                        <span class="comment-0"><br></span>
+                        <span class="comment-2">Curso PHP</span>
+                        <span class="comment-0"><br></span>
+                    </div>
                 </div>
-                <div class="calendar-day">
-                    <div class="day-title">7</div>
-                    <div class="day-comment">Comentario del día 7</div>
+                <div class="calendar-day" id="calendar_id_6">
+                    <span class="day-title" id="id_6"></span>
+                    <div class="day-comment">
+                        <span class="comment-0"><br></span>
+                        <span class="comment-0"><br></span>
+                        <span class="comment-0"><br></span>
+                    </div>
                 </div>
-                <div class="calendar-day">
-                    <div class="day-title">8</div>
-                    <div class="day-comment">Comentario del día 8</div>
+                <div class="calendar-day" id="calendar_id_7">
+                    <span class="day-title" id="id_7"></span>
+                    <div class="day-comment">
+                        <span class="comment-0"><br></span>
+                        <span class="comment-0"><br></span>
+                        <span class="comment-0"><br></span>
+                    </div>
                 </div>
-                <div class="calendar-day">
-                    <div class="day-title">9</div>
-                    <div class="day-comment">Comentario del día 9</div>
+                <div class="calendar-day" id="calendar_id_8">
+                    <span class="day-title" id="id_8"></span>
+                    <div class="day-comment">
+                        <span class="comment-1">Curso Laravel</span>
+                        <span class="comment-0"><br></span>
+                        <span class="comment-0"><br></span>
+                    </div>
                 </div>
-                <div class="calendar-day">
-                    <div class="day-title">10</div>
-                    <div class="day-comment">Comentario del día 10</div>
+                <div class="calendar-day" id="calendar_id_9">
+                    <span class="day-title" id="id_9"></span>
+                    <div class="day-comment">
+                        <span class="comment-0"><br></span>
+                        <span class="comment-1">Curso html5</span>
+                        <span class="comment-3">Diseño gráfico</span>
+                    </div>
                 </div>
-                <div class="calendar-day">
-                    <div class="day-title">11</div>
-                    <div class="day-comment">Comentario del día 11</div>
+                <div class="calendar-day" id="calendar_id_10">
+                    <span class="day-title" id="id_10"></span>
+                    <div class="day-comment">
+                        <span class="comment-2">Curso React</span>
+                        <span class="comment-0"><br></span>
+                        <span class="comment-0"><br></span>
+                    </div>
                 </div>
-                <div class="calendar-day">
-                    <div class="day-title">12</div>
-                    <div class="day-comment">Comentario del día 12</div>
+                <div class="calendar-day" id="calendar_id_11">
+                    <span class="day-title" id="id_11"></span>
+                    <div class="day-comment">
+                        <span class="comment-0"><br></span>
+                        <span class="comment-0"><br></span>
+                        <span class="comment-1">Curso Boostrap</span>
+                    </div>
                 </div>
-                <div class="calendar-day">
-                    <div class="day-title">13</div>
-                    <div class="day-comment">Comentario del día 13</div>
+                <div class="calendar-day" id="calendar_id_12">
+                    <span class="day-title" id="id_12"></span>
+                    <div class="day-comment">
+                        <span class="comment-0"><br></span>
+                        <span class="comment-2">Curso PHP</span>
+                        <span class="comment-0"><br></span>
+                    </div>
                 </div>
-                <div class="calendar-day">
-                    <div class="day-title">14</div>
-                    <div class="day-comment">Comentario del día 14</div>
+                <div class="calendar-day" id="calendar_id_13">
+                    <span class="day-title" id="id_13"></span>
+                    <div class="day-comment">
+                        <span class="comment-0"><br></span>
+                        <span class="comment-0"><br></span>
+                        <span class="comment-0"><br></span>
+                    </div>
                 </div>
-                <div class="calendar-day">
-                    <div class="day-title">15</div>
-                    <div class="day-comment">Comentario del día 15</div>
+                <div class="calendar-day" id="calendar_id_14">
+                    <span class="day-title" id="id_14"></span>
+                    <div class="day-comment">
+                        <span class="comment-0"><br></span>
+                        <span class="comment-3">Curso Inglés</span>
+                        <span class="comment-0"><br></span>
+                    </div>
                 </div>
-                <div class="calendar-day">
-                    <div class="day-title">16</div>
-                    <div class="day-comment">Comentario del día 16</div>
+                <div class="calendar-day" id="calendar_id_15">
+                    <span class="day-title" id="id_15"></span>
+                    <div class="day-comment">
+                        <span class="comment-1">Curso Laravel</span>
+                        <span class="comment-0"><br></span>
+                        <span class="comment-0"><br></span>
+                    </div>
                 </div>
-                <div class="calendar-day">
-                    <div class="day-title">17</div>
-                    <div class="day-comment">Comentario del día 17</div>
+                <div class="calendar-day" id="calendar_id_16">
+                    <span class="day-title" id="id_16"></span>
+                    <div class="day-comment">
+                        <span class="comment-0"><br></span>
+                        <span class="comment-1">Curso html5</span>
+                        <span class="comment-3">Diseño gráfico</span>
+                    </div>
                 </div>
-                <div class="calendar-day">
-                    <div class="day-title">18</div>
-                    <div class="day-comment">Comentario del día 18</div>
+                <div class="calendar-day" id="calendar_id_17">
+                    <span class="day-title" id="id_17"></span>
+                    <div class="day-comment">
+                        <span class="comment-2">Curso React</span>
+                        <span class="comment-0"><br></span>
+                        <span class="comment-0"><br></span>
+                    </div>
                 </div>
-                <div class="calendar-day">
-                    <div class="day-title">19</div>
-                    <div class="day-comment">Comentario del día 19</div>
+                <div class="calendar-day" id="calendar_id_18">
+                    <span class="day-title" id="id_18"></span>
+                    <div class="day-comment">
+                        <span class="comment-0"><br></span>
+                        <span class="comment-0"><br></span>
+                        <span class="comment-1">Curso Boostrap</span>
+                    </div>
                 </div>
-                <div class="calendar-day">
-                    <div class="day-title">20</div>
-                    <div class="day-comment">Comentario del día 20</div>
+                <div class="calendar-day" id="calendar_id_19">
+                    <span class="day-title" id="id_19"></span>
+                    <div class="day-comment">
+                        <span class="comment-0"><br></span>
+                        <span class="comment-2">Curso PHP</span>
+                        <span class="comment-0"><br></span>
+                    </div>
                 </div>
-                <div class="calendar-day">
-                    <div class="day-title">21</div>
-                    <div class="day-comment">Comentario del día 21</div>
+                <div class="calendar-day" id="calendar_id_20">
+                    <span class="day-title" id="id_20"></span>
+                    <div class="day-comment">
+                        <span class="comment-0"><br></span>
+                        <span class="comment-0"><br></span>
+                        <span class="comment-3">Curso UX</span>
+                    </div>
                 </div>
-                <div class="calendar-day">
-                    <div class="day-title">22</div>
-                    <div class="day-comment">Comentario del día 22</div>
+                <div class="calendar-day" id="calendar_id_21">
+                    <span class="day-title" id="id_21"></span>
+                    <div class="day-comment">
+                        <span class="comment-0"><br></span>
+                        <span class="comment-3">Curso Inglés</span>
+                        <span class="comment-0"><br></span>
+                    </div>
                 </div>
-                <div class="calendar-day">
-                    <div class="day-title">23</div>
-                    <div class="day-comment">Comentario del día 23</div>
+                <div class="calendar-day" id="calendar_id_22">
+                    <span class="day-title" id="id_22"></span>
+                    <div class="day-comment">
+                        <span class="comment-1">Curso Laravel</span>
+                        <span class="comment-0"><br></span>
+                        <span class="comment-0"><br></span>
+                    </div>
                 </div>
-                <div class="calendar-day">
-                    <div class="day-title">24</div>
-                    <div class="day-comment">Comentario del día 24</div>
+                <div class="calendar-day" id="calendar_id_23">
+                    <span class="day-title" id="id_23"></span>
+                    <div class="day-comment">
+                        <span class="comment-0"><br></span>
+                        <span class="comment-1">Curso html5</span>
+                        <span class="comment-3">Diseño gráfico</span>
+                    </div>
                 </div>
-                <div class="calendar-day">
-                    <div class="day-title">25</div>
-                    <div class="day-comment">Comentario del día 25</div>
+                <div class="calendar-day" id="calendar_id_24">
+                    <span class="day-title" id="id_24"></span>
+                    <div class="day-comment">
+                        <span class="comment-2">Curso React</span>
+                        <span class="comment-0"><br></span>
+                        <span class="comment-0"><br></span>
+                    </div>
                 </div>
-                <div class="calendar-day">
-                    <div class="day-title">26</div>
-                    <div class="day-comment">Comentario del día 26</div>
+                <div class="calendar-day" id="calendar_id_25">
+                    <span class="day-title" id="id_25"></span>
+                    <div class="day-comment">
+                        <span class="comment-0"><br></span>
+                        <span class="comment-0"><br></span>
+                        <span class="comment-1">Curso Boostrap</span>
+                    </div>
                 </div>
-                <div class="calendar-day">
-                    <div class="day-title">27</div>
-                    <div class="day-comment">Comentario del día 27</div>
+                <div class="calendar-day" id="calendar_id_26">
+                    <span class="day-title" id="id_26"></span>
+                    <div class="day-comment">
+                        <span class="comment-0"><br></span>
+                        <span class="comment-2">Curso PHP</span>
+                        <span class="comment-0"><br></span>
+                    </div>
                 </div>
-                <div class="calendar-day">
-                    <div class="day-title">28</div>
-                    <div class="day-comment">Comentario del día 28</div>
+                <div class="calendar-day" id="calendar_id_27">
+                    <span class="day-title" id="id_27"></span>
+                    <div class="day-comment">
+                        <span class="comment-0"><br></span>
+                        <span class="comment-0"><br></span>
+                        <span class="comment-3">Curso UX</span>
+                    </div>
                 </div>
-                <div class="calendar-day">
-                    <div class="day-title">29</div>
-                    <div class="day-comment">Comentario del día 39</div>
+                <div class="calendar-day" id="calendar_id_28">
+                    <span class="day-title" id="id_28"></span>
+                    <div class="day-comment">
+                        <span class="comment-0"><br></span>
+                        <span class="comment-3">Curso Inglés</span>
+                        <span class="comment-0"><br></span>
+                    </div>
                 </div>
-                <div class="calendar-day">
-                    <div class="day-title">30 Septiembre</div>
-                    <div class="day-comment">Comentario del día 30</div>
+                <div class="calendar-day" id="calendar_id_29">
+                    <span class="day-title" id="id_29"></span>
+                    <div class="day-comment">
+                        <span class="comment-1">Curso Laravel</span>
+                        <span class="comment-0"><br></span>
+                        <span class="comment-0"><br></span>
+                    </div>
                 </div>
-            </div>
-        </div>
+                <div class="calendar-day" id="calendar_id_30">
+                    <span class="day-title" id="id_30"></span>
+                    <div class="day-comment">
+                        <span class="comment-0"><br></span>
+                        <span class="comment-1">Curso html5</span>
+                        <span class="comment-3">Diseño gráfico</span>
+                    </div>
+                </div>
+                <div class="calendar-day" id="calendar_id_31">
+                    <span class="day-title" id="id_31"></span>
+                    <div class="day-comment">
+                        <span class="comment-2">Curso React</span>
+                        <span class="comment-0"><br></span>
+                        <span class="comment-0"><br></span>
+                    </div>
+                </div>
+                <div class="calendar-day" id="calendar_id_32">
+                    <span class="day-title" id="id_32"></span>
+                    <div class="day-comment">
+                        <span class="comment-0"><br></span>
+                        <span class="comment-0"><br></span>
+                        <span class="comment-0"><br></span>
+                    </div>
+                </div>
+                <div class="calendar-day" id="calendar_id_33">
+                    <span class="day-title" id="id_33"></span>
+                    <div class="day-comment">
+                        <span class="comment-0"><br></span>
+                        <span class="comment-2">Curso PHP</span>
+                        <span class="comment-0"><br></span>
+                    </div>
+                </div>
+                <div class="calendar-day" id="calendar_id_34">
+                    <span class="day-title" id="id_34"></span>
+                    <div class="day-comment">
+                        <span class="comment-0"><br></span>
+                        <span class="comment-0"><br></span>
+                        <span class="comment-3">Curso UX</span>
+                    </div>
+                </div>
+                <div class="calendar-day" id="calendar_id_35">
+                    <span class="day-title" id="id_35"></span>
+                    <div class="day-comment">
+                        <span class="comment-0"><br></span>
+                        <span class="comment-0"><br></span>
+                        <span class="comment-0"><br></span>
+                    </div>
+                </div>
+                <div class="calendar-day" id="calendar_id_36">
+                    <span class="day-title" id="id_36"></span>
+                    <div class="day-comment">
+                        <span class="comment-0"><br></span>
+                        <span class="comment-0"><br></span>
+                        <span class="comment-0"><br></span>
+                    </div>
+                </div>
+                <div class="calendar-day" id="calendar_id_37">
+                    <span class="day-title" id="id_37"></span>
+                    <div class="day-comment">
+                        <span class="comment-0"><br></span>
+                        <span class="comment-1">Curso html5</span>
+                        <span class="comment-3">Diseño gráfico</span>
+                    </div>
+                </div>
+                <div class="calendar-day" id="calendar_id_38">
+                    <span class="day-title" id="id_38"></span>
+                    <div class="day-comment">
+                        <span class="comment-0"><br></span>
+                        <span class="comment-0"><br></span>
+                        <span class="comment-0"><br></span>
+                    </div>
+                </div>
+                <div class="calendar-day" id="calendar_id_39">
+                    <span class="day-title" id="id_39"></span>
+                    <div class="day-comment">
+                        <span class="comment-0"><br></span>
+                        <span class="comment-0"><br></span>
+                        <span class="comment-0"><br></span>
+                    </div>
+                </div>
+                <div class="calendar-day" id="calendar_id_40">
+                    <span class="day-title" id="id_40"></span>
+                    <div class="day-comment">
+                        <span class="comment-0"><br></span>
+                        <span class="comment-0"><br></span>
+                        <span class="comment-0"><br></span>
+                    </div>
+                </div>
+                <div class="calendar-day" id="calendar_id_41">
+                    <span class="day-title" id="id_41"></span>
+                    <div class="day-comment">
+                        <span class="comment-0"><br></span>
+                        <span class="comment-0"><br></span>
+                        <span class="comment-0"><br></span>
+                    </div>
+                </div>
+            </article>
+        </section>
+
     </main>
-    <div id="footer"></div>
+    <footer></footer>
     <script src="scripts/includeHeaderFooter.js"></script>
+    <script src="scripts/DOM.js"></script>
+    <script>
+        window.addEventListener("resize", (event) => {
+            document.getElementById("resolucion").innerHTML=window.innerWidth + ' x ' + window.innerHeight;
+        });
+</script>
 </body>
 </html>

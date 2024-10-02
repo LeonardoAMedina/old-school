@@ -6,6 +6,13 @@
 	font-family: Arial, sans-serif;
 }
 
+header{
+	position:sticky;
+	top:0;
+	/*Esto sirve para corregir la propiedad que le da el relative y que no esten superpuestos los objetos*/
+	z-index: 1000;
+}
+
 h1{
 	font-size: 2em;
 	margin-bottom: 5%;
@@ -17,7 +24,7 @@ main{
 }
 
 body{
-	background: linear-gradient(180deg, #004080, #333333);
+	background: linear-gradient(#004080, #008080,#004080);
 }
 
 .titulos{
@@ -26,6 +33,13 @@ body{
 	font-weight: bold;
 }
 
+.modalidad-online{
+	color: #45E6AA;
+}
+
+.modalidad-presencial{
+    color: #A145E6;
+}
 .link-button{
     display: inline-flex;
     align-items: center;
@@ -43,7 +57,7 @@ body{
 .curso {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: center;
+	justify-content: space-between;
 	margin-top: 5%;
 	margin-bottom: 2%;
 	line-height: 1.9em;
@@ -51,6 +65,7 @@ body{
 
 .curso-contenedor-img{
 	width: 40%;
+	text-align: center;
 }
 
 .curso__imagen {
@@ -59,7 +74,7 @@ body{
 }
 
 .curso__detalles {
-	width: 60%;
+	width: 50%;
 	font-size: 1.17em;
 	align-self: center;
 }
@@ -139,21 +154,22 @@ details{
 }
 
 @media only screen and (min-width: 600px){
+
 	.curso-contenedor-img{
-		width: 40%;
+		width: 100%;
 	}
 	.curso__detalles {
-		width: 60%;
+		width: 100%;
 	}
 }
 
 @media only screen and (min-width: 992px){
 	.curso-contenedor-img{
-		width: 25%;
+		width: 35%;
 	}
 
 	.curso__detalles {
-		width: 75%;
+		width: 60%;
 	}	
 }
 /* Fin seccion curso */

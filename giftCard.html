@@ -9,6 +9,14 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/footer.css">
     <style>
+
+        header{
+            position:sticky;
+            top:0;
+            /*Esto sirve para corregir la propiedad que le da el relative y que no esten superpuestos los objetos*/
+            z-index: 1000;
+        }
+
         .giftcard-preview {
             display: flex;
             flex-direction: column;
@@ -19,7 +27,8 @@
             background-image: url('images/giftCard/gift-card-bg-1.png');
             background-repeat: no-repeat;
             background-size: 100%;
-            width: 48rem;
+            width: 55em;
+            height: 55em;
         }
         .price-tag {
             position: absolute;
@@ -111,7 +120,7 @@
     </style>
 </head>
 <body>
-    <div id="header"></div>
+    <header></header>
     <main>
         <section id="preview" class="giftcard-preview">
             <div id="show-input-price" class="price-tag">$0000.-</div>
@@ -120,80 +129,84 @@
         </section>
         <aside class="form-container">
             <h2>Personalización de Giftcard</h2>
-            <div class="form-group">
-                <label for="nombre">Nombre Destinatario</label>
-                <input  id="recipientInput" type="text" onkeydown="return /[a-zA-Z ]/i.test(event.key)" name="nombre">
-            </div>
-            <div class="form-group">
-                <label>Color</label>
-                <div class="options">
-                    <label><span name="r-span" class="color-1"></span><input checked type="radio" name="font-color" value="color-1"></span></label>
-                    <label><span name="r-span" class="color-2"></span><input type="radio" name="font-color" value="color-2"></label>
-                    <label><span name="r-span" class="color-3"></span><input type="radio" name="font-color" value="color-3"></label>
-                    <label><span name="r-span" class="color-4"></span><input type="radio" name="font-color" value="color-4"></label>
-                    <label><span name="r-span" class="color-5"></span><input type="radio" name="font-color" value="color-5"></label>
+            
+            <form action="#">
+                <div class="form-group">
+                    <label for="nombre">Nombre Destinatario</label>
+                    <input  id="recipientInput" type="text"
+                        onkeydown="return /[a-zA-Z ]/i.test(event.key)" name="nombre" required>
                 </div>
-            </div>
-            <div class="form-group">
-                <label>Tamaño de fuente</label>
-                <div class="options">
-                    <label><input id="f-size-1" type="radio" name="font-size" value="20"> 20px</label>
-                    <label><input id="f-size-2" type="radio" name="font-size" value="28"> 28px</label>
-                    <label><input checked id="f-size-3" type="radio" name="font-size" value="32"> 32px</label>
-                    <label><input id="f-size-4" type="radio" name="font-size" value="48"> 48px</label>
-                    <label><input id="f-size-5" type="radio" name="font-size" value="60"> 60px</label>
+                <div class="form-group">
+                    <label>Color</label>
+                    <div class="options">
+                        <label><span name="r-span" class="color-1"></span><input checked type="radio" name="font-color" value="color-1"></span></label>
+                        <label><span name="r-span" class="color-2"></span><input type="radio" name="font-color" value="color-2"></label>
+                        <label><span name="r-span" class="color-3"></span><input type="radio" name="font-color" value="color-3"></label>
+                        <label><span name="r-span" class="color-4"></span><input type="radio" name="font-color" value="color-4"></label>
+                        <label><span name="r-span" class="color-5"></span><input type="radio" name="font-color" value="color-5"></label>
+                    </div>
                 </div>
-            </div>
-            <div class="form-group">
-                <label for="monto">Monto $</label>
-                <input type="number" min="0" id="amount" name="monto">
-            </div>
-            <div class="form-group">
-                <label>Ubicación</label>
-                <div class="options">
-                    <label>
-                        <img class="position-img" src="/images/giftCard/position-1.png" alt="Opcion 1">
-                        <input name="position-check" type="radio" value="1">
-                    </label>
-                    <label>
-                        <img class="position-img" src="/images/giftCard/position-2.png" alt="Opcion 2">
-                        <input checked name="position-check" type="radio" value="2">
-                    </label>
-                    <label>
-                        <img class="position-img" src="/images/giftCard/position-3.png" alt="Opcion 3">
-                        <input name="position-check" type="radio" value="3">
-                    </label>
+                <div class="form-group">
+                    <label>Tamaño de fuente</label>
+                    <div class="options">
+                        <label><input id="f-size-1" type="radio" name="font-size" value="20"> 20px</label>
+                        <label><input id="f-size-2" type="radio" name="font-size" value="28"> 28px</label>
+                        <label><input checked id="f-size-3" type="radio" name="font-size" value="32"> 32px</label>
+                        <label><input id="f-size-4" type="radio" name="font-size" value="48"> 48px</label>
+                        <label><input id="f-size-5" type="radio" name="font-size" value="60"> 60px</label>
+                    </div>
                 </div>
-            </div>
-            <div class="form-group">
-                <label>Fondo</label>
-                <div class="options">
-                    <label>
-                        <img class="preview-bg-img" src="/images/giftCard/gift-card-bg-1-preview.png" alt="Opcion 3">
-                        <input checked type="radio" name="back-color" value="url('images/giftCard/gift-card-bg-1.png')">
-                    </label>
-                    <label>
-                        <img class="preview-bg-img" src="/images/giftCard/gift-card-bg-2-preview.png" alt="Opcion 3">
-                        <input type="radio" name="back-color" value="url('images/giftCard/gift-card-bg-2.png')">
-                    </label>
-                    <label>
-                        <img class="preview-bg-img" src="/images/giftCard/gift-card-bg-3-preview.png" alt="Opcion 3">
-                        <input type="radio" name="back-color" value="url('images/giftCard/gift-card-bg-3.png')">
-                    </label>
-                    <label>
-                        <img class="preview-bg-img" src="/images/giftCard/gift-card-bg-4-preview.png" alt="Opcion 3">
-                        <input type="radio" name="back-color" value="url('images/giftCard/gift-card-bg-4.png')">
-                    </label>
-                    <label>
-                        <img class="preview-bg-img" src="/images/giftCard/gift-card-bg-5-preview.png" alt="Opcion 3">
-                        <input type="radio" name="back-color" value="url('images/giftCard/gift-card-bg-5.png')">
-                    </label>
+                <div class="form-group">
+                    <label for="monto">Monto $</label>
+                    <input type="number" min="0" id="amount" name="monto" required>
                 </div>
-            </div>
-            <button class="confirm-button">Aceptar</button>
+                <div class="form-group">
+                    <label>Ubicación</label>
+                    <div class="options">
+                        <label>
+                            <img class="position-img" src="images/giftCard/position-1.png" alt="Opcion 1">
+                            <input name="position-check" type="radio" value="1">
+                        </label>
+                        <label>
+                            <img class="position-img" src="images/giftCard/position-2.png" alt="Opcion 2">
+                            <input checked name="position-check" type="radio" value="2">
+                        </label>
+                        <label>
+                            <img class="position-img" src="images/giftCard/position-3.png" alt="Opcion 3">
+                            <input name="position-check" type="radio" value="3">
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Fondo</label>
+                    <div class="options">
+                        <label>
+                            <img class="preview-bg-img" src="images/giftCard/gift-card-bg-1-preview.png" alt="Opcion 3">
+                            <input checked type="radio" name="back-color" value="url('images/giftCard/gift-card-bg-1.png')">
+                        </label>
+                        <label>
+                            <img class="preview-bg-img" src="images/giftCard/gift-card-bg-2-preview.png" alt="Opcion 3">
+                            <input type="radio" name="back-color" value="url('images/giftCard/gift-card-bg-2.png')">
+                        </label>
+                        <label>
+                            <img class="preview-bg-img" src="images/giftCard/gift-card-bg-3-preview.png" alt="Opcion 3">
+                            <input type="radio" name="back-color" value="url('images/giftCard/gift-card-bg-3.png')">
+                        </label>
+                        <label>
+                            <img class="preview-bg-img" src="images/giftCard/gift-card-bg-4-preview.png" alt="Opcion 3">
+                            <input type="radio" name="back-color" value="url('images/giftCard/gift-card-bg-4.png')">
+                        </label>
+                        <label>
+                            <img class="preview-bg-img" src="images/giftCard/gift-card-bg-5-preview.png" alt="Opcion 3">
+                            <input type="radio" name="back-color" value="url('images/giftCard/gift-card-bg-5.png')">
+                        </label>
+                    </div>
+                </div>
+                <button class="confirm-button" type="submit">Aceptar</button>
+            </form>    
         </aside>
     </main>
-    <div id="footer"></div>
+    <footer></footer>
     <script src="scripts/includeHeaderFooter.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
