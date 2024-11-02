@@ -8,15 +8,52 @@
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/button.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+        .swiper-wrapper {
+            display: flex; /* Ensure flexbox layout */
+            height: auto; /* Reset height */
+        }
+
+    
+        .swiper {
+          width: 100%;
+          height: 100%;
+        }
+    
+        .swiper-slide {
+          display: flex;
+        }
+    
+        .swiper-slide img {
+          height: auto;
+          width: 100%;
+        }
+      </style>
 </head>
 <body>
     <header></header>
     <main>
         <section class="slider">
-            <div class="slider-carousel">
-                <img class="slide-img" src="./images/slider-1a.jpg" alt="Imagen carousel 1">
-                <button class="btn-display-left"><</button>
-                <button class="btn-display-right">></button>
+              <!-- Swiper -->
+            <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="./images/cursos/react.jpg" alt="Imagen carousel 1"/>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/cursos/js.jpg" alt="Imagen carousel 2"/>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/cursos/python.jpg" alt="Imagen carousel 3"/>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/cursos/vue.jpg" alt="Imagen carousel 4"/>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
             </div>
         </section>
 
@@ -45,129 +82,9 @@
             </div>
         </section>
 
-        <section class="cursos-relacionados">
+        <section id="cursos__relacionados_js" class="cursos-relacionados">
             <div class="cursos-relacionados-title">
                 <h4 class="titulos">Cursos destacados</h4>
-            </div>
-
-            <div class="cursos-relacionados-item">
-                <div class="cursos-relacionados-item-contenedor-imagen">
-                    <img src="./images/cursos/js.jpg" alt="Foto Curso 1" class="cursos-relacionados-item__imagen">
-                </div>
-                <div class="cursos-relacionados-item-contenedor-lista">
-                <ul class="cursos-relacionados-item-lista">
-                    <li>JavaScript Moderno</li>
-                    <li>52hs</li>
-                    <li>$199,99</li>
-                    <li class="modalidad-online">Online</li>
-                </ul>
-                <a class="link-button" href="./courseDetaile.html">Ver detalle</a>
-                </div>
-            </div>
-
-            <div class="cursos-relacionados-item">
-                <div class="cursos-relacionados-item-contenedor-imagen">
-                    <img src="./images/cursos/python.jpg" alt="Foto Curso 1" class="cursos-relacionados-item__imagen">
-                </div>
-                <div class="cursos-relacionados-item-contenedor-lista">
-                <ul class="cursos-relacionados-item-lista">
-                    <li>Curso Maestro de Python</li>
-                    <li>36hs</li>
-                    <li>$13,99</li>
-                    <li class="modalidad-presencial">Presencial</li>
-                </ul>
-                <a class="link-button" href="./courseDetailePresencial.html">Ver detalle</a>
-                </div>
-            </div>
-
-            <div class="cursos-relacionados-item">
-                <div class="cursos-relacionados-item-contenedor-imagen">
-                    <img src="./images/cursos/vue.jpg" alt="Foto Curso 1" class="cursos-relacionados-item__imagen">
-                </div>
-                <div class="cursos-relacionados-item-contenedor-lista">
-                <ul class="cursos-relacionados-item-lista">
-                    <li>Vue js 2</li>
-                    <li>6 hs</li>
-                    <li>$12.99</li>
-                    <li class="modalidad-online">Online</li>
-                </ul>
-                <a class="link-button" href="./courseDetaile.html">Ver detalle</a>
-                </div>
-            </div>
-
-            <div class="cursos-relacionados-item">
-                <div class="cursos-relacionados-item-contenedor-imagen">
-                    <img src="./images/cursos/react.jpg" alt="Foto Curso 1" class="cursos-relacionados-item__imagen">
-                </div>
-                <div class="cursos-relacionados-item-contenedor-lista">
-                <ul class="cursos-relacionados-item-lista">
-                    <li>Pro Dev con React</li>
-                    <li>28 hs</li>
-                    <li>$8,99</li>
-                    <li class="modalidad-presencial">Presencial</li>
-                </ul>
-                <a class="link-button" href="./courseDetailePresencial.html">Ver detalle</a>
-                </div>
-            </div>
-
-            <div class="cursos-relacionados-item">
-                <div class="cursos-relacionados-item-contenedor-imagen">
-                    <img src="./images/cursos/excel.jpg" alt="Foto Curso 1" class="cursos-relacionados-item__imagen">
-                </div>
-                <div class="cursos-relacionados-item-contenedor-lista">
-                <ul class="cursos-relacionados-item-lista">
-                    <li>Excel Profesional 2024</li>
-                    <li>8 hs</li>
-                    <li>$13,99</li>
-                    <li class="modalidad-presencial">Presencial</li>
-                </ul>
-                <a class="link-button" href="./courseDetailePresencial.html">Ver detalle</a>
-                </div>
-            </div>
-
-            <div class="cursos-relacionados-item">
-                <div class="cursos-relacionados-item-contenedor-imagen">
-                    <img src="./images/cursos/front.jpg" alt="Foto Curso 1" class="cursos-relacionados-item__imagen">
-                </div>
-                <div class="cursos-relacionados-item-contenedor-lista">
-                <ul class="cursos-relacionados-item-lista">
-                    <li>Web Front End</li>
-                    <li>52 hs</li>
-                    <li>$16,99</li>
-                    <li class="modalidad-online">Online</li>
-                </ul>
-                <a class="link-button" href="./courseDetaile.html">Ver detalle</a>
-                </div>
-            </div>
-
-            <div class="cursos-relacionados-item">
-                <div class="cursos-relacionados-item-contenedor-imagen">
-                    <img src="./images/cursos/full-js.jpg" alt="Foto Curso 1" class="cursos-relacionados-item__imagen">
-                </div>
-                <div class="cursos-relacionados-item-contenedor-lista">
-                <ul class="cursos-relacionados-item-lista">
-                    <li>Web Full Stack Js</li>
-                    <li>30 hs</li>
-                    <li>$7,99</li>
-                    <li class="modalidad-online">Online</li>
-                </ul>
-                <a class="link-button" href="./courseDetaile.html">Ver detalle</a>
-                </div>
-            </div>
-
-            <div class="cursos-relacionados-item">
-                <div class="cursos-relacionados-item-contenedor-imagen">
-                    <img src="./images/cursos/powerbi.jpg" alt="Foto Curso 1" class="cursos-relacionados-item__imagen">
-                </div>
-                <div class="cursos-relacionados-item-contenedor-lista">
-                <ul class="cursos-relacionados-item-lista">
-                    <li>Power Bi Completo</li>
-                    <li>6 hs</li>
-                    <li>$2,99</li>
-                    <li class="modalidad-online">Online</li>
-                </ul>
-                <a class="link-button" href="./courseDetaile.html">Ver detalle</a>
-                </div>
             </div>
         </section>
 
@@ -183,6 +100,28 @@
         
     </main>
     <footer></footer>
-    <script src="scripts/includeHeaderFooter.js"></script>    
+    <script src="scripts/includeHeaderFooter.js"></script>
+    <script src="scripts/courses_management.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+    var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        effect: "fade",
+        navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        },
+        autoplay: {
+            delay: 2000, // 1 second
+            disableOnInteraction: false, // Enable navigation buttons during autoplay
+        },
+    });
+    </script>   
 </body>
 </html>

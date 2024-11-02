@@ -23,7 +23,7 @@ function cargar_calendario()
 
     var mes=fec_aux.split("-");
     mes=mes[1];
- 
+
     var dia_sem;
     var aux_mes;
     for (let i = 0; i < arr_articles.length; i++) {
