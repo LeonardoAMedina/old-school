@@ -47,8 +47,11 @@ body{
 
 .slider{
     margin-top: 5%;
+    margin-left: 15%;
+    margin-right: 15%;
     display: flex;
     justify-content: center;
+    max-width: 70%;
 }
 
 .slider-carousel{

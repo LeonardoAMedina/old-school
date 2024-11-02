@@ -10,10 +10,10 @@
     <link rel="stylesheet" href="css/button.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <style>
-.swiper-wrapper {
-    display: flex; /* Ensure flexbox layout */
-    height: auto; /* Reset height */
-}
+        .swiper-wrapper {
+            display: flex; /* Ensure flexbox layout */
+            height: auto; /* Reset height */
+        }
 
     
         .swiper {
@@ -235,6 +235,10 @@
         pagination: {
         el: ".swiper-pagination",
         clickable: true,
+        },
+        autoplay: {
+            delay: 2000, // 1 second
+            disableOnInteraction: false, // Enable navigation buttons during autoplay
         },
     });
     </script>   
