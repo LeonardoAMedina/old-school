@@ -4,6 +4,13 @@
     font-family: Arial, sans-serif;
 }
 
+header{
+    position:sticky;
+    top:0;
+    /*Esto sirve para corregir la propiedad que le da el relative y que no esten superpuestos los objetos*/
+    z-index: 1000;
+}
+
 main{
     margin-left: 10%;
     margin-right: 10%;

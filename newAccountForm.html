@@ -12,17 +12,17 @@
 		<section class="registration">
 			<div class="login-header">Crear cuenta nueva</div>
 
-			<form class="login-form" action="/old-school.html" method="get">
-					<label class="login-form-label" for="username"><b>Email</b></label><br/>
+			<form class="login-form" action="./loginForm.html" id="crearUsuario_js">
+					<label class="login-form-label" for="email"><b>Email</b></label>
 					<input class="login-form-input" type="email" placeholder="Ingrese Email" name="email" required>
 
-					<label class="login-form-label" for="username"><b>Nombre de usuario:</b></label><br/>
-					<input class="login-form-input" type="text" placeholder="Ingrese nombre de usuario" name="username" required>
+					<label class="login-form-label" for="username"><b>Nombre de usuario:</b></label>
+					<input class="login-form-input" type="text" placeholder="Nombre de usuario" name="username" required>
 
-					<label class="login-form-label" for="password"><b>Contraseña:</b></label><br/>
-					<input class="login-form-input" type="password" placeholder="Ingrese contraseña" name="password" required>
+					<label class="login-form-label" for="password"><b>Contraseña:</b></label>
+					<input class="login-form-input" type="password" placeholder="Contraseña" name="password" required>
 
-					<label class="login-form-label" for="passwordCheck"><b>Repita contraseña:</b></label><br/>
+					<label class="login-form-label" for="passwordCheck"><b>Repita contraseña:</b></label>
 					<input class="login-form-input" type="password" placeholder="Repita contraseña" name="passwordCheck" required>
 					<div class="form-btns">
 						<button type="submit" class="btn-weak">Crear cuenta</button>					
@@ -34,5 +34,6 @@
 			</div>
 		</section>
 	</main>
+	<script src="./scripts/new_account.js"></script>
 </body>
 </html>

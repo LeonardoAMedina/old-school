@@ -3,6 +3,7 @@
     align-items: center;
     background-color: #8d96bb;
     padding: 0.625em 1.5625em 0.625em 1.25em;
+    flex-wrap: wrap;
 }
 .logo {
     /* background-color: #145c73; */
