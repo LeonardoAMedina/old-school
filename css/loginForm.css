@@ -27,12 +27,12 @@ body {
 	box-shadow: 0 0 70px rgba(0, 0, 0, 1.8);
     max-width: 400px;
     width: 40vh;
-    height: auto;
+    height: 67vh;
 }
 
 .login-header {
     font-size: 24px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     text-align: center;
 }
 
@@ -42,7 +42,7 @@ body {
 }
 
 .login-form-label {
-    margin-bottom: 2px;
+    margin-bottom: 5px;
 }
 
 .login-form-input {
