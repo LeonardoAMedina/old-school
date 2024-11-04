@@ -23,11 +23,11 @@ campoPassword.addEventListener('click' , (event) =>{
 });
 
 form.addEventListener('submit', (event) =>{
-    
+
     event.preventDefault();
 
     let userName = form.elements['username'].value;
-    let password = form.elements['password'].value;    
+    let password = form.elements['password'].value;
 
     let coincidencia;
     const chequearUsuarioYcontrasenia = (usuario) => {
@@ -42,7 +42,7 @@ form.addEventListener('submit', (event) =>{
     if(coincidencia.length){
         delete coincidencia[0].password;
         localStorage.setItem('loggedUser', JSON.stringify(coincidencia));
-        
+
         form.submit();
     }else{        
         mensajeError.style.display ='unset';

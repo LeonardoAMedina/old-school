@@ -11,7 +11,7 @@ if(usuariosExistentes !=null){
 let mensajeError= document.getElementById('error_js');
 
 form.addEventListener('submit', (event) =>{
-    
+
     event.preventDefault();
     mensajeError.innerHTML='';
     mensajeError.style.display ='none';
@@ -27,7 +27,7 @@ form.addEventListener('submit', (event) =>{
     const chequearUsuario = (usuario) => {
 
         if (userName == usuario.name){
-            let errorUsuarioDuplicado = document.createTextNode(`* El nombre de usuario ya existe. Elija otro nombre de usuario`);       
+            let errorUsuarioDuplicado = document.createTextNode(`* El nombre de usuario ya existe. Elija otro nombre de usuario`);
             mensajeError.appendChild(errorUsuarioDuplicado);
             mensajeError.appendChild(saltoDeLinea);
             formTieneErrores = true;
@@ -45,7 +45,7 @@ form.addEventListener('submit', (event) =>{
     };
 
     if(/[^a-z]/.test(userName)){
-        let errorUserName = document.createTextNode(`* El nombre solo puede estar compuesto por letras`);       
+        let errorUserName = document.createTextNode(`* El nombre solo puede estar compuesto por letras`);
         mensajeError.appendChild(errorUserName);
         mensajeError.appendChild(saltoDeLinea);
         formTieneErrores = true;

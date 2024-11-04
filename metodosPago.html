@@ -53,11 +53,8 @@
     <script>
         function shoppingCartIncrement(event) {
             event.preventDefault();
-            const shoppingCounter = document.querySelector('.badge');
-            let currentCount = parseInt(shoppingCounter.innerText);
-            shoppingCounter.innerText = currentCount + 1;
-            shoppingCounter.style.display = 'block';
-
+            //TODO implementar popup pago finalizado los valores se toman del localstorage
+            console.log("efectuo el pago");
             // Clear the form fields
             const form = event.target;
             form.reset();
