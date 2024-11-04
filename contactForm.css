@@ -5,6 +5,41 @@ body {
     box-sizing: border-box;
 }
 
+.modal {
+    /* modals are hidden by default */
+    display: none;
+
+    /* modal container fixed across whole screen */
+    position: fixed;
+    inset: 0;
+
+    /* z-index must be higher than everything else on the page */
+    z-index: 10000;
+    
+    /* semi-transparent black background exposed by padding */
+    background-color: rgba(0, 0, 0, .75);
+    color:black;
+    padding: 5%;
+}
+
+.modal.open {
+    display: block;
+}
+
+.modal-body {
+    position:fixed;
+    top:25%;
+    left:25%;
+    padding: 5%;
+    background: #fff;
+    
+}
+
+body.modal-open {
+    /* body overflow is hidden to hide main scrollbar when modal window is open */
+    overflow: hidden;
+}
+
 header{
     position:sticky;
     top:0;
@@ -42,6 +77,15 @@ header{
     border-radius: 4px;
 }
 
+.form_error{
+    color:red;
+    display:none;
+}
+.form-datos_caracteresIngresados{
+    color:white;
+    display:none;
+}
+
 article{
     display: flex;
     justify-content: space-between;
@@ -75,7 +119,7 @@ textarea {
 }
 
 .ubicacion .mapa {
-    width: 72rem;
+    /*width: 72rem;*/
     height: 30rem;
     background-color: #e9e9e9;
     background-repeat: no-repeat;
