@@ -72,16 +72,17 @@ cursoContainer.innerHTML =
 			</div>
             `;
 const curso_detalles = document.getElementById('curso__detalles_js');
-const link= document.createElement('a');
+const link= document.createElement('button');
 link.classList.add('link-button');
 
 if (cursoAMostrar[0].modalidad == 'online'){
-	link.href='./metodosPago.html';
+	//link.href='./metodosPago.html';
+	link.onclick=()=>loadShoppingCart(idDeCurso);
 	link.innerHTML= 'Agregar al carrito';
 }
 
 if (cursoAMostrar[0].modalidad == 'presencial'){
-	link.href='./registrationForm.html';
+	link.href='./registrationForm.html?idDeCurso=' + idDeCurso;
 	link.innerHTML= 'Inscribirse';
 }
 

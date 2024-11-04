@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="registrationForm.css">
+    <link rel="stylesheet" href="css/button.css">
 </head>
 <body>
     <header></header>
@@ -31,11 +32,11 @@
                 </article>
 
                 <article class="register-form-item">
-                    <input class="register-form-input"type="text" id="name1" name="name1" placeholder="Nombre">
+                    <input class="register-form-input"type="text" id="name2" name="name1" placeholder="Nombre">
                     
-                    <input class="register-form-input"type="text" id="surname1" name="surname1" placeholder="Apellido">
+                    <input class="register-form-input"type="text" id="surname2" name="surname1" placeholder="Apellido">
 
-                    <input class="register-form-input" type="email" id="mail1" name="mail1" placeholder="Mail">
+                    <input class="register-form-input" type="email" id="mail2" name="mail1" placeholder="Mail">
 
                     <button class="btn-delete-person" type="button">
                         <img class="icon" src="./images/minus-icon-wh.svg">
@@ -43,11 +44,11 @@
                 </article>
 
                 <article class="register-form-item">
-                    <input class="register-form-input"type="text" id="name1" name="name1" placeholder="Nombre">
+                    <input class="register-form-input"type="text" id="name3" name="name1" placeholder="Nombre">
                     
-                    <input class="register-form-input"type="text" id="surname1" name="surname1" placeholder="Apellido">
+                    <input class="register-form-input"type="text" id="surname3" name="surname1" placeholder="Apellido">
 
-                    <input class="register-form-input" type="email" id="mail1" name="mail1" placeholder="Mail">
+                    <input class="register-form-input" type="email" id="mail3" name="mail1" placeholder="Mail">
 
                     <button class="btn-delete-person" type="button">
                         <img class="icon" src="./images/minus-icon-wh.svg">
@@ -63,11 +64,18 @@
                 <br/>
                 <span class="register-form-importe">$1500 </span>
                 
-                <button class="link-button" type="submit" >Inscribirse</button>              
+                <button class="link-button" type="button" onclick='chargeShoppingCard()'>Inscribirse</button>              
             </form>
         </section>
     </main>
     <footer></footer>
+    <script>
+        const chargeShoppingCard = () => {
+            const parametrosUrl = new URLSearchParams(window.location.search);
+            const idDeCurso= parametrosUrl.get('idDeCurso');
+            loadShoppingCart(idDeCurso);
+        }
+    </script>
     <script src="../scripts/includeHeaderFooter.js"></script>
 </body>
 </html>

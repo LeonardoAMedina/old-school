@@ -23,7 +23,7 @@ const loadShoppingCart = (id) => {
         '<span>Nuevo Articulo</span>' +
             '<button class="remove-item" onClick=deleteFromShoppingCart('
              + id + ')>❌</button>' +
-    '</div><a class="link-button">Pagar</a>';
+    '</div><a class="link-button" href="./metodosPago.html">Pagar</a>';
 
     const shoppingCounter = document.querySelector('.badge');
             let currentCount = parseInt(shoppingCounter.innerText);
