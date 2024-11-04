@@ -14,20 +14,29 @@
     <header></header>
     <main>
         <section class="container">
+
             <article class="contacto">
                 <div class="centrado">
                     <h2>CONTACTO</h2>
                 </div>
-                <form action="contactForm.html">
+                <form action="contactForm.html" id="contact-form_js">
                     <input type="text" name="name" placeholder="Nombre" required>
+                    <input type="text" name="surname" placeholder="Apellido" required>
                     <input type="email" name="email" placeholder="Correo Electrónico" required>
                     <input type="tel" name="tel" placeholder="Teléfono" required>
-                    <textarea class="datos-contacto" name="datos" placeholder="Información de contacto"></textarea>
+                    <textarea class="datos-contacto" name="datos" placeholder="Información de contacto" required></textarea>
+                    <p id="caracteres-ingresados_js" class="form-datos_caracteresIngresados"></p>
+                    <p id="error_js" class="form_error"></p>
                     <div class="centrado">
                         <button class="confirm-button" type="submit">Enviar</button>
                     </div>
-                    
                 </form>
+                <div id="modal" class="modal">
+                    <div class="modal-body">
+                        <p>Su consulta ha sido enviada.</p>
+                        <button class="confirm-button" onclick="closeModal()">Aceptar</button>
+                    </div>
+                </div>
             </article>
 
             <article class="ubicacion">
@@ -37,6 +46,7 @@
         </section>
     </main>
     <footer></footer>
-    <script src="scripts/includeHeaderFooter.js"></script>
+    <script src="./scripts/includeHeaderFooter.js"></script>
+    <script src="./scripts/contact_form.js"></script>
 </body>
 </html>
