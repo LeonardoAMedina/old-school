@@ -6,17 +6,10 @@ body {
 }
 
 .modal {
-    /* modals are hidden by default */
     display: none;
-
-    /* modal container fixed across whole screen */
     position: fixed;
     inset: 0;
-
-    /* z-index must be higher than everything else on the page */
     z-index: 10000;
-
-    /* semi-transparent black background exposed by padding */
     background-color: rgba(0, 0, 0, .75);
     color:black;
     padding: 5%;

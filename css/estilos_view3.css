@@ -328,3 +328,28 @@ details{
 } 
 
 /*Fin seccion cursos relacionados*/
+
+/*Modal*/
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    background-color: rgba(0, 0, 0, .75);
+    color:black;
+    /*padding: 5%;*/
+}
+
+.modal.open {
+    display: block;
+}
+
+.modal-body {
+    position:fixed;
+    top:5%;
+	left: 5%;
+    padding: 15%;
+    background: #fff;
+
+}
+/*Fin modal*/

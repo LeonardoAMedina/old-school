@@ -72,21 +72,43 @@ cursoContainer.innerHTML =
 			</div>
             `;
 const curso_detalles = document.getElementById('curso__detalles_js');
-const link= document.createElement('button');
-link.classList.add('link-button');
+const boton= document.createElement('button');
+const link= document.createElement('a');
 
 if (cursoAMostrar[0].modalidad == 'online'){
-	//link.href='./metodosPago.html';
-	link.onclick=()=>loadShoppingCart(idDeCurso);
-	link.innerHTML= 'Agregar al carrito';
+	
+	boton.classList.add('link-button');
+	boton.setAttribute('id', 'btn-add-shop')
+	boton.onclick=()=>loadShoppingCart(idDeCurso);
+	boton.innerHTML= 'Agregar al carrito';
+	curso_detalles.appendChild(boton);
 }
 
 if (cursoAMostrar[0].modalidad == 'presencial'){
+	
+	link.classList.add('link-button');	
 	link.href='./registrationForm.html?idDeCurso=' + idDeCurso;
 	link.innerHTML= 'Inscribirse';
+	curso_detalles.appendChild(link);
 }
 
-curso_detalles.appendChild(link);
+if(boton){
+	boton.addEventListener( 'click', (event =>{
+		let modal = document.getElementById('modal');
+        modal.classList.add('open');
+        document.body.classList.add('modal-open');
+		const modalBody = document.getElementById('modal-body');
+		modalBody.innerHTML=`
+		<h3>Felicitaciones!!!</h3> 
+		<p>Agregaste el curso ${cursoAMostrar[0].name} a tu carrito</>
+		</br></br>
+		<button class='link-button' onclick="closeModal()">Aceptar</button>
+		`;
+		
+	}));
+}
+
+
 
 const docenteContainer = document.getElementById('docente_container_js');
 const calificacionDocente= Number(cursoAMostrar[0].docente.calificacion);
@@ -161,3 +183,7 @@ const cargarCursos = () =>{
 cargarCursos();
 
 });
+
+function closeModal(){
+    window.location.replace('./old-school.html');
+}

@@ -44,7 +44,7 @@ form.addEventListener('submit', (event) =>{
         formTieneErrores = true;
     };
 
-    if(/[^a-z]/.test(userName)){
+    if(/[^A-z]/.test(userName)){
         let errorUserName = document.createTextNode(`* El nombre solo puede estar compuesto por letras`);
         mensajeError.appendChild(errorUserName);
         mensajeError.appendChild(saltoDeLinea);
