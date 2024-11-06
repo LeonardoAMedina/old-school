@@ -38,3 +38,16 @@ a.btn-strong:hover {
     justify-content: center;
     padding: 1em 0 1em 0;
 }
+
+.link-button{
+    display: inline-flex;
+    align-items: center;
+    background: #5ec1e5;
+    padding: 0 1.2em;
+    height: 2.5em;
+    border-radius: 1em;
+    color: white;
+    font-size: large;
+    text-decoration: none;
+
+}
