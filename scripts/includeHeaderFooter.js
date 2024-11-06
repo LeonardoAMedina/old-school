@@ -1,39 +1,97 @@
-async function loadHTML(file, tagName) {
+async function loadHTML(file, tagName, callback) {
     const response = await fetch(file);
     const text = await response.text();
     document.getElementsByTagName(tagName)[0].innerHTML = text;
+    if (callback) callback();
 }
 
 const loadShoppingCart = (id) => {
     const cursosData = localStorage.getItem('cursos');
-   // console.log(cursosData);
-    const cursosArray = JSON.parse(cursosData);
-    console.log(cursosArray.cursos[2].name);
+    const cursosArray = JSON.parse(cursosData);    
+    let curso = undefined;
 
-    const curso = cursosArray.cursos[id];
+    for ( let i = 0 ; i < cursosArray.cursos.length && ! curso; i ++) {
+        if (id == cursosArray.cursos[i].id) {
+            curso = cursosArray.cursos[i];
+        }
+    }
+    //Si no se encuentra el curso termina la funcion
     if(! curso) {
-        console.error("Curson no encontrado!!!")
+        console.error("Curso no encontrado!!!")
         return;
     }
-    //TODO verificar si el curso ya fue ingresado sino ingresarlo
-
-    //TODO generar codigo a partir de la coleccion de cursos seleccionados
-    document.getElementById('cartSidebar').innerHTML += 
-    '<div class="cart-item">' +
-        '<span>Nuevo Articulo</span>' +
-            '<button class="remove-item" onClick=deleteFromShoppingCart('
-             + id + ')>❌</button>' +
-    '</div><a class="link-button" href="./metodosPago.html">Pagar</a>';
-
-    const shoppingCounter = document.querySelector('.badge');
-            let currentCount = parseInt(shoppingCounter.innerText);
-            shoppingCounter.innerText = currentCount + 1;
-            shoppingCounter.style.display = 'block';
+    const shoppingCartData = localStorage.getItem('shoppingCartCursos');
+    let shoppingCartArray= JSON.parse(shoppingCartData);
+    const cursoShoppingCart = {"id": id, "name": curso.name,
+        "precio": curso.precio};
+    
+    //agrego nuevo curso al shopping cart
+    if(shoppingCartArray) {
+        shoppingCartArray.cursos.push(cursoShoppingCart);
+    } else {
+        //TODO verificar si el curso ya se encuentra cargado
+        //no se agrega
+        shoppingCartArray = {"cursos":[{"id": id, "name": curso.name,
+            "precio": curso.precio}]};
+    }
+    localStorage.setItem('shoppingCartCursos', JSON.stringify(shoppingCartArray));
+    renderShoppingCart(); 
 }
 
-const deleteFromShoppingCart = (id) => {
+/* Renderiza el listado en el shopping cart */ 
+const renderShoppingCart = () => {
+    const pagarBtn = '<a class="link-button" href="./metodosPago.html">Pagar</a>';
+
+    const shoppingCartData = localStorage.getItem('shoppingCartCursos');
+    const shoppingCartObj = JSON.parse(shoppingCartData);
+    let shoppingCartContent = '';
+
+    //shopping cart empty
+    if (! shoppingCartObj) {
+        document.getElementById('cartSidebar').innerHTML = 
+            '<div class="cart-item"><strong>Seleccionar cursos</strong></div>';
+        const shoppingCounter = document.querySelector('.badge');
+        shoppingCounter.innerText = 0;
+        shoppingCounter.style.display = '';
+        return;
+    }
+    document.getElementById('cartSidebar').innerHTML='';
+
+    for (let i = 0 ; i < shoppingCartObj.cursos.length ; i++) {
+        let curso = shoppingCartObj.cursos[i];
+        shoppingCartContent += '<div class="cart-item">' +
+        '<span>' + curso.name + '  $ '+ curso.precio +'</span>' +
+            '<button class="remove-item" onClick="deleteFromShoppingCart('
+            + curso.id +')">❌</button>' +
+        '</div>';
+    }
+    document.getElementById('cartSidebar').innerHTML= shoppingCartContent + pagarBtn;
+
+    const shoppingCounter = document.querySelector('.badge');
+    shoppingCounter.innerText = shoppingCartObj.cursos.length;
+    shoppingCounter.style.display = 'block';
+}
+
+const deleteFromShoppingCart = (id) => {    
+    const shoppingCartData = localStorage.getItem('shoppingCartCursos');
+    let shoppingCartArray= JSON.parse(shoppingCartData);
+
+    let cursosArray = [];
+    for (let i = 0 ; i < shoppingCartArray.cursos.length ; i++) {
+        if (id != shoppingCartArray.cursos[i].id) {
+            cursosArray.push(shoppingCartArray.cursos[i]);
+        }
+    }
+    if (cursosArray.length > 0) {
+        localStorage.setItem('shoppingCartCursos',
+            JSON.stringify({"cursos":cursosArray}));
+    } else {
+        localStorage.removeItem('shoppingCartCursos');
+    }
+    renderShoppingCart();
     console.log("Borrando: " + id);
 } 
 
-loadHTML('commons/header.html', 'header');
+loadHTML('commons/header.html', 'header', renderShoppingCart);
 loadHTML('commons/footer.html', 'footer');
+
