@@ -261,6 +261,30 @@
                     showRecipientInput.style.fontSize = selectedFontSize + 'px';
                 });
             });
+            // Add event listener for position-check radio buttons
+            const positionRadios = document.querySelectorAll('input[name="position-check"]');
+            positionRadios.forEach(radio => {
+                radio.addEventListener('change', function() {
+                    if (this.value === '1') {
+                        showInputPrice.style.left = '10px';
+                        showInputPrice.style.right = 'auto';
+                        showInputPrice.style.bottom = 'auto';
+                        showInputPrice.style.top = '10px';
+                    }
+                    if (this.value === '2') {
+                        showInputPrice.style.right = '10px';
+                        showInputPrice.style.left = 'auto';
+                        showInputPrice.style.bottom = 'auto';
+                        showInputPrice.style.top = '10px';
+                    }
+                    if (this.value === '3') {
+                        showInputPrice.style.right = '10px';
+                        showInputPrice.style.left = 'auto';
+                        showInputPrice.style.bottom = '6em';
+                        showInputPrice.style.top = 'auto';
+                    }
+                });
+            });
         });
     </script>
 </body>
