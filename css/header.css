@@ -154,4 +154,44 @@ header body {
         font-size: 1em; /* Adjust font size for mobile devices */
     }
 }
+ /* shopping cart **/
+.cart {
+    position: relative;
+}
 
+.cart-sidebar {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+    padding: 10px;
+    z-index: 1000;
+    border-radius: 15px;
+}
+
+.cart:hover .cart-sidebar {
+    background-color: #555;
+    display: block;
+    color: white;
+    border: none;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+}
+
+.remove-item {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.cart-sidebar a.link-button {
+    margin-top: 1em;
+}
+/* end shopping cart */

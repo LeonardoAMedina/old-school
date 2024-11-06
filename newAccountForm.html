@@ -12,8 +12,8 @@
 		<section class="registration">
 			<div class="login-header">Crear cuenta nueva</div>
 
-			<form class="login-form" action="/old-school.html">
-					<label class="login-form-label" for="username"><b>Email</b></label>
+			<form class="login-form" action="./loginForm.html" id="crearUsuario_js">
+					<label class="login-form-label" for="email"><b>Email</b></label>
 					<input class="login-form-input" type="email" placeholder="Ingrese Email" name="email" required>
 
 					<label class="login-form-label" for="username"><b>Nombre de usuario:</b></label>
@@ -26,7 +26,8 @@
 					<input class="login-form-input" type="password" placeholder="Repita contraseña" name="passwordCheck" required>
 					<div class="form-btns">
 						<button type="submit" class="btn-weak">Crear cuenta</button>					
-					</div>					
+					</div>
+					<p id="error_js" class="form_error"></p>
 			</form>
 
 			<div class="login-footer">
@@ -34,5 +35,6 @@
 			</div>
 		</section>
 	</main>
+	<script src="./scripts/new_account.js"></script>
 </body>
 </html>

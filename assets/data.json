@@ -1,0 +1,588 @@
+{
+    "cursos": [
+        {
+            "id": 1,
+            "name": "JavaScript Moderno",
+            "duracion": "52hs",
+            "precio": "199,99",
+            "modalidad": "online",
+            "imgUrl": "./images/cursos/js.jpg",
+            "descripcion": "Aprende el lenguaje más popular! JavaScript! El curso incluye la Sintaxis de ECMAScript ES6, ES7, ES8, ES9, ES10, ES11 y ES12 o también conocida como JavaScript Moderno. También el curso incluye Node.js, Vue.js Express, Mongodb, React y mucho más! En este curso aprenderás JavaScript desde los fundamentos hasta temas más avanzados como Prototypes, Delegation, Classes, Ajax, Promises, Generadores, Orientado a Objetos, Fetch API, Async Await, Async JS, Objetos, así como consumir REST APIs, APIs de JavaScript nátivas como Notification API, Speech API y mucho más! Si estos temas no son de tu conocimiento, estas en el curso adecuado para aprenderlos!",
+            "requisitos": [
+                "Un Editor de Texto, instalaremos Visual Studio Code.",
+                "Un Navegador, yo recomiendo Chrome.",
+                "Internet, ya que los videos solo pueden verse en nuestro sitio web",
+                "Si sabes HTML y CSS y quieres añadir interacción a tus sitios web, JavaScript es la forma de hacerlo"
+            ],
+            "contenidosPorClase": [
+                {
+                    "nombreClase": "Introduccion",
+                    "unidades": [
+                        {
+                            "nombre": "Hola Mundo en JavaScript",
+                            "iconUrl": "./images/video-icon.svg",
+                            "duracion": "05:22"
+                        },
+                        {
+                            "nombre": "El Proyecto Final de este curso",
+                            "iconUrl": "./images/audio-icon.svg",
+                            "duracion": "10min"
+                        },
+                        {
+                            "nombre": "Materiales del curso - DESCARGA MATERIALES AQUI",
+                            "iconUrl": "./images/pdf-icon.svg",
+                            "duracion": "10min"
+                        },
+                        {
+                            "nombre": "Examen",
+                            "iconUrl": "./images/exam-icon.svg",
+                            "duracion": "25min"
+                        }
+                    ]
+                },
+                {
+                    "nombreClase": "Unidad 1: var, let y const",
+                    "unidades": [
+                        {
+                            "nombre": "Todo lo que debes saber de las variables",
+                            "iconUrl": "./images/video-icon.svg",
+                            "duracion": "09:24"
+                        },
+                        {
+                            "nombre": "Var, let y const explicacion extendida",
+                            "iconUrl": "./images/audio-icon.svg",
+                            "duracion": "15min"
+                        },
+                        {
+                            "nombre": "Resumen variables",
+                            "iconUrl": "./images/pdf-icon.svg",
+                            "duracion": "10min"
+                        },
+                        {
+                            "nombre": "Examen Unidad 1: variables",
+                            "iconUrl": "./images/exam-icon.svg",
+                            "duracion": "45min"
+                        }
+                    ]
+                }
+            ],
+            "docente": {
+                "nombre": "Brendan Eich",
+                "calificacion": "4",
+                "descripcion": "Es un programador estadounidense conocido por inventar el lenguaje de programación JavaScript, así como el navegador Brave. Tras trabajar en Silicon Graphics, pasó por varias empresas hasta llegar a Netscape Communications Corporation en abril de 1995, trabajando en el desarrollo del lenguaje JavaScript (originalmente llamado Mocha, luego denominado LiveScript) para el navegador web Netscape Navigator. A principios de 1998 ayudó a fundar la Fundación Mozilla, sirviendo como principal arquitecto. Cuando AOL cerró la unidad del navegador Netscape en julio de 2003, Eich ayudó a hacer girar a la Fundación Mozilla.",
+                "imgUrl": "./images/Brendan_Eich_js.jpg"
+            }
+        },
+        {
+            "id": 2,
+            "name": "Curso Maestro de Python",
+            "duracion": "36hs",
+            "precio": "13,99",
+            "modalidad": "presencial",
+            "imgUrl": "./images/cursos/python.jpg",
+            "descripcion": "Python",
+            "requisitos": [
+                "Un Editor de Texto, instalaremos Visual Studio Code.",
+                "Un Navegador, yo recomiendo Chrome.",
+                "Internet, ya que los videos solo pueden verse en nuestro sitio web",
+                "Si sabes HTML y CSS y quieres añadir interacción a tus sitios web, JavaScript es la forma de hacerlo"
+            ],
+            "contenidosPorClase": [
+                {
+                    "nombreClase": "Introduccion",
+                    "unidades": [
+                        {
+                            "nombre": "Hola Mundo en JavaScript",
+                            "iconUrl": "./images/video-icon.svg",
+                            "duracion": "05:22"
+                        },
+                        {
+                            "nombre": "El Proyecto Final de este curso",
+                            "iconUrl": "./images/audio-icon.svg",
+                            "duracion": "10min"
+                        },
+                        {
+                            "nombre": "Materiales del curso - DESCARGA MATERIALES AQUI",
+                            "iconUrl": "./images/pdf-icon.svg",
+                            "duracion": "10min"
+                        },
+                        {
+                            "nombre": "Examen",
+                            "iconUrl": "./images/exam-icon.svg",
+                            "duracion": "25min"
+                        }
+                    ]
+                },
+                {
+                    "nombreClase": "Unidad 1: var, let y const",
+                    "unidades": [
+                        {
+                            "nombre": "Todo lo que debes saber de las variables",
+                            "iconUrl": "./images/video-icon.svg",
+                            "duracion": "09:24"
+                        },
+                        {
+                            "nombre": "Var, let y const explicacion extendida",
+                            "iconUrl": "./images/audio-icon.svg",
+                            "duracion": "15min"
+                        },
+                        {
+                            "nombre": "Resumen variables",
+                            "iconUrl": "./images/pdf-icon.svg",
+                            "duracion": "10min"
+                        },
+                        {
+                            "nombre": "Examen Unidad 1: variables",
+                            "iconUrl": "./images/exam-icon.svg",
+                            "duracion": "45min"
+                        }
+                    ]
+                }
+            ],
+            "docente": {
+                "nombre": "Brendan Eich",
+                "calificacion": "2",
+                "descripcion": "instructor python",
+                "imgUrl": "./images/Brendan_Eich_js.jpg"
+            }
+        },
+        {
+            "id": 3,
+            "name": "Vue js 2",
+            "duracion": "6hs",
+            "precio": "12.99",
+            "modalidad": "online",
+            "imgUrl": "./images/cursos/vue.jpg",
+            "descripcion": "vue",
+            "requisitos": [
+                "Un Editor de Texto, instalaremos Visual Studio Code.",
+                "Un Navegador, yo recomiendo Chrome.",
+                "Internet, ya que los videos solo pueden verse en nuestro sitio web",
+                "Si sabes HTML y CSS y quieres añadir interacción a tus sitios web, JavaScript es la forma de hacerlo"
+            ],
+            "contenidosPorClase": [
+                {
+                    "nombreClase": "Introduccion",
+                    "unidades": [
+                        {
+                            "nombre": "Hola Mundo en JavaScript",
+                            "iconUrl": "./images/video-icon.svg",
+                            "duracion": "05:22"
+                        },
+                        {
+                            "nombre": "El Proyecto Final de este curso",
+                            "iconUrl": "./images/audio-icon.svg",
+                            "duracion": "10min"
+                        },
+                        {
+                            "nombre": "Materiales del curso - DESCARGA MATERIALES AQUI",
+                            "iconUrl": "./images/pdf-icon.svg",
+                            "duracion": "10min"
+                        },
+                        {
+                            "nombre": "Examen",
+                            "iconUrl": "./images/exam-icon.svg",
+                            "duracion": "25min"
+                        }
+                    ]
+                },
+                {
+                    "nombreClase": "Unidad 1: var, let y const",
+                    "unidades": [
+                        {
+                            "nombre": "Todo lo que debes saber de las variables",
+                            "iconUrl": "./images/video-icon.svg",
+                            "duracion": "09:24"
+                        },
+                        {
+                            "nombre": "Var, let y const explicacion extendida",
+                            "iconUrl": "./images/audio-icon.svg",
+                            "duracion": "15min"
+                        },
+                        {
+                            "nombre": "Resumen variables",
+                            "iconUrl": "./images/pdf-icon.svg",
+                            "duracion": "10min"
+                        },
+                        {
+                            "nombre": "Examen Unidad 1: variables",
+                            "iconUrl": "./images/exam-icon.svg",
+                            "duracion": "45min"
+                        }
+                    ]
+                }
+            ],
+            "docente": {
+                "nombre": "Brendan Eich",
+                "calificacion": "2",
+                "descripcion": "instructor bue",
+                "imgUrl": "./images/Brendan_Eich_js.jpg"
+            }
+        },
+        {
+            "id": 4,
+            "name": "Pro Dev con React",
+            "duracion": "28hs",
+            "precio": "8,99",
+            "modalidad": "presencial",
+            "imgUrl": "./images/cursos/react.jpg",
+            "descripcion": "react",
+            "requisitos": [
+                "Un Editor de Texto, instalaremos Visual Studio Code.",
+                "Un Navegador, yo recomiendo Chrome.",
+                "Internet, ya que los videos solo pueden verse en nuestro sitio web",
+                "Si sabes HTML y CSS y quieres añadir interacción a tus sitios web, JavaScript es la forma de hacerlo"
+            ],
+            "contenidosPorClase": [
+                {
+                    "nombreClase": "Introduccion",
+                    "unidades": [
+                        {
+                            "nombre": "Hola Mundo en JavaScript",
+                            "iconUrl": "./images/video-icon.svg",
+                            "duracion": "05:22"
+                        },
+                        {
+                            "nombre": "El Proyecto Final de este curso",
+                            "iconUrl": "./images/audio-icon.svg",
+                            "duracion": "10min"
+                        },
+                        {
+                            "nombre": "Materiales del curso - DESCARGA MATERIALES AQUI",
+                            "iconUrl": "./images/pdf-icon.svg",
+                            "duracion": "10min"
+                        },
+                        {
+                            "nombre": "Examen",
+                            "iconUrl": "./images/exam-icon.svg",
+                            "duracion": "25min"
+                        }
+                    ]
+                },
+                {
+                    "nombreClase": "Unidad 1: var, let y const",
+                    "unidades": [
+                        {
+                            "nombre": "Todo lo que debes saber de las variables",
+                            "iconUrl": "./images/video-icon.svg",
+                            "duracion": "09:24"
+                        },
+                        {
+                            "nombre": "Var, let y const explicacion extendida",
+                            "iconUrl": "./images/audio-icon.svg",
+                            "duracion": "15min"
+                        },
+                        {
+                            "nombre": "Resumen variables",
+                            "iconUrl": "./images/pdf-icon.svg",
+                            "duracion": "10min"
+                        },
+                        {
+                            "nombre": "Examen Unidad 1: variables",
+                            "iconUrl": "./images/exam-icon.svg",
+                            "duracion": "45min"
+                        }
+                    ]
+                }
+            ],
+            "docente": {
+                "nombre": "Brendan Eich",
+                "calificacion": "3",
+                "descripcion": "instructor react",
+                "imgUrl": "./images/Brendan_Eich_js.jpg"
+            }
+        },
+        {
+            "id": 5,
+            "name": "Excel Profesional 2024",
+            "duracion": "8hs",
+            "precio": "13,99",
+            "modalidad": "presencial",
+            "imgUrl": "./images/cursos/excel.jpg",
+            "descripcion": "excel",
+            "requisitos": [
+                "Un Editor de Texto, instalaremos Visual Studio Code.",
+                "Un Navegador, yo recomiendo Chrome.",
+                "Internet, ya que los videos solo pueden verse en nuestro sitio web",
+                "Si sabes HTML y CSS y quieres añadir interacción a tus sitios web, JavaScript es la forma de hacerlo"
+            ],
+            "contenidosPorClase": [
+                {
+                    "nombreClase": "Introduccion",
+                    "unidades": [
+                        {
+                            "nombre": "Hola Mundo en JavaScript",
+                            "iconUrl": "./images/video-icon.svg",
+                            "duracion": "05:22"
+                        },
+                        {
+                            "nombre": "El Proyecto Final de este curso",
+                            "iconUrl": "./images/audio-icon.svg",
+                            "duracion": "10min"
+                        },
+                        {
+                            "nombre": "Materiales del curso - DESCARGA MATERIALES AQUI",
+                            "iconUrl": "./images/pdf-icon.svg",
+                            "duracion": "10min"
+                        },
+                        {
+                            "nombre": "Examen",
+                            "iconUrl": "./images/exam-icon.svg",
+                            "duracion": "25min"
+                        }
+                    ]
+                },
+                {
+                    "nombreClase": "Unidad 1: var, let y const",
+                    "unidades": [
+                        {
+                            "nombre": "Todo lo que debes saber de las variables",
+                            "iconUrl": "./images/video-icon.svg",
+                            "duracion": "09:24"
+                        },
+                        {
+                            "nombre": "Var, let y const explicacion extendida",
+                            "iconUrl": "./images/audio-icon.svg",
+                            "duracion": "15min"
+                        },
+                        {
+                            "nombre": "Resumen variables",
+                            "iconUrl": "./images/pdf-icon.svg",
+                            "duracion": "10min"
+                        },
+                        {
+                            "nombre": "Examen Unidad 1: variables",
+                            "iconUrl": "./images/exam-icon.svg",
+                            "duracion": "45min"
+                        }
+                    ]
+                }
+            ],
+            "docente": {
+                "nombre": "Brendan Eich",
+                "calificacion": "1",
+                "descripcion": "instructor excel",
+                "imgUrl": "./images/Brendan_Eich_js.jpg"
+            }
+        },
+        {
+            "id": 6,
+            "name": "Web Front End",
+            "duracion": "52hs",
+            "precio": "16,99",
+            "modalidad": "online",
+            "imgUrl": "./images/cursos/front.jpg",
+            "descripcion": "front end",
+            "requisitos": [
+                "Un Editor de Texto, instalaremos Visual Studio Code.",
+                "Un Navegador, yo recomiendo Chrome.",
+                "Internet, ya que los videos solo pueden verse en nuestro sitio web",
+                "Si sabes HTML y CSS y quieres añadir interacción a tus sitios web, JavaScript es la forma de hacerlo"
+            ],
+            "contenidosPorClase": [
+                {
+                    "nombreClase": "Introduccion",
+                    "unidades": [
+                        {
+                            "nombre": "Hola Mundo en JavaScript",
+                            "iconUrl": "./images/video-icon.svg",
+                            "duracion": "05:22"
+                        },
+                        {
+                            "nombre": "El Proyecto Final de este curso",
+                            "iconUrl": "./images/audio-icon.svg",
+                            "duracion": "10min"
+                        },
+                        {
+                            "nombre": "Materiales del curso - DESCARGA MATERIALES AQUI",
+                            "iconUrl": "./images/pdf-icon.svg",
+                            "duracion": "10min"
+                        },
+                        {
+                            "nombre": "Examen",
+                            "iconUrl": "./images/exam-icon.svg",
+                            "duracion": "25min"
+                        }
+                    ]
+                },
+                {
+                    "nombreClase": "Unidad 1: var, let y const",
+                    "unidades": [
+                        {
+                            "nombre": "Todo lo que debes saber de las variables",
+                            "iconUrl": "./images/video-icon.svg",
+                            "duracion": "09:24"
+                        },
+                        {
+                            "nombre": "Var, let y const explicacion extendida",
+                            "iconUrl": "./images/audio-icon.svg",
+                            "duracion": "15min"
+                        },
+                        {
+                            "nombre": "Resumen variables",
+                            "iconUrl": "./images/pdf-icon.svg",
+                            "duracion": "10min"
+                        },
+                        {
+                            "nombre": "Examen Unidad 1: variables",
+                            "iconUrl": "./images/exam-icon.svg",
+                            "duracion": "45min"
+                        }
+                    ]
+                }
+            ],
+            "docente": {
+                "nombre": "Brendan Eich",
+                "calificacion": "2",
+                "descripcion": "instructor front end",
+                "imgUrl": "./images/Brendan_Eich_js.jpg"
+            }
+        },
+        {
+            "id": 7,
+            "name": "Web Full Stack Js",
+            "duracion": "30hs",
+            "precio": "7,99",
+            "modalidad": "online",
+            "imgUrl": "./images/cursos/full-js.jpg",
+            "descripcion": "full stack",
+            "requisitos": [
+                "Un Editor de Texto, instalaremos Visual Studio Code.",
+                "Un Navegador, yo recomiendo Chrome.",
+                "Internet, ya que los videos solo pueden verse en nuestro sitio web",
+                "Si sabes HTML y CSS y quieres añadir interacción a tus sitios web, JavaScript es la forma de hacerlo"
+            ],
+            "contenidosPorClase": [
+                {
+                    "nombreClase": "Introduccion",
+                    "unidades": [
+                        {
+                            "nombre": "Hola Mundo en JavaScript",
+                            "iconUrl": "./images/video-icon.svg",
+                            "duracion": "05:22"
+                        },
+                        {
+                            "nombre": "El Proyecto Final de este curso",
+                            "iconUrl": "./images/audio-icon.svg",
+                            "duracion": "10min"
+                        },
+                        {
+                            "nombre": "Materiales del curso - DESCARGA MATERIALES AQUI",
+                            "iconUrl": "./images/pdf-icon.svg",
+                            "duracion": "10min"
+                        },
+                        {
+                            "nombre": "Examen",
+                            "iconUrl": "./images/exam-icon.svg",
+                            "duracion": "25min"
+                        }
+                    ]
+                },
+                {
+                    "nombreClase": "Unidad 1: var, let y const",
+                    "unidades": [
+                        {
+                            "nombre": "Todo lo que debes saber de las variables",
+                            "iconUrl": "./images/video-icon.svg",
+                            "duracion": "09:24"
+                        },
+                        {
+                            "nombre": "Var, let y const explicacion extendida",
+                            "iconUrl": "./images/audio-icon.svg",
+                            "duracion": "15min"
+                        },
+                        {
+                            "nombre": "Resumen variables",
+                            "iconUrl": "./images/pdf-icon.svg",
+                            "duracion": "10min"
+                        },
+                        {
+                            "nombre": "Examen Unidad 1: variables",
+                            "iconUrl": "./images/exam-icon.svg",
+                            "duracion": "45min"
+                        }
+                    ]
+                }
+            ],
+            "docente": {
+                "nombre": "Brendan Eich",
+                "calificacion": "5",
+                "descripcion": "instructor full stack",
+                "imgUrl": "./images/Brendan_Eich_js.jpg"
+            }
+        },
+        {
+            "id": 8,
+            "name": "Power Bi Completo",
+            "duracion": "6hs",
+            "precio": "2,99",
+            "modalidad": "online",
+            "imgUrl": "./images/cursos/powerbi.jpg",
+            "descripcion": "bi power",
+            "requisitos": [
+                "Un Editor de Texto, instalaremos Visual Studio Code.",
+                "Un Navegador, yo recomiendo Chrome.",
+                "Internet, ya que los videos solo pueden verse en nuestro sitio web",
+                "Si sabes HTML y CSS y quieres añadir interacción a tus sitios web, JavaScript es la forma de hacerlo"
+            ],
+            "contenidosPorClase": [
+                {
+                    "nombreClase": "Introduccion",
+                    "unidades": [
+                        {
+                            "nombre": "Hola Mundo en JavaScript",
+                            "iconUrl": "./images/video-icon.svg",
+                            "duracion": "05:22"
+                        },
+                        {
+                            "nombre": "El Proyecto Final de este curso",
+                            "iconUrl": "./images/audio-icon.svg",
+                            "duracion": "10min"
+                        },
+                        {
+                            "nombre": "Materiales del curso - DESCARGA MATERIALES AQUI",
+                            "iconUrl": "./images/pdf-icon.svg",
+                            "duracion": "10min"
+                        },
+                        {
+                            "nombre": "Examen",
+                            "iconUrl": "./images/exam-icon.svg",
+                            "duracion": "25min"
+                        }
+                    ]
+                },
+                {
+                    "nombreClase": "Unidad 1: var, let y const",
+                    "unidades": [
+                        {
+                            "nombre": "Todo lo que debes saber de las variables",
+                            "iconUrl": "./images/video-icon.svg",
+                            "duracion": "09:24"
+                        },
+                        {
+                            "nombre": "Var, let y const explicacion extendida",
+                            "iconUrl": "./images/audio-icon.svg",
+                            "duracion": "15min"
+                        },
+                        {
+                            "nombre": "Resumen variables",
+                            "iconUrl": "./images/pdf-icon.svg",
+                            "duracion": "10min"
+                        },
+                        {
+                            "nombre": "Examen Unidad 1: variables",
+                            "iconUrl": "./images/exam-icon.svg",
+                            "duracion": "45min"
+                        }
+                    ]
+                }
+            ],
+            "docente": {
+                "nombre": "Brendan Eich",
+                "calificacion": "2",
+                "descripcion": "instructor bi power",
+                "imgUrl": "./images/Brendan_Eich_js.jpg"
+            }
+        }
+    ]
+}
