@@ -27,10 +27,12 @@ const loadShoppingCart = (id) => {
     
     //agrego nuevo curso al shopping cart
     if(shoppingCartArray) {
+        if (shoppingCartData.includes('"id":"'+id+'"')) {
+            //el curso ya se encuentra cargado
+            return;
+        }
         shoppingCartArray.cursos.push(cursoShoppingCart);
-    } else {
-        //TODO verificar si el curso ya se encuentra cargado
-        //no se agrega
+    } else {        
         shoppingCartArray = {"cursos":[{"id": id, "name": curso.name,
             "precio": curso.precio}]};
     }
