@@ -43,7 +43,7 @@
                     title="Ingrese tres numeros."
                     required>
 
-                <span class="pago-curso-form-importe">$199,99 </span>                
+                <span class="pago-curso-form-importe">$ 0,00</span>            
                 <button class="link-button" type="submit">Pagar</button>              
             </form>
         </section>
@@ -58,7 +58,19 @@
             // Clear the form fields
             const form = event.target;
             form.reset();
-        }       
-    </script>
+        }
+
+        const getTotalFromUrl = () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const total = urlParams.get('total');
+            //const totalValue = getTotalFromUrl();
+            const priceElement = document.querySelector('.pago-curso-form-importe');
+            priceElement.textContent = "$ " + total.replace(".", ",");//`$ ${total.toFixed(2)}`;
+        }
+
+        window.addEventListener('load', function() {
+            getTotalFromUrl();
+        });
+  </script>
 </body>
 </html>

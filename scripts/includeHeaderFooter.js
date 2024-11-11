@@ -42,7 +42,7 @@ const loadShoppingCart = (id) => {
 
 /* Renderiza el listado en el shopping cart */ 
 const renderShoppingCart = () => {
-    const pagarBtn = '<a class="link-button" href="./metodosPago.html">Pagar</a>';
+    const pagarBtn = '<a class="link-button" href="#" onClick="calculatePayment()">Pagar</a>';
 
     const shoppingCartData = localStorage.getItem('shoppingCartCursos');
     const shoppingCartObj = JSON.parse(shoppingCartData);
@@ -92,7 +92,28 @@ const deleteFromShoppingCart = (id) => {
     }
     renderShoppingCart();
     console.log("Borrando: " + id);
-} 
+}
+
+const calculatePayment = () => {    
+
+    // Retrieve the shopping cart data from local storage
+    const shoppingCartData = localStorage.getItem('shoppingCartCursos');
+    let totalPrice = 0.00;
+
+    if (shoppingCartData) {
+        // Parse the JSON string to an object
+        const shoppingCart = JSON.parse(shoppingCartData);
+     
+        if (Array.isArray(shoppingCart.cursos)) {
+            // Calculate the total price
+            totalPrice = shoppingCart.cursos.reduce((sum, curso) => {
+                const precioFloat = parseFloat(curso.precio.replace(",", ".")); 
+                return sum + (precioFloat || 0);
+            }, 0);
+        }
+    }
+    window.location.href = './metodosPago.html?total=' + totalPrice.toFixed(2);
+};
 
 loadHTML('commons/header.html', 'header', renderShoppingCart);
 loadHTML('commons/footer.html', 'footer');
