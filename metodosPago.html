@@ -13,9 +13,9 @@
     <header></header>
     <main>
         <section class="pago-curso">
-            <article class="pago-curso-cabecera">
-                <h1>Comprando: JavaScript Moderno. Guía Definitiva</h2>
-                <h2>Pago con tarjeta</h2>
+            <article id="pago-curso-cabecera_js" class="pago-curso-cabecera">
+                <h1 id="pago-curso-titulo_js">Estas comprando: </h2>
+                <h2 id="tipo-pago_js">Pago con tarjeta</h2>
             </article>
 
             <form class="pago-curso-form" onsubmit="return shoppingCartIncrement(event)">
@@ -43,13 +43,14 @@
                     title="Ingrese tres numeros."
                     required>
 
-                <span class="pago-curso-form-importe">$199,99 </span>                
+                <span id="pago-curso-form-importe_js" class="pago-curso-form-importe">$199,99 </span>                
                 <button class="link-button" type="submit">Pagar</button>              
             </form>
         </section>
     </main>
     <footer></footer>
     <script src="./scripts/includeHeaderFooter.js"></script>
+    <script src="./scripts/metodos_pago.js"></script>
     <script>
         function shoppingCartIncrement(event) {
             event.preventDefault();
