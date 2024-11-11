@@ -4,11 +4,11 @@ let botonesContenedor;
 const manejarUsuarioLogueado=()=>{
     botonesContenedor= document.getElementById('header-btn-js');
     botonesContenedor.innerHTML=`
-    <p class="logged-name">Perfil de ${usuarioLogueado[0].name.toUpperCase()}</p>
     <img src="images/header/logged-user.svg" class="logged"> 
     </br>
     <div id="userSidebar" class="user-sidebar">
-    
+        <div class="cart-item"><strong>Perfil de ${usuarioLogueado[0].name.toUpperCase()}</strong></div>
+        
         <button class="link-button" onclick="cerrarSesion()">Cerrar sesión</button>
         <button class="link-button" onclick="eliminarUsuario()">Eliminar Usuario</button>
     
