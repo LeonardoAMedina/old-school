@@ -13,12 +13,21 @@
     <header></header>
     <main>
         <section class="pago-curso">
+
+            <dialog id="modal" class="modal">
+                <article>
+                    <p id="modal-titulo_js">Compra finalizada!!!</p>
+                    <ul id="modal-cursos-comprados_js"></ul>
+                </article>
+                <button class="link-button" onclick="terminar()">Confirmar</button>
+            </dialog>
+
             <article id="pago-curso-cabecera_js" class="pago-curso-cabecera">
                 <h1 id="pago-curso-titulo_js">Estas comprando: </h2>
                 <h2 id="tipo-pago_js">Pago con tarjeta</h2>
             </article>
 
-            <form class="pago-curso-form" onsubmit="return shoppingCartIncrement(event)">
+            <form id="payForm"class="pago-curso-form" action="./old-school.html" method="get">
 
                     <label for="cardName">Nombre como aparece en la tarjeta</label>
                     <input class="pago-curso-form-input"type="text" id="cardName" name="cardName" placeholder="Nombre" required>
@@ -44,14 +53,14 @@
                     required>
 
                 <span id="pago-curso-form-importe_js" class="pago-curso-form-importe">$199,99 </span>                
-                <button class="link-button" type="submit">Pagar</button>              
+                <button id="boton-pago_js" class="link-button" type="submit">Pagar</button>              
             </form>
         </section>
     </main>
     <footer></footer>
     <script src="./scripts/includeHeaderFooter.js"></script>
     <script src="./scripts/metodos_pago.js"></script>
-    <script>
+    <!--<script>
         function shoppingCartIncrement(event) {
             event.preventDefault();
             //TODO implementar popup pago finalizado los valores se toman del localstorage
@@ -60,6 +69,6 @@
             const form = event.target;
             form.reset();
         }       
-    </script>
+    </script>-->
 </body>
 </html>

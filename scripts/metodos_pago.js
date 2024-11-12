@@ -21,3 +21,30 @@ cursosEnCarritosParseados.cursos.forEach(curso => {
 
 contenedorTitulos.insertBefore(listadoDeCursosAPagar,puntoDeInsercion);
 contenedorMontoTotal.innerHTML=`$ ${montoTotal.toPrecision(5)}`;
+
+const formulario = document.getElementById('payForm');
+const botonPago = document.getElementById('boton-pago_js');
+
+const mostrarModalResumen =() =>{
+    const modal= document.getElementById('modal');
+    let cursosCompradosElement = document.getElementById('modal-cursos-comprados_js')
+    cursosCompradosElement.innerHTML=`Felicitaciones, completaste la compra de: `;
+     cursosEnCarritosParseados.cursos.forEach(curso => {
+        let tituloCurso= document.createElement('li');
+        tituloCurso.innerHTML=`${curso.name}`;
+        cursosCompradosElement.appendChild(tituloCurso);
+    });
+    
+    localStorage.removeItem('shoppingCartCursos');
+    modal.show();
+    
+}
+
+formulario.addEventListener('submit', (event)=>{
+    event.preventDefault();
+    mostrarModalResumen();
+});
+
+const terminar = () => {
+    window.location.href = './old-school.html';
+}
