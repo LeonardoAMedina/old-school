@@ -39,9 +39,10 @@ function cargar_calendario()
         aux_mes=dt.getMonth()+1;
 
         if(mes!=aux_mes)
-            document.getElementById('calendar_id_'+i).style.backgroundColor="transparent";
+            document.getElementById('calendar_id_'+i).style.opacity=0;
         else
             document.getElementById('calendar_id_'+i).style.backgroundColor="white";
         dt.setDate(dt.getDate()+1);
     }
 }
+

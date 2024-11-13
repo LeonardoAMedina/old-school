@@ -5,6 +5,12 @@ async function loadHTML(file, tagName, callback) {
     if (callback) callback();
 }
 
+const loadLoggedUserScript = () =>{
+    let loggedUserScriptElement = document.createElement('script');
+    loggedUserScriptElement.setAttribute('src', './scripts/header_login.js');
+    document.body.appendChild(loggedUserScriptElement);
+}
+
 const loadShoppingCart = (id) => {
     const cursosData = localStorage.getItem('cursos');
     const cursosArray = JSON.parse(cursosData);    
@@ -95,5 +101,5 @@ const deleteFromShoppingCart = (id) => {
 } 
 
 loadHTML('commons/header.html', 'header', renderShoppingCart);
-loadHTML('commons/footer.html', 'footer');
+loadHTML('commons/footer.html', 'footer',loadLoggedUserScript);
 
