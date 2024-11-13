@@ -8,12 +8,12 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/button.css">
+    
     <script type="text/javascript" src="scripts/script_calendar.js"></script>
     <style>
 
-        *{
+        body{
             margin: 0px;
-            padding: 0px;
         }
 
         header{
@@ -110,6 +110,7 @@
         }
 
         .comment-0 {
+            cursor: pointer;
             display: flex;
             justify-content: right;
             font-size: 14px;
@@ -119,6 +120,7 @@
         }
 
         .comment-1 {
+            cursor: pointer;
             display: flex;
             justify-content: center;
             font-size: 14px;
@@ -129,6 +131,7 @@
         }
 
         .comment-2 {
+            cursor: pointer;
             display: flex;
             justify-content: center;
             font-size: 14px;
@@ -139,6 +142,7 @@
         }
 
         .comment-3 {
+            cursor: pointer;
             display: flex;
             justify-content: center;
             font-size: 14px;
@@ -191,14 +195,26 @@
             transition: all 240ms linear;
         }
 
-        #modal{
+        .modal{
             margin: auto;
-            padding: 1em;
-            border-radius: 10px;
-            width: 50%;
-            min-height: 40%;
-            font-size: 1.5em;
-            z-index: 1000;
+            place-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            inset:0;
+            z-index: 10000;
+            background-color: rgba(0, 0, 0, .75);
+            color:black;
+        }
+
+        .modal-body {
+            background-color: white;
+            padding: 10em;
+            margin-top: 2em;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>
@@ -557,25 +573,31 @@
             </article>
         </section>
 
-        <dialog id="modal" class="modal1">
-            <p>Curso de JavaScript</p>
-            <p>Please</p>
-            <button class="close-button" onclick="cerrar_modal(1)">Cerrar</button>
-            <button onclick="redirigir_modal(1)">Redirigir</button>
+        <dialog class="modal" id="modal1">
+            <article class="modal-body">
+                <p>Curso de JavaScript</p>
+                <p id="modal-desc-1_js"></p>
+                <button class="close-button link-button" onclick="cerrar_modal(1)">Cerrar</button>
+                <button class="link-button" onclick="redirigir_modal(1)">Ver mas</button>
+            </article>
         </dialog>
 
-        <dialog id="modal" class="modal2">
-            <p>Curso React</p>
-            <p>Please</p>
-            <button class="close-button" onclick="cerrar_modal(2)">Cerrar</button>
-            <button onclick="redirigir_modal(2)">Redirigir</button>
+        <dialog class="modal" id="modal2">
+            <article class="modal-body">
+                <p>Curso React</p>
+                <p id="modal-desc-2_js"></p>
+                <button class="close-button link-button" onclick="cerrar_modal(2)">Cerrar</button>
+                <button class="link-button" onclick="redirigir_modal(2)">Ver mas</button>
+            </article>
         </dialog>
 
-        <dialog id="modal" class="modal3">
-            <p>Curso Vue</p>
-            <p>Please</p>
-            <button class="close-button" onclick="cerrar_modal(3)">Cerrar</button>
-            <button onclick="redirigir_modal(3)">Redirigir</button>
+        <dialog class="modal" id="modal3">
+            <article class="modal-body">
+                <p>Curso Vue</p>
+                <p id="modal-desc-3_js"></p>
+                <button class="close-button link-button" onclick="cerrar_modal(3)">Cerrar</button>
+                <button class="link-button" onclick="redirigir_modal(3)">Ver mas</button>
+            </article>
         </dialog>
     </main>
     <footer></footer>
