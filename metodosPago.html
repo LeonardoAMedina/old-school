@@ -13,12 +13,22 @@
     <header></header>
     <main>
         <section class="pago-curso">
-            <article class="pago-curso-cabecera">
-                <h1>Comprando: JavaScript Moderno. Guía Definitiva</h2>
-                <h2>Pago con tarjeta</h2>
+
+            <dialog id="modal" class="modal">
+                <article class="modal-body">
+                    <h3 id="modal-titulo_js">Compra finalizada!!!</h3>
+                    <ul id="modal-cursos-comprados_js"></ul>
+                    <button class="link-button" onclick="terminar()">Confirmar</button>
+                </article>
+                
+            </dialog>
+
+            <article id="pago-curso-cabecera_js" class="pago-curso-cabecera">
+                <h1 id="pago-curso-titulo_js">Estas comprando: </h2>
+                <h2 id="tipo-pago_js">Pago con tarjeta</h2>
             </article>
 
-            <form class="pago-curso-form" onsubmit="return shoppingCartIncrement(event)">
+            <form id="payForm"class="pago-curso-form" action="./old-school.html" method="get">
 
                     <label for="cardName">Nombre como aparece en la tarjeta</label>
                     <input class="pago-curso-form-input"type="text" id="cardName" name="cardName" placeholder="Nombre" required>
@@ -43,14 +53,15 @@
                     title="Ingrese tres numeros."
                     required>
 
-                <span class="pago-curso-form-importe">$ 0,00</span>            
-                <button class="link-button" type="submit">Pagar</button>              
+                <span id="pago-curso-form-importe_js" class="pago-curso-form-importe">$199,99 </span>                
+                <button id="boton-pago_js" class="link-button" type="submit">Pagar</button>              
             </form>
         </section>
     </main>
     <footer></footer>
     <script src="./scripts/includeHeaderFooter.js"></script>
-    <script>
+    <script src="./scripts/metodos_pago.js"></script>
+    <!--<script>
         function shoppingCartIncrement(event) {
             event.preventDefault();
             //TODO implementar popup pago finalizado los valores se toman del localstorage
@@ -58,19 +69,7 @@
             // Clear the form fields
             const form = event.target;
             form.reset();
-        }
-
-        const getTotalFromUrl = () => {
-            const urlParams = new URLSearchParams(window.location.search);
-            const total = urlParams.get('total');
-            //const totalValue = getTotalFromUrl();
-            const priceElement = document.querySelector('.pago-curso-form-importe');
-            priceElement.textContent = "$ " + total.replace(".", ",");//`$ ${total.toFixed(2)}`;
-        }
-
-        window.addEventListener('load', function() {
-            getTotalFromUrl();
-        });
-  </script>
+        }       
+    </script>-->
 </body>
 </html>

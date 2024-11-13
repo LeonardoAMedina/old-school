@@ -19,7 +19,7 @@ const cursoAMostrar = cursosGuardadosParseados.cursos.filter(buscarCurso);
 
 //Si el curso no se encuentra redireccionamos al home
 if(cursoAMostrar.length==0){
-    window.location.href = './old-school-dv.html';
+    window.location.href = './old-school.html';
 }
 
 const cursoContainer = document.getElementById('curso_container_js');

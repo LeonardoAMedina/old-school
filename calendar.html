@@ -8,12 +8,12 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/button.css">
+    
     <script type="text/javascript" src="scripts/script_calendar.js"></script>
     <style>
 
-        *{
+        body{
             margin: 0px;
-            padding: 0px;
         }
 
         header{
@@ -46,7 +46,6 @@
             color:white;
             width:fit-content
         }
-
 
         .calendar-grid{
             padding-top: 0.5rem;
@@ -111,35 +110,111 @@
         }
 
         .comment-0 {
+            cursor: pointer;
             display: flex;
             justify-content: right;
             font-size: 14px;
             background-color: transparent;
             width: 80%;
+            opacity: 0;
         }
 
         .comment-1 {
+            cursor: pointer;
             display: flex;
-            justify-content: right;
+            justify-content: center;
             font-size: 14px;
             background-color: green;
             width: 80%;
+            border-radius: 15px;
+            color:white;
         }
 
         .comment-2 {
+            cursor: pointer;
             display: flex;
-            justify-content: right;
+            justify-content: center;
             font-size: 14px;
             background-color:red;
             width: 80%;
+            border-radius: 15px;
+            color:white;
         }
 
         .comment-3 {
+            cursor: pointer;
             display: flex;
-            justify-content: right;
+            justify-content: center;
             font-size: 14px;
             background-color: blue;
             width: 80%;
+            border-radius: 15px;
+            color:white;
+        }
+
+        /* .open{
+            display: block;
+            margin: 40px auto;
+            border: 0;
+            border-radius:8px;
+            padding:10px 30px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size:1rem;
+            font-weight:600;
+            background-color: blue;
+            cursor:pointer;
+            color:white;
+            transition: all 240ms linear;
+        }
+
+        dialog{
+            width:80%;
+            max-width: 350px;
+            background-color: white;
+            padding: 34px;
+            border:0;
+            border-radius: 5px;
+        }
+
+        dialog:-internal-dialog-in-top-layer::backdrop{
+            background-color:black;
+            opacity:0.5;
+        } */
+        .open{
+            display: block;
+            margin: 40px auto;
+            border: 0;
+            border-radius:8px;
+            padding:10px 30px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size:1rem;
+            font-weight:600;
+            background-color: blue;
+            cursor:pointer;
+            color:white;
+            transition: all 240ms linear;
+        }
+
+        .modal{
+            margin: auto;
+            place-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            inset:0;
+            z-index: 10000;
+            background-color: rgba(0, 0, 0, .75);
+            color:black;
+        }
+
+        .modal-body {
+            background-color: white;
+            padding: 10em;
+            margin-top: 2em;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>
@@ -162,344 +237,371 @@
                 <div class="calendar-day" id="calendar_id_0">
                     <span class="day-title" id="id_0"></span>
                     <div class="day-comment">
-                        <span class="comment-0"><br></span>
-                        <span class="comment-0"><br></span>
-                        <span class="comment-0"><br></span>
+                        <button class="comment-0"><br></button>
+                        <button class="comment-0"><br></button>
+                        <button class="comment-0"><br></button>
                     </div>
                 </div>
                 <div class="calendar-day" id="calendar_id_1">
                     <span class="day-title" id="id_1"></span>
                     <div class="day-comment">
-                        <span class="comment-0"><br></span>
-                        <span class="comment-0"><br></span>
-                        <span class="comment-0"><br></span>
+                        <button class="comment-0"><br></button>
+                        <button class="comment-0"><br></button>
+                        <button class="comment-0"><br></button>
                     </div>
                 </div>
                 <div class="calendar-day" id="calendar_id_2">
                     <span class="day-title" id="id_2"></span>
                     <div class="day-comment">
-                        <span class="comment-0"><br></span>
-                        <span class="comment-1">Curso html5</span>
-                        <span class="comment-3">Diseño gráfico</span>
+                        <button class="comment-0"><br></button>
+                        <button class="comment-1" onclick="abrir_modal(1)">JavaScript</button>
+                        <button class="comment-3">Vue</button>
                     </div>
                 </div>
                 <div class="calendar-day" id="calendar_id_3">
                     <span class="day-title" id="id_3"></span>
                     <div class="day-comment">
-                        <span class="comment-0"><br></span>
-                        <span class="comment-0"><br></span>
-                        <span class="comment-0"><br></span>
+                        <button class="comment-0"><br></button>
+                        <button class="comment-0"><br></button>
+                        <button class="comment-0"><br></button>
                     </div>
                 </div>
                 <div class="calendar-day" id="calendar_id_4">
                     <span class="day-title" id="id_4"></span>
                     <div class="day-comment">
-                        <span class="comment-0"><br></span>
-                        <span class="comment-0"><br></span>
-                        <span class="comment-1">Curso Boostrap</span>
+                        <button class="comment-0"><br></button>
+                        <button class="comment-0"><br></button>
+                        <button class="comment-1" onclick="abrir_modal(1)">JavaScript</button>
                     </div>
                 </div>
                 <div class="calendar-day" id="calendar_id_5">
                     <span class="day-title" id="id_5"></span>
                     <div class="day-comment">
-                        <span class="comment-0"><br></span>
-                        <span class="comment-2">Curso PHP</span>
-                        <span class="comment-0"><br></span>
+                        <button class="comment-0"><br></button>
+                        <button class="comment-2" onclick="abrir_modal(2)">React</button>
+                        <button class="comment-0"><br></button>
                     </div>
                 </div>
                 <div class="calendar-day" id="calendar_id_6">
                     <span class="day-title" id="id_6"></span>
                     <div class="day-comment">
-                        <span class="comment-0"><br></span>
-                        <span class="comment-0"><br></span>
-                        <span class="comment-0"><br></span>
+                        <button class="comment-0"><br></button>
+                        <button class="comment-0"><br></button>
+                        <button class="comment-0"><br></button>
                     </div>
                 </div>
                 <div class="calendar-day" id="calendar_id_7">
                     <span class="day-title" id="id_7"></span>
                     <div class="day-comment">
-                        <span class="comment-0"><br></span>
-                        <span class="comment-0"><br></span>
-                        <span class="comment-0"><br></span>
+                        <button class="comment-0"><br></button>
+                        <button class="comment-0"><br></button>
+                        <button class="comment-0"><br></button>
                     </div>
                 </div>
                 <div class="calendar-day" id="calendar_id_8">
                     <span class="day-title" id="id_8"></span>
                     <div class="day-comment">
-                        <span class="comment-1">Curso Laravel</span>
-                        <span class="comment-0"><br></span>
-                        <span class="comment-0"><br></span>
+                        <button class="comment-1" onclick="abrir_modal(1)">JavaScript</button>
+                        <button class="comment-0"><br></button>
+                        <button class="comment-0"><br></button>
                     </div>
                 </div>
                 <div class="calendar-day" id="calendar_id_9">
                     <span class="day-title" id="id_9"></span>
                     <div class="day-comment">
-                        <span class="comment-0"><br></span>
-                        <span class="comment-1">Curso html5</span>
-                        <span class="comment-3">Diseño gráfico</span>
+                        <button class="comment-0"><br></button>
+                        <button class="comment-1" onclick="abrir_modal(1)">JavaScript</button>
+                        <button class="comment-3" onclick="abrir_modal(3)">Vue</button>
                     </div>
                 </div>
                 <div class="calendar-day" id="calendar_id_10">
                     <span class="day-title" id="id_10"></span>
                     <div class="day-comment">
-                        <span class="comment-2">Curso React</span>
-                        <span class="comment-0"><br></span>
-                        <span class="comment-0"><br></span>
+                        <button class="comment-2" onclick="abrir_modal(2)">React</button>
+                        <button class="comment-0"><br></button>
+                        <button class="comment-0"><br></button>
                     </div>
                 </div>
                 <div class="calendar-day" id="calendar_id_11">
                     <span class="day-title" id="id_11"></span>
                     <div class="day-comment">
-                        <span class="comment-0"><br></span>
-                        <span class="comment-0"><br></span>
-                        <span class="comment-1">Curso Boostrap</span>
+                        <button class="comment-0"><br></button>
+                        <button class="comment-0"><br></button>
+                        <button class="comment-1" onclick="abrir_modal(1)">JavaScript</button>
                     </div>
                 </div>
                 <div class="calendar-day" id="calendar_id_12">
                     <span class="day-title" id="id_12"></span>
                     <div class="day-comment">
-                        <span class="comment-0"><br></span>
-                        <span class="comment-2">Curso PHP</span>
-                        <span class="comment-0"><br></span>
+                        <button class="comment-0"><br></button>
+                        <button class="comment-2" onclick="abrir_modal(2)">React</button>
+                        <button class="comment-0"><br></button>
                     </div>
                 </div>
                 <div class="calendar-day" id="calendar_id_13">
                     <span class="day-title" id="id_13"></span>
                     <div class="day-comment">
-                        <span class="comment-0"><br></span>
-                        <span class="comment-0"><br></span>
-                        <span class="comment-0"><br></span>
+                        <button class="comment-0"><br></button>
+                        <button class="comment-0"><br></button>
+                        <button class="comment-0"><br></button>
                     </div>
                 </div>
                 <div class="calendar-day" id="calendar_id_14">
                     <span class="day-title" id="id_14"></span>
                     <div class="day-comment">
-                        <span class="comment-0"><br></span>
-                        <span class="comment-3">Curso Inglés</span>
-                        <span class="comment-0"><br></span>
+                        <button class="comment-0"><br></button>
+                        <button class="comment-3" onclick="abrir_modal(3)">Vue</button>
+                        <button class="comment-0"><br></button>
                     </div>
                 </div>
                 <div class="calendar-day" id="calendar_id_15">
                     <span class="day-title" id="id_15"></span>
                     <div class="day-comment">
-                        <span class="comment-1">Curso Laravel</span>
-                        <span class="comment-0"><br></span>
-                        <span class="comment-0"><br></span>
+                        <button class="comment-1" onclick="abrir_modal(1)">JavaScript</button>
+                        <button class="comment-0"><br></button>
+                        <button class="comment-0"><br></button>
                     </div>
                 </div>
                 <div class="calendar-day" id="calendar_id_16">
                     <span class="day-title" id="id_16"></span>
                     <div class="day-comment">
-                        <span class="comment-0"><br></span>
-                        <span class="comment-1">Curso html5</span>
-                        <span class="comment-3">Diseño gráfico</span>
+                        <button class="comment-0"><br></button>
+                        <button class="comment-1" onclick="abrir_modal(1)">JavaScript</button>
+                        <button class="comment-3" onclick="abrir_modal(3)">Vue</button>
                     </div>
                 </div>
                 <div class="calendar-day" id="calendar_id_17">
                     <span class="day-title" id="id_17"></span>
                     <div class="day-comment">
-                        <span class="comment-2">Curso React</span>
-                        <span class="comment-0"><br></span>
-                        <span class="comment-0"><br></span>
+                        <button class="comment-2" onclick="abrir_modal(2)">React</button>
+                        <button class="comment-0"><br></button>
+                        <button class="comment-0"><br></button>
                     </div>
                 </div>
                 <div class="calendar-day" id="calendar_id_18">
                     <span class="day-title" id="id_18"></span>
                     <div class="day-comment">
-                        <span class="comment-0"><br></span>
-                        <span class="comment-0"><br></span>
-                        <span class="comment-1">Curso Boostrap</span>
+                        <button class="comment-0"><br></button>
+                        <button class="comment-0"><br></button>
+                        <button class="comment-1" onclick="abrir_modal(1)">JavaScript</button>
                     </div>
                 </div>
                 <div class="calendar-day" id="calendar_id_19">
                     <span class="day-title" id="id_19"></span>
                     <div class="day-comment">
-                        <span class="comment-0"><br></span>
-                        <span class="comment-2">Curso PHP</span>
-                        <span class="comment-0"><br></span>
+                        <button class="comment-0"><br></button>
+                        <button class="comment-2" onclick="abrir_modal(2)">React</button>
+                        <button class="comment-0"><br></button>
                     </div>
                 </div>
                 <div class="calendar-day" id="calendar_id_20">
                     <span class="day-title" id="id_20"></span>
                     <div class="day-comment">
-                        <span class="comment-0"><br></span>
-                        <span class="comment-0"><br></span>
-                        <span class="comment-3">Curso UX</span>
+                        <button class="comment-0"><br></button>
+                        <button class="comment-0"><br></button>
+                        <button class="comment-3" onclick="abrir_modal(3)">Vue</button>
                     </div>
                 </div>
                 <div class="calendar-day" id="calendar_id_21">
                     <span class="day-title" id="id_21"></span>
                     <div class="day-comment">
-                        <span class="comment-0"><br></span>
-                        <span class="comment-3">Curso Inglés</span>
-                        <span class="comment-0"><br></span>
+                        <button class="comment-0"><br></button>
+                        <button class="comment-3" onclick="abrir_modal(3)">Vue</button>
+                        <button class="comment-0"><br></button>
                     </div>
                 </div>
                 <div class="calendar-day" id="calendar_id_22">
                     <span class="day-title" id="id_22"></span>
                     <div class="day-comment">
-                        <span class="comment-1">Curso Laravel</span>
-                        <span class="comment-0"><br></span>
-                        <span class="comment-0"><br></span>
+                        <button class="comment-1" onclick="abrir_modal(1)">JavaScript</button>
+                        <button class="comment-0"><br></button>
+                        <button class="comment-0"><br></button>
                     </div>
                 </div>
                 <div class="calendar-day" id="calendar_id_23">
                     <span class="day-title" id="id_23"></span>
                     <div class="day-comment">
-                        <span class="comment-0"><br></span>
-                        <span class="comment-1">Curso html5</span>
-                        <span class="comment-3">Diseño gráfico</span>
+                        <button class="comment-0"><br></button>
+                        <button class="comment-1" onclick="abrir_modal(1)">JavaScript</button>
+                        <button class="comment-3" onclick="abrir_modal(3)">Vue</button>
                     </div>
                 </div>
                 <div class="calendar-day" id="calendar_id_24">
                     <span class="day-title" id="id_24"></span>
                     <div class="day-comment">
-                        <span class="comment-2">Curso React</span>
-                        <span class="comment-0"><br></span>
-                        <span class="comment-0"><br></span>
+                        <button class="comment-2" onclick="abrir_modal(2)">React</button>
+                        <button class="comment-0"><br></button>
+                        <button class="comment-0"><br></button>
                     </div>
                 </div>
                 <div class="calendar-day" id="calendar_id_25">
                     <span class="day-title" id="id_25"></span>
                     <div class="day-comment">
-                        <span class="comment-0"><br></span>
-                        <span class="comment-0"><br></span>
-                        <span class="comment-1">Curso Boostrap</span>
+                        <button class="comment-0"><br></button>
+                        <button class="comment-0"><br></button>
+                        <button class="comment-1" onclick="abrir_modal(1)">JavaScript</button>
                     </div>
                 </div>
                 <div class="calendar-day" id="calendar_id_26">
                     <span class="day-title" id="id_26"></span>
                     <div class="day-comment">
-                        <span class="comment-0"><br></span>
-                        <span class="comment-2">Curso PHP</span>
-                        <span class="comment-0"><br></span>
+                        <button class="comment-0"><br></button>
+                        <button class="comment-2" onclick="abrir_modal(2)">React</button>
+                        <button class="comment-0"><br></button>
                     </div>
                 </div>
                 <div class="calendar-day" id="calendar_id_27">
                     <span class="day-title" id="id_27"></span>
                     <div class="day-comment">
-                        <span class="comment-0"><br></span>
-                        <span class="comment-0"><br></span>
-                        <span class="comment-3">Curso UX</span>
+                        <button class="comment-0"><br></button>
+                        <button class="comment-0"><br></button>
+                        <button class="comment-3" onclick="abrir_modal(3)">Vue</button>
                     </div>
                 </div>
                 <div class="calendar-day" id="calendar_id_28">
                     <span class="day-title" id="id_28"></span>
                     <div class="day-comment">
-                        <span class="comment-0"><br></span>
-                        <span class="comment-3">Curso Inglés</span>
-                        <span class="comment-0"><br></span>
+                        <button class="comment-0"><br></button>
+                        <button class="comment-3" onclick="abrir_modal(3)">Vue</button>
+                        <button class="comment-0"><br></button>
                     </div>
                 </div>
                 <div class="calendar-day" id="calendar_id_29">
                     <span class="day-title" id="id_29"></span>
                     <div class="day-comment">
-                        <span class="comment-1">Curso Laravel</span>
-                        <span class="comment-0"><br></span>
-                        <span class="comment-0"><br></span>
+                        <button class="comment-1" onclick="abrir_modal(1)">JavaScript</button>
+                        <button class="comment-0"><br></button>
+                        <button class="comment-0"><br></button>
                     </div>
                 </div>
                 <div class="calendar-day" id="calendar_id_30">
                     <span class="day-title" id="id_30"></span>
                     <div class="day-comment">
-                        <span class="comment-0"><br></span>
-                        <span class="comment-1">Curso html5</span>
-                        <span class="comment-3">Diseño gráfico</span>
+                        <button class="comment-0"><br></button>
+                        <button class="comment-1" onclick="abrir_modal(1)">JavaScript</button>
+                        <button class="comment-3" onclick="abrir_modal(3)">Vue</button>
                     </div>
                 </div>
                 <div class="calendar-day" id="calendar_id_31">
                     <span class="day-title" id="id_31"></span>
                     <div class="day-comment">
-                        <span class="comment-2">Curso React</span>
-                        <span class="comment-0"><br></span>
-                        <span class="comment-0"><br></span>
+                        <button class="comment-2" onclick="abrir_modal(2)">React</button>
+                        <button class="comment-0"><br></button>
+                        <button class="comment-0"><br></button>
                     </div>
                 </div>
                 <div class="calendar-day" id="calendar_id_32">
                     <span class="day-title" id="id_32"></span>
                     <div class="day-comment">
-                        <span class="comment-0"><br></span>
-                        <span class="comment-0"><br></span>
-                        <span class="comment-0"><br></span>
+                        <button class="comment-0"><br></button>
+                        <button class="comment-0"><br></button>
+                        <button class="comment-0"><br></button>
                     </div>
                 </div>
                 <div class="calendar-day" id="calendar_id_33">
                     <span class="day-title" id="id_33"></span>
                     <div class="day-comment">
-                        <span class="comment-0"><br></span>
-                        <span class="comment-2">Curso PHP</span>
-                        <span class="comment-0"><br></span>
+                        <button class="comment-0"><br></button>
+                        <button class="comment-2" onclick="abrir_modal(2)">React</button>
+                        <button class="comment-0"><br></button>
                     </div>
                 </div>
                 <div class="calendar-day" id="calendar_id_34">
                     <span class="day-title" id="id_34"></span>
                     <div class="day-comment">
-                        <span class="comment-0"><br></span>
-                        <span class="comment-0"><br></span>
-                        <span class="comment-3">Curso UX</span>
+                        <button class="comment-0"><br></button>
+                        <button class="comment-0"><br></button>
+                        <button class="comment-3" onclick="abrir_modal(3)">Vue</button>
                     </div>
                 </div>
                 <div class="calendar-day" id="calendar_id_35">
                     <span class="day-title" id="id_35"></span>
                     <div class="day-comment">
-                        <span class="comment-0"><br></span>
-                        <span class="comment-0"><br></span>
-                        <span class="comment-0"><br></span>
+                        <button class="comment-0"><br></button>
+                        <button class="comment-0"><br></button>
+                        <button class="comment-0"><br></button>
                     </div>
                 </div>
                 <div class="calendar-day" id="calendar_id_36">
                     <span class="day-title" id="id_36"></span>
                     <div class="day-comment">
-                        <span class="comment-0"><br></span>
-                        <span class="comment-0"><br></span>
-                        <span class="comment-0"><br></span>
+                        <button class="comment-0"><br></button>
+                        <button class="comment-0"><br></button>
+                        <button class="comment-0"><br></button>
                     </div>
                 </div>
                 <div class="calendar-day" id="calendar_id_37">
                     <span class="day-title" id="id_37"></span>
                     <div class="day-comment">
-                        <span class="comment-0"><br></span>
-                        <span class="comment-1">Curso html5</span>
-                        <span class="comment-3">Diseño gráfico</span>
+                        <button class="comment-0"><br></button>
+                        <button class="comment-1" onclick="abrir_modal(1)">JavaScript</button>
+                        <button class="comment-3" onclick="abrir_modal(3)">Vue</button>
                     </div>
                 </div>
                 <div class="calendar-day" id="calendar_id_38">
                     <span class="day-title" id="id_38"></span>
                     <div class="day-comment">
-                        <span class="comment-0"><br></span>
-                        <span class="comment-0"><br></span>
-                        <span class="comment-0"><br></span>
+                        <button class="comment-0"><br></button>
+                        <button class="comment-0"><br></button>
+                        <button class="comment-0"><br></button>
                     </div>
                 </div>
                 <div class="calendar-day" id="calendar_id_39">
                     <span class="day-title" id="id_39"></span>
                     <div class="day-comment">
-                        <span class="comment-0"><br></span>
-                        <span class="comment-0"><br></span>
-                        <span class="comment-0"><br></span>
+                        <button class="comment-0"><br></button>
+                        <button class="comment-0"><br></button>
+                        <button class="comment-0"><br></button>
                     </div>
                 </div>
                 <div class="calendar-day" id="calendar_id_40">
                     <span class="day-title" id="id_40"></span>
                     <div class="day-comment">
-                        <span class="comment-0"><br></span>
-                        <span class="comment-0"><br></span>
-                        <span class="comment-0"><br></span>
+                        <button class="comment-0"><br></button>
+                        <button class="comment-0"><br></button>
+                        <button class="comment-0"><br></button>
                     </div>
                 </div>
                 <div class="calendar-day" id="calendar_id_41">
                     <span class="day-title" id="id_41"></span>
                     <div class="day-comment">
-                        <span class="comment-0"><br></span>
-                        <span class="comment-0"><br></span>
-                        <span class="comment-0"><br></span>
+                        <button class="comment-0"><br></button>
+                        <button class="comment-0"><br></button>
+                        <button class="comment-0"><br></button>
                     </div>
                 </div>
             </article>
         </section>
 
+        <dialog class="modal" id="modal1">
+            <article class="modal-body">
+                <p>Curso de JavaScript</p>
+                <p id="modal-desc-1_js"></p>
+                <button class="close-button link-button" onclick="cerrar_modal(1)">Cerrar</button>
+                <button class="link-button" onclick="redirigir_modal(1)">Ver mas</button>
+            </article>
+        </dialog>
+
+        <dialog class="modal" id="modal2">
+            <article class="modal-body">
+                <p>Curso React</p>
+                <p id="modal-desc-2_js"></p>
+                <button class="close-button link-button" onclick="cerrar_modal(2)">Cerrar</button>
+                <button class="link-button" onclick="redirigir_modal(2)">Ver mas</button>
+            </article>
+        </dialog>
+
+        <dialog class="modal" id="modal3">
+            <article class="modal-body">
+                <p>Curso Vue</p>
+                <p id="modal-desc-3_js"></p>
+                <button class="close-button link-button" onclick="cerrar_modal(3)">Cerrar</button>
+                <button class="link-button" onclick="redirigir_modal(3)">Ver mas</button>
+            </article>
+        </dialog>
     </main>
     <footer></footer>
+    <script src="scripts/modal_calendar.js"></script>
     <script src="scripts/includeHeaderFooter.js"></script>
     <script src="scripts/DOM.js"></script>
     <script>

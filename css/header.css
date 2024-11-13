@@ -195,3 +195,50 @@ header body {
     margin-top: 1em;
 }
 /* end shopping cart */
+
+/*Logged user styles*/
+
+.logged{
+    height: 40px;
+}
+
+.logged-name{
+    color: white;
+    font-size: 1.2em;
+    text-decoration-line: underline;
+}
+
+.header-btn {
+    position: relative;
+}
+
+.user-sidebar {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+    padding: 10px;
+    z-index: 1000;
+    border-radius: 15px;
+}
+
+.header-btn:hover .user-sidebar {
+    background-color: #555;
+    display: block;
+    color: white;
+    border: none;
+}
+
+.user-sidebar button{
+    cursor: pointer;
+}
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+} 
+
+/*End logged user styles*/

@@ -12,61 +12,47 @@
 <body>
     <header></header>
     <main>
+        <dialog id="modal" class="modal">
+            <article class="modal-body">
+                <h3 id="modal-titulo_js">Titulo</h3>
+                <ul id="modal-personas-inscriptas_js"></ul>
+                <button class="link-button" onclick="terminar()">Confirmar</button>
+            </article>
+           
+        </dialog>
         <section class="inscripcion-curso">
 
-            <h1>Front end: Primeros pasos</h2>
+            <h1 id="nombreCurso">Front end: Primeros pasos</h2>
             <h2>INSCRIPCIÓN</h2>
+            <p id="precioUnitario">Precio</p>
             </br>
 
-            <form class="register-form" action="./metodosPago.html" method="get">
+            <form id="registerForm" class="register-form" action="./metodosPago.html" method="get">
 
                 <article class="register-form-item">
+                    
                     <input class="register-form-input"type="text" id="name1" name="name1" placeholder="Nombre" required>
                     
                     <input class="register-form-input"type="text" id="surname1" name="surname1" placeholder="Apellido" required>
 
                     <input class="register-form-input" type="email" id="mail1" name="mail1" placeholder="Mail" required>
-                    <button class="btn-delete-person" type="button">
+                    <button id="limpiar-form-item_js" class="btn-delete-person" type="button">
                         <img class="icon" src="./images/minus-icon-wh.svg">
                     </button>
                 </article>
-
-                <article class="register-form-item">
-                    <input class="register-form-input"type="text" id="name2" name="name1" placeholder="Nombre">
-                    
-                    <input class="register-form-input"type="text" id="surname2" name="surname1" placeholder="Apellido">
-
-                    <input class="register-form-input" type="email" id="mail2" name="mail1" placeholder="Mail">
-
-                    <button class="btn-delete-person" type="button">
-                        <img class="icon" src="./images/minus-icon-wh.svg">
-                    </button>
-                </article>
-
-                <article class="register-form-item">
-                    <input class="register-form-input"type="text" id="name3" name="name1" placeholder="Nombre">
-                    
-                    <input class="register-form-input"type="text" id="surname3" name="surname1" placeholder="Apellido">
-
-                    <input class="register-form-input" type="email" id="mail3" name="mail1" placeholder="Mail">
-
-                    <button class="btn-delete-person" type="button">
-                        <img class="icon" src="./images/minus-icon-wh.svg">
-                    </button>
-                </article>
-                </br>
                 
-                <span>Agregar persona
-                    <button class="btn-add-person" type="button">
+                <span id="agregarPersonaContainer_js">Agregar persona
+                    <button onclick='agregarPersona()' class="btn-add-person" type="button">
                         <img class="icon" src="./images/plus-icon-wh.svg">
                     </button>
                 </span>
                 <br/>
-                <span class="register-form-importe">$1500 </span>
+                <span id="precioTotal_js" class="register-form-importe">$1500 </span>
                 
-                <button class="link-button" type="button" onclick='chargeShoppingCard()'>Inscribirse</button>              
+                <button id="inscripcionBtn_js" class="link-button" type="submit" >Inscribirse</button>              
             </form>
         </section>
+
     </main>
     <footer></footer>
     <script>
@@ -77,5 +63,6 @@
         }
     </script>
     <script src="../scripts/includeHeaderFooter.js"></script>
+    <script src="./scripts/registration_form.js"></script>
 </body>
 </html>
